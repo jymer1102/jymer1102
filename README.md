@@ -23,3 +23,5 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 * 🤖 [Screen Pet](https://screen-pet.base44.app/)
 * 🟢 [Blob Fidget](https://blob-fidget.base44.app/)
 * 👾 [Tag Mania](https://jymer1102.github.io/Tag_Mania/)
+
+![Snake Animation](https://raw.githubusercontent.com/jymer1102/jymer1102/output/github-snake.svg)
