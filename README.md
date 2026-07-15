@@ -2,8 +2,6 @@
 
 # 👋 Hi, I'm jymer1102!
 
-![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjymer1102&count_bg=%23EA4AAA&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)
-
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=F7F7F7&width=435&lines=Hi%2C+I'm+jymer1102!;Building+jymer1102.me;Learning+web+design!)](https://git.io/typing-svg)
 
 ---
@@ -15,11 +13,6 @@
 
 ### 🛠️ Skills & Technologies
 [![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,discord,spotify,instagram,windows)](https://skillicons.dev)
-
----
-
-### 🏆 My Trophies
-[![Trophies](https://github-profile-trophy.vercel.app/?username=jymer1102&theme=radical)](https://github.com/ryo-ma/github-profile-trophy)
 
 ---
 
@@ -46,20 +39,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 <div align="center">
-
-### 📊 Live GitHub Stats
-<table border="0">
-  <tr>
-    <td>
-      <img src="https://github-readme-stats-fast.vercel.app/api?username=jymer1102&show_icons=true&theme=radical" alt="Jymer's GitHub stats" />
-    </td>
-    <td>
-      <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=radical" alt="Top Languages" />
-    </td>
-  </tr>
-</table>
-
----
 
 ### 💬 Quote of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
