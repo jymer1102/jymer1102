@@ -11,6 +11,10 @@
 
 ---
 
+![Visitor Count](https://komarev.com/personal-badge/?username=jymer1102&color=red&style=flat-square)
+
+---
+
 ### 🛠️ Skills & Technologies
 [![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,spotify,discord,instagram,unity,windows)](https://skillicons.dev)
 
