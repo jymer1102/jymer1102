@@ -29,6 +29,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ### 📬 Connect with Me
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
+
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
 
 ### 👨‍💻 My Creations
