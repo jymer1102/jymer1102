@@ -6,7 +6,7 @@
 
 ---
 
-### 🐍 My Contributions Graph (The Snake!)
+### 🐍 My Contributions Graph
 ![Snake Animation](https://raw.githubusercontent.com/jymer1102/jymer1102/output/github-snake.svg)
 
 ---
@@ -21,9 +21,19 @@
 ### 🚀 About Me
 I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!
 
-> "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
+<div align="center">
 
-> "For God did not call us to be impure, but to live a holy life." — 1 Thessalonians 4:7
+*“Design is not just what it looks like and feels like. Design is how it works.”*
+— **Steve Jobs**
+
+✨
+
+*“For God did not call us to be impure, but to live a holy life.”*
+— **1 Thessalonians 4:7**
+
+</div>
+
+---
 
 ### 🛠️ My Skills & Interests
 * **Web Design:** Exploring free web hosting and site builders, I love to design and tweak websites, coding is not what I do, though.
@@ -34,6 +44,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
+
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
 
 ---
