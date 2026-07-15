@@ -2,7 +2,7 @@
 
 # 👋 Hi, I'm jymer1102!
 
-![Visitor Count](https://komarev.com/personal-badge/?username=jymer1102&color=red&style=flat-square)
+![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjymer1102&count_bg=%23EA4AAA&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=false)
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=F7F7F7&width=435&lines=Hi%2C+I'm+jymer1102!;Building+jymer1102.me;Learning+web+design!)](https://git.io/typing-svg)
 
@@ -14,7 +14,7 @@
 ---
 
 ### 🛠️ Skills & Technologies
-[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,spotify,discord,instagram,windows)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,discord,spotify,instagram,windows)](https://skillicons.dev)
 
 ---
 
