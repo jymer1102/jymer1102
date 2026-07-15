@@ -27,8 +27,9 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 * **Learning:** Getting the hang of GitHub and basic web tools.
 
 ### 📬 Connect with Me
-* 🌐 My Website: [jymer1102.me](http://jymer1102.me) (Coming soon!)
-* 🌴 My Linktree: [linktr.ee/jymer1102](https://linktr.ee/jymer1102)
+### 📬 Connect with Me
+[![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
 
 ### 👨‍💻 My Creations
 * 🌟 [Nova AI](https://nova-ai-mk9x.onrender.com/)
