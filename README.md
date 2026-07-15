@@ -12,7 +12,7 @@
 ---
 
 ### 🛠️ Skills & Technologies
-[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,spotify,discord)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,spotify,discord, instagram,unity,windows)](https://skillicons.dev)
 
 ---
 
