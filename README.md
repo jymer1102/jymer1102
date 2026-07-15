@@ -40,14 +40,14 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 <div align="center">
 
-### 📊 Live GitHub Stats
+#### 📊 Live GitHub Stats
 <table border="0">
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=jymer1102&show_icons=true&theme=radical" alt="Jymer's GitHub stats" />
+      <img src="https://github-readme-stats-fast.vercel.app/api?username=jymer1102&show_icons=true&theme=radical" alt="Jymer's GitHub stats" />
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=radical" alt="Top Languages" />
+      <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=radical" alt="Top Languages" />
     </td>
   </tr>
 </table>
