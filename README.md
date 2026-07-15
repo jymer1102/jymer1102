@@ -6,7 +6,7 @@
 
 ---
 
-### 🐍 My Contributions Graph (The Snake!)
+### My Contributions Graph
 ![Snake Animation](https://raw.githubusercontent.com/jymer1102/jymer1102/output/github-snake.svg)
 
 ---
