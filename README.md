@@ -21,6 +21,8 @@
 ### 🚀 About Me
 I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!
 
+> "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
+
 ### 🛠️ My Skills & Interests
 * **Web Design:** Exploring free web hosting and site builders, I love to design and tweak websites, coding is not what I do, though.
 * **Current Projects:** Working on my personal portfolio site (`jymer1102.me`).
@@ -30,7 +32,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
-
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
 
 ---
@@ -44,6 +45,11 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 <div align="center">
+
+### 📖 Verse of the Day
+![Daily Verse](https://dailyverse.vercel.app/api?theme=dark)
+
+---
 
 ### 💬 Quote of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
