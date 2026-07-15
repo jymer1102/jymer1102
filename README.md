@@ -30,15 +30,16 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
+
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
 
 ---
 
 ### 👨‍💻 My Creations
-* 🌟 **Nova AI** — [![Launch App](https://img.shields.io/badge/Launch_App-FF5733?style=flat-square&logo=render&logoColor=white)](https://nova-ai-mk9x.onrender.com/)
-* 🤖 **Screen Pet** — [![Launch App](https://img.shields.io/badge/Launch_App-4A90E2?style=flat-square&logo=googlechrome&logoColor=white)](https://screen-pet.base44.app/)
-* 🟢 **Blob Fidget** — [![Launch App](https://img.shields.io/badge/Launch_App-2ECC71?style=flat-square&logo=googleplay&logoColor=white)](https://blob-fidget.base44.app/)
-* 👾 **Tag Mania** — [![Launch App](https://img.shields.io/badge/Launch_App-9B59B6?style=flat-square&logo=githubpages&logoColor=white)](https://jymer1102.github.io/Tag_Mania/)
+* 🌟 **Nova AI** — [![Launch](https://img.shields.io/badge/Launch-FF5733?style=flat-square)](https://nova-ai-mk9x.onrender.com/)
+* 🤖 **Screen Pet** — [![Launch](https://img.shields.io/badge/Launch-4A90E2?style=flat-square)](https://screen-pet.base44.app/)
+* 🟢 **Blob Fidget** — [![Launch](https://img.shields.io/badge/Launch-2ECC71?style=flat-square)](https://blob-fidget.base44.app/)
+* 👾 **Tag Mania** — [![Launch](https://img.shields.io/badge/Launch-9B59B6?style=flat-square)](https://jymer1102.github.io/Tag_Mania/)
 
 ---
 
