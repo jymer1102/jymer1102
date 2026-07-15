@@ -23,6 +23,8 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 > "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
 
+> "For God did not call us to be impure, but to live a holy life." — 1 Thessalonians 4:7
+
 ### 🛠️ My Skills & Interests
 * **Web Design:** Exploring free web hosting and site builders, I love to design and tweak websites, coding is not what I do, though.
 * **Current Projects:** Working on my personal portfolio site (`jymer1102.me`).
@@ -45,11 +47,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 <div align="center">
-
-### 📖 Verse of the Day
-![Daily Verse](https://dailyverse.vercel.app/api?theme=dark)
-
----
 
 ### 💬 Quote of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
