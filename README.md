@@ -48,7 +48,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 <br>
 
 #### 🤑 Like what I do? Consider donating!
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/YOUR_PAYPAL_USERNAME)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/jymer1102)
 
 </div>
 
