@@ -1,4 +1,4 @@
-# 👋 Hi, I'm Jymer!
+# 👋 Hi, I'm jymer1102!
 
 ### 🚀 About Me
 I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!
