@@ -14,4 +14,4 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 📬 Connect with Me
 * 🌐 My Website: [jymer1102.me](http://jymer1102.me) (Coming soon!)
-* 📧 [Your Email or Social Link here]
+* 🌴 My Linktree: [linktr.ee/jymer1102](https://linktr.ee/jymer1102)
