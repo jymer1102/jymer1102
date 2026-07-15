@@ -54,6 +54,11 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
+### 🏆 My Trophies
+[![]](https://github-profile-trophy.vercel.app/?username=jymer1102&theme=radical)
+
+---
+
 ### 💬 Quote of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
