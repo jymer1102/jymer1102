@@ -6,7 +6,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 ### 🛠️ My Skills & Interests
-* **Web Design:** Exploring free web hosting and site builders.
+* **Web Design:** Exploring free web hosting and site builders, I love to design and tweK websites, coding is not what I do, though.
 * **Current Projects:** Working on my personal portfolio site (`jymer1102.me`).
 * **Learning:** Getting the hang of GitHub and basic web tools.
 
