@@ -1,16 +1,17 @@
-## Hi there 👋
+# 👋 Hi, I'm Jymer!
 
-<!--
-**jymer1102/jymer1102** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### 🚀 About Me
+I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🛠️ My Skills & Interests
+* **Web Design:** Exploring free web hosting and site builders.
+* **Current Projects:** Working on my personal portfolio site (`jymer1102.me`).
+* **Learning:** Getting the hang of GitHub and basic web tools.
+
+---
+
+### 📬 Connect with Me
+* 🌐 My Website: [jymer1102.me](http://jymer1102.me) (Coming soon!)
+* 📧 [Your Email or Social Link here]
