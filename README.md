@@ -26,11 +26,13 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 * **Current Projects:** Working on my personal portfolio site (`jymer1102.me`).
 * **Learning:** Getting the hang of GitHub and basic web tools.
 
-### 📬 Connect with Me
+---
+
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
-
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
+
+---
 
 ### 👨‍💻 My Creations
 * 🌟 [Nova AI](https://nova-ai-mk9x.onrender.com/)
@@ -47,9 +49,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### 🃏 Random Dev Joke Card
-If you liked the Quote of the Day card, you can swap it or pair it with an automatic programming/tech joke card that refreshes a new joke every single time someone views your page.
-* **How to use it:**
-```markdown
+### 🃏 Joke of the Day
 ![Jokes Card](https://github-readme-joke.vercel.app/api?theme=radical)
+
 </div>
