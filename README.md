@@ -14,7 +14,7 @@
 ---
 
 ### 🛠️ Skills & Technologies
-[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,figma,canvas)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,spotify,discord,instagram,windows)](https://skillicons.dev)
 
 ---
 
