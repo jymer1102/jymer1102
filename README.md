@@ -45,4 +45,11 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ### 💬 Quote of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
+---
+
+### 🃏 Random Dev Joke Card
+If you liked the Quote of the Day card, you can swap it or pair it with an automatic programming/tech joke card that refreshes a new joke every single time someone views your page.
+* **How to use it:**
+```markdown
+![Jokes Card](https://github-readme-joke.vercel.app/api?theme=radical)
 </div>
