@@ -35,10 +35,10 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 ### 👨‍💻 My Creations
-* 🌟 [Nova AI](https://nova-ai-mk9x.onrender.com/)
-* 🤖 [Screen Pet](https://screen-pet.base44.app/)
-* 🟢 [Blob Fidget](https://blob-fidget.base44.app/)
-* 👾 [Tag Mania](https://jymer1102.github.io/Tag_Mania/)
+* 🌟 **Nova AI** — [![Launch App](https://img.shields.io/badge/Launch_App-FF5733?style=flat-square&logo=render&logoColor=white)](https://nova-ai-mk9x.onrender.com/)
+* 🤖 **Screen Pet** — [![Launch App](https://img.shields.io/badge/Launch_App-4A90E2?style=flat-square&logo=googlechrome&logoColor=white)](https://screen-pet.base44.app/)
+* 🟢 **Blob Fidget** — [![Launch App](https://img.shields.io/badge/Launch_App-2ECC71?style=flat-square&logo=googleplay&logoColor=white)](https://blob-fidget.base44.app/)
+* 👾 **Tag Mania** — [![Launch App](https://img.shields.io/badge/Launch_App-9B59B6?style=flat-square&logo=githubpages&logoColor=white)](https://jymer1102.github.io/Tag_Mania/)
 
 ---
 
