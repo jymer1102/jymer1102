@@ -2,21 +2,24 @@
 
 # 👋 Hi, I'm jymer1102!
 
+![Visitor Count](https://komarev.com/personal-badge/?username=jymer1102&color=red&style=flat-square)
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=F7F7F7&width=435&lines=Hi%2C+I'm+jymer1102!;Building+jymer1102.me;Learning+web+design!)](https://git.io/typing-svg)
 
 ---
 
-### My Contributions Graph
+### 🐍 My Contributions Graph (The Snake!)
 ![Snake Animation](https://raw.githubusercontent.com/jymer1102/jymer1102/output/github-snake.svg)
 
 ---
 
-![Visitor Count](https://komarev.com/personal-badge/?username=jymer1102&color=red&style=flat-square)
+### 🛠️ Skills & Technologies
+[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,figma,canvas)](https://skillicons.dev)
 
 ---
 
-### 🛠️ Skills & Technologies
-[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,spotify,discord,instagram,unity,windows)](https://skillicons.dev)
+### 🏆 My Trophies
+[![Trophies](https://github-profile-trophy.vercel.app/?username=jymer1102&theme=radical)](https://github.com/ryo-ma/github-profile-trophy)
 
 ---
 
@@ -44,7 +47,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 <div align="center">
 
-#### 📊 Live GitHub Stats
+### 📊 Live GitHub Stats
 <table border="0">
   <tr>
     <td>
@@ -55,11 +58,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
     </td>
   </tr>
 </table>
-
----
-
-### 🏆 My Trophies
-[![]](https://github-profile-trophy.vercel.app/?username=jymer1102&theme=radical)
 
 ---
 
