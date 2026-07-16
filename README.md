@@ -37,8 +37,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 <div align="center">
 
-*“Design is not just what it looks like and feels like. Design is how it works.”*
-— **Steve Jobs**
+![Steve Jobs Quote](https://capsule-render.vercel.app/api?type=rect&color=1a1a1a&text=Design%20is%20how%20it%20works.&fontSize=22&fontColor=7B2CBF&height=70)
 
 ✨
 
