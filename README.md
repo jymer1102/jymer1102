@@ -46,7 +46,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 🛠️ My Skills & Interests
 * 🌐 **Web Design:** Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.
-* 💻 **Current Projects:** Tuning up my personal portfolio site (`jymer1102.me`).
+* 💻 **Current Projects:** Tuning up my personal portfolio site (`jymer1102.me`). I am also working on creating a fun little zombie shooter game that can be accessible at school.
 * 🚀 **Learning:** Getting the hang of GitHub and basic web tools.
 
 ---
