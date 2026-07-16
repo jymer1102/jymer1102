@@ -89,8 +89,10 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 ### 💬 Quote of the Day
-![Dev Card](https://quotes-githubreadme.vercel.app/api?type=horizontal&theme=
+![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
-👁️ **Profile Views:** ![Views](https://api.moioauth.com/users/jymer1102/counter.svg?color=blueviolet&style=flat-square)
+---
+
+👁️ **Profile Views:** ![Views](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=views&query=%24.value&url=https%3A%2F%2Fapi.countapi.xyz%2Fhit%2Fjymer1102%2Fvisits&style=flat-square)
 
 </div>
