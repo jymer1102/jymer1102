@@ -93,6 +93,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjymer1102%2Fjymer1102&count_bg=%238A2BE2&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=views&edge_flat=true)
+![Views](https://img.shields.io/badge/profile--views-active-blueviolet?style=flat-square)
 
 </div>
