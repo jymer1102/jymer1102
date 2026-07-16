@@ -93,6 +93,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-👁️ **Profile Views:** ![Views](https://img.shields.io/badge/dynamic/json?color=blueviolet&label=views&query=%24.value&url=https%3A%2F%2Fapi.countapi.xyz%2Fhit%2Fjymer1102%2Fvisits&style=flat-square)
+[![jymer1102 profile views](https://u8views.com/api/v1/github/profiles/251914228/views/day-week-month-total-count.svg)](https://u8views.com/github/jymer1102)
 
 </div>
