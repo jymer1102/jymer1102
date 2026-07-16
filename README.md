@@ -95,8 +95,10 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### 💬 Quote of the Day
+### 💬 Quote & Joke of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+![Jokes Card](https://readme-jokes.vercel.app/api?theme=radical)
 
 ---
 
