@@ -13,6 +13,11 @@
 
 ---
 
+### 🏆 My GitHub Trophies
+[![Github Trophies](https://github-profile-trophy-mirror.vercel.app/?username=jymer1102&theme=radical&no-bg=true&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
+
+---
+
 ### 📊 My GitHub Stats & Languages
 ![Jymer's GitHub Stats](https://github-stats-extended.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true)
 
