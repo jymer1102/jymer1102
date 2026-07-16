@@ -32,6 +32,10 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 <div align="center">
 
+![Building](https://img.shields.io/badge/Building-Zombie_Shooter_Game-green?style=flat-square&logo=gamecontroller&logoColor=white)
+
+---
+
 *“Design is not just what it looks like and feels like. Design is how it works.”*
 — **Steve Jobs**
 
@@ -85,6 +89,8 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 🟢 **Blob Fidget** — [![Launch](https://img.shields.io/badge/Launch-2ECC71?style=flat-square)](https://blob-fidget.base44.app/)
 
 👾 **Tag Mania** — [![Launch](https://img.shields.io/badge/Launch-9B59B6?style=flat-square)](https://jymer1102.github.io/Tag_Mania/)
+
+🧟 **Zombie Shooter** — [![In Progress](https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square)](#)
 
 ---
 
