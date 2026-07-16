@@ -19,7 +19,7 @@
 ---
 
 ### 🛠️ Skills & Technologies
-[![My Skills](https://skillicons.dev/icons?i=github,vscode,discord,spotify,instagram,windows)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,discord,spotify,instagram,windows&theme=dark)](https://skillicons.dev)
 
 ---
 
@@ -43,9 +43,9 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 ### 🛠️ My Skills & Interests
-* **Web Design:** Exploring free web hosting and site builders, I love to design and tweak websites, coding is not what I do, though.
-* **Current Projects:** Working on my personal portfolio site (`jymer1102.me`).
-* **Learning:** Getting the hang of GitHub and basic web tools.
+* 🌐 **Web Design:** Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.
+* 💻 **Current Projects:** Tuning up my personal portfolio site (`jymer1102.me`).
+* 🚀 **Learning:** Getting the hang of GitHub and basic web tools.
 
 ---
 
