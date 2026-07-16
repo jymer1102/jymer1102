@@ -14,9 +14,9 @@
 ---
 
 ### 📊 My GitHub Stats & Languages
-![Jymer's GitHub Stats](https://github-readme-stats-eight-theta.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true)
+![Jymer's GitHub Stats](https://github-stats-extended.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true)
 
-![Top Langs](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=dark&hide_border=true)
+![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=dark&hide_border=true)
 
 ---
 
@@ -93,6 +93,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-![Views](https://komarev.com/badge/counter.svg?username=jymer1102&color=blueviolet&style=flat-square)
+👁️ **Profile Views:** ![Views](https://komarev.com/badge/counter.svg?username=jymer1102&color=blueviolet&style=flat-square)
 
 </div>
