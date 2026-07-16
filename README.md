@@ -46,6 +46,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
+
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
 
 <div align="center">
@@ -57,7 +58,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### 🎵 Currently Listening To (Apple Music)
+### 🎵 Currently Listening To
 <div align="center">
 
 [![Apple Music GitHub profile](https://music-profile.rayriffy.com/theme/dark.svg?uid=001396.90916c02bf7f45439497c8295a54ba75.1626)](https://music-profile.rayriffy.com)
