@@ -60,6 +60,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/LINKTREE-39E09B?style=for-the-badge&logo=linktree&logoColor=white&labelColor=1a1a1a)](https://linktr.ee/jymer1102)
+
 [![Website](https://img.shields.io/badge/WEBSITE-7B2CBF?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=1a1a1a)](http://jymer1102.me)
 
 <div align="center">
