@@ -99,11 +99,15 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### 💬 Quote of the Day
+### 💬 Quote & Joke of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+![Jokes Card](https://github-readme-joke-post.vercel.app/api?theme=radical)
 
 ---
 
 👁️ **Profile Views:** [![jymer1102 profile views](https://u8views.com/api/v1/github/profiles/251914228/views/day-week-month-total-count.svg)](https://u8views.com/github/jymer1102)
 
 </div>
+
+![Wave Footer](https://capsule-render.vercel.app/api?type=waving&color=7B2CBF&height=120&section=footer)
