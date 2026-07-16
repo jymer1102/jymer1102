@@ -93,6 +93,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-👁️ **Profile Views:** ![Views](https://profile-counter.glitch.me/jymer1102/count.svg)
+![Views](https://komarev.com/badge/counter.svg?username=jymer1102&color=blueviolet&style=flat-square)
 
 </div>
