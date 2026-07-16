@@ -12,9 +12,9 @@
 ---
 
 ### 📊 My GitHub Stats & Languages
-![Jymer's GitHub Stats](https://github-readme-stats.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true)
+![Jymer's GitHub Stats](https://github-readme-stats-eight-theta.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=dark&hide_border=true)
+![Top Langs](https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=dark&hide_border=true)
 
 ---
 
