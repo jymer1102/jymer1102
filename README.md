@@ -11,6 +11,13 @@
 
 ---
 
+### 📊 My GitHub Stats & Languages
+![Jymer's GitHub Stats](https://github-readme-stats.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true)
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=dark&hide_border=true)
+
+---
+
 ### 🛠️ Skills & Technologies
 [![My Skills](https://skillicons.dev/icons?i=html,css,github,vscode,discord,spotify,instagram,windows)](https://skillicons.dev)
 
