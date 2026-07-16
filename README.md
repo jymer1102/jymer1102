@@ -1,5 +1,7 @@
 <div align="center">
 
+![Profile Banner](jymer1102_header_image.PNG)
+
 # 👋 Hi, I'm jymer1102!
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=F7F7F7&width=435&lines=Hi%2C+I'm+jymer1102!;Building+jymer1102.me;Learning+web+design!)](https://git.io/typing-svg)
@@ -86,9 +88,11 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-<div align="center">
-
 ### 💬 Quote of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+---
+
+👁️ **Profile Views:** ![Views](https://profile-counter.glitch.me/jymer1102/count.svg)
 
 </div>
