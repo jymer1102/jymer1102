@@ -93,6 +93,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-[![jymer1102 profile views](https://u8views.com/api/v1/github/profiles/251914228/views/day-week-month-total-count.svg)](https://u8views.com/github/jymer1102)
+👁️ **Profile Views:** [![jymer1102 profile views](https://u8views.com/api/v1/github/profiles/251914228/views/day-week-month-total-count.svg)](https://u8views.com/github/jymer1102)
 
 </div>
