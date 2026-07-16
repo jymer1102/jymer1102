@@ -68,10 +68,10 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ---
 
 ### 👨‍💻 My Creations
-* 🌟 **Nova AI** — [![Launch](https://img.shields.io/badge/Launch-FF5733?style=flat-square)](https://nova-ai-mk9x.onrender.com/)
-* 🤖 **Screen Pet** — [![Launch](https://img.shields.io/badge/Launch-4A90E2?style=flat-square)](https://screen-pet.base44.app/)
-* 🟢 **Blob Fidget** — [![Launch](https://img.shields.io/badge/Launch-2ECC71?style=flat-square)](https://blob-fidget.base44.app/)
-* 👾 **Tag Mania** — [![Launch](https://img.shields.io/badge/Launch-9B59B6?style=flat-square)](https://jymer1102.github.io/Tag_Mania/)
+🌟 **Nova AI** — [![Launch](https://img.shields.io/badge/Launch-FF5733?style=flat-square)](https://nova-ai-mk9x.onrender.com/)
+🤖 **Screen Pet** — [![Launch](https://img.shields.io/badge/Launch-4A90E2?style=flat-square)](https://screen-pet.base44.app/)
+🟢 **Blob Fidget** — [![Launch](https://img.shields.io/badge/Launch-2ECC71?style=flat-square)](https://blob-fidget.base44.app/)
+👾 **Tag Mania** — [![Launch](https://img.shields.io/badge/Launch-9B59B6?style=flat-square)](https://jymer1102.github.io/Tag_Mania/)
 
 ---
 
