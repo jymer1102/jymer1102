@@ -37,10 +37,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 <div align="center">
 
-![Building](https://img.shields.io/badge/Building-Zombie_Shooter_Game-green?style=flat-square&logo=gamecontroller&logoColor=white)
-
----
-
 *“Design is not just what it looks like and feels like. Design is how it works.”*
 — **Steve Jobs**
 
@@ -55,7 +51,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 🛠️ My Skills & Interests
 * 🌐 **Web Design:** Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.
-* 💻 **Current Projects:** Tuning up my personal portfolio site (`jymer1102.me`). I am also working on creating a fun little zombie shooter game that can be accessible at school.
+* 💻 **Current Projects:** Tuning up my personal portfolio site (`jymer1102.me`).
 * 🚀 **Learning:** Getting the hang of GitHub and basic web tools.
 
 ---
@@ -99,10 +95,8 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### 💬 Quote & Joke of the Day
+### 💬 Quote of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
-
-![Jokes Card](https://github-readme-joke-post.vercel.app/api?theme=radical)
 
 ---
 
