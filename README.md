@@ -59,14 +59,13 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 <div align="center">
 
 ### 📬 Connect with Me
-[![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
-
-[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
+[![Linktree](https://img.shields.io/badge/LINKTREE-39E09B?style=for-the-badge&logo=linktree&logoColor=white&labelColor=1a1a1a)](https://linktr.ee/jymer1102)
+[![Website](https://img.shields.io/badge/WEBSITE-7B2CBF?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=1a1a1a)](http://jymer1102.me)
 
 <div align="center">
 
 #### 🤑 Like what I do? Consider donating!
-[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/jymer1102)
+[![PayPal](https://img.shields.io/badge/PAYPAL-00457C?style=for-the-badge&logo=paypal&logoColor=white&labelColor=1a1a1a)](https://www.paypal.me/jymer1102)
 
 </div>
 
@@ -95,7 +94,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### 💬 Quote of the Day
+### 💬 Quote & Joke of the Day
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
 ![Jokes Card](https://readme-jokes.vercel.app/api?theme=radical)
