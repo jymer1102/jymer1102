@@ -42,13 +42,15 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
+<div align="center">
+
 ### 📬 Connect with Me
 [![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
 [![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](http://jymer1102.me)
 
 <div align="center">
 
-#### ☕ Like what I do? Consider donating!
+#### 🤑 Like what I do? Consider donating!
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/jymer1102)
 
 </div>
