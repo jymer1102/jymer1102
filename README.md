@@ -1,6 +1,6 @@
 <div align="center">
 
-![Profile Banner](jymer1102_header_image.PNG)
+![Profile Banner](jymer1102_header.GIF)
 
 # 👋 Hi, I'm jymer1102!
 
