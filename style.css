@@ -1,5 +1,5 @@
 /* ==========================================================================
-  jymer1102 — Portfolio Stylesheet
+  jymer1102 — Site Stylesheet
   Table of Contents:
     1.  Fonts & Design Tokens
     2.  Global Reset & Base
@@ -1330,13 +1330,13 @@ transform: translate(-50%, -6px);
 }
 
 html, body {
-cursor: url('/portfolio/images/cursor/custom-j-cursor.png') 0 0, default;
+cursor: url('/jymer1102/images/cursor/custom-j-cursor.png') 0 0, default;
 }
 
 a, button, .nav-cta, .btn-primary, select, input[type="submit"], .submit-btn,
 .logo, .theme-toggle, .playground-btn, .modal-close-btn, .modal-btn,
 select.form-control, .project-card:not(.coming-soon) {
-cursor: url('/portfolio/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer;
+cursor: url('/jymer1102/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer;
 }
 
 /* Phone Action Modal */
