@@ -817,6 +817,8 @@ list-style: none;
 display: flex;
 flex-direction: column;
 gap: 32px;
+transform-style: preserve-3d;
+transform: translateZ(6px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
 }
 
 .connect-list li {
@@ -888,6 +890,11 @@ transform-style: preserve-3d;
 }
 
 /* Form Field Spacing */
+#contact-form {
+transform-style: preserve-3d;
+transform: translateZ(6px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+}
+
 .form-group {
 margin-bottom: 26px;
 }
