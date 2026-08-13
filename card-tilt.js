@@ -9,7 +9,7 @@
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   /* ── Tunables ──────────────────────────────────────────────────────────── */
-  const SELECTORS    = '.split-card, .project-card:not(.coming-soon)';
+  const SELECTORS    = '.split-card, .project-card';
   const MAX_TILT     = 13;     // pointer tilt, degrees
   const LIFT_PX      = 12;     // max translateZ on pointer tilt
   const PERSPECTIVE  = 900;    // px – lower = more dramatic
@@ -37,12 +37,16 @@
       `perspective(${PERSPECTIVE}px) rotateX(${rx}deg) rotateY(${ry}deg) rotateZ(${rz}deg) translateZ(${lift}px)`;
     card.el.style.boxShadow  =
       `0 ${14 + lift}px ${36 + lift * 2}px -16px rgba(0,0,0,${0.35 + lift * 0.016})`;
+    card.el.style.setProperty('--tilt-rx', rx);
+    card.el.style.setProperty('--tilt-ry', ry);
   }
 
   function snapReset(card) {
     card.el.style.transition = `transform ${SNAP_EASE}, box-shadow ${SNAP_EASE}`;
     card.el.style.transform  = 'perspective(900px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateZ(0px)';
     card.el.style.boxShadow  = '';
+    card.el.style.setProperty('--tilt-rx', 0);
+    card.el.style.setProperty('--tilt-ry', 0);
   }
 
   /* ── Pointer tilt ───────────────────────────────────────────────────────── */
