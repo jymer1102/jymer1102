@@ -1,0 +1,113 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                var stored = localStorage.getItem('theme');
+                var theme = stored;
+                if (!theme) {
+                    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        theme = 'dark';
+                    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                        theme = 'light';
+                    } else {
+                        theme = 'dark';
+                    }
+                }
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jymer1102 | 404 Not Found</title>
+    <meta name="description" content="Page not found on jymer1102's portfolio.">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
+    <link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="top">
+        <div class="nav-left">
+            <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
+        </div>
+        <div class="nav-links">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/creations/' | relative_url }}">Creations</a>
+            <a href="{{ '/connect/' | relative_url }}">Connect</a>
+            <a href="{{ '/playground/' | relative_url }}">Playground</a>
+        </div>
+    </nav>
+
+    <header class="page-header error-header" data-aos="fade-up" data-aos-duration="900">
+        <p class="eyebrow">portfolio / system error</p>
+        <h1 class="glow-text">404<span class="cursor">_</span></h1>
+        <p class="subtitle">Looks like this page got lost in the void.</p>
+    </header>
+
+    <main class="container error-main" id="error-container">
+
+        <div class="split-card error-card js-interactive-container" data-aos="fade-up" data-aos-duration="800">
+            <h3>Path Diverted</h3>
+            <p>The link you clicked might be broken, or the page may have been removed. Let's get you back to home.</p>
+            <a href="{{ '/' | relative_url }}" class="submit-btn" style="text-decoration: none; width: auto; padding: 12px 32px;">Return to Home</a>
+        </div>
+
+    </main>
+
+    <footer class="error-footer">jymer1102 — built with care.</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: false,
+            mirror: true,
+            duration: 800,
+            easing: 'ease-out-cubic'
+        });
+    </script>
+
+    <script>
+        const interactiveContainers = document.querySelectorAll('.js-interactive-container');
+
+        interactiveContainers.forEach(container => {
+            const updateGlowPosition = (clientX, clientY) => {
+                const rect = container.getBoundingClientRect();
+                const x = clientX - rect.left;
+                const y = clientY - rect.top;
+                container.style.setProperty('--mx', `${x}px`);
+                container.style.setProperty('--my', `${y}px`);
+            };
+
+            container.addEventListener('mousemove', (e) => updateGlowPosition(e.clientX, e.clientY));
+            container.addEventListener('pointerdown', (e) => updateGlowPosition(e.clientX, e.clientY));
+            container.addEventListener('touchmove', (e) => {
+                const touch = e.touches[0];
+                if (touch) updateGlowPosition(touch.clientX, touch.clientY);
+            });
+        });
+    </script>
+
+    <script src="{{ '/scroll-reveal.js' | relative_url }}"></script>
+    <script src="{{ '/theme-toggle.js' | relative_url }}"></script>
+    <script src="{{ '/favicon-animation.js' | relative_url }}"></script>
+
+</body>
+</html>

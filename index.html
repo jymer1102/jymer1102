@@ -1,0 +1,163 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function () {
+try {
+var stored = localStorage.getItem('theme');
+var theme = stored;
+if (!theme) {
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+theme = 'dark';
+} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+theme = 'light';
+} else {
+theme = 'dark';
+}
+}
+document.documentElement.setAttribute('data-theme', theme);
+} catch (e) {
+document.documentElement.setAttribute('data-theme', 'dark');
+}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jymer1102 | Home</title>
+<meta name="description" content="jymer1102 — creator and designer building high-performance, visually striking web experiences.">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
+<link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
+
+<meta property="og:title" content="jymer1102 Site">
+<meta property="og:description" content="Hi, I'm jymer1102">
+<meta property="og:image" content="https://jymer1102.github.io/portfolio/images/social-card.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="jymer1102 Site">
+<meta name="twitter:description" content="Hi, I'm jymer1102.">
+<meta name="twitter:image" content="https://jymer1102.github.io/portfolio/images/social-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav id="top">
+<div class="nav-left">
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+<i class="fa-solid fa-moon"></i>
+</button>
+<a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
+</div>
+<div class="nav-links">
+<a href="{{ '/' | relative_url }}" class="active">Home</a>
+<a href="{{ '/creations/' | relative_url }}">Creations</a>
+<a href="{{ '/connect/' | relative_url }}">Connect</a>
+<a href="{{ '/playground/' | relative_url }}">Playground</a>
+</div>
+</nav>
+
+<div class="home-banner" id="banner-container">
+<img src="{{ '/images/jymer1102_banner.gif' | relative_url }}" alt="jymer1102 banner" id="loading-gif">
+</div>
+
+<header class="hero" data-aos="fade-up" data-aos-duration="900">
+<p class="eyebrow">portfolio / home</p>
+<h1 class="glow-text">Design is how it works<span class="cursor">_</span></h1>
+<p class="subtitle">Welcome to my personal portfolio.</p>
+</header>
+
+<p id="scroll-indicator">Scroll down to explore ↓</p>
+
+<main class="container reveal-on-scroll" id="page-container">
+<section class="intro-section" data-aos="fade-up" data-aos-duration="900">
+<h2>Hi, I'm jymer1102</h2>
+<p>I'm a creator, designer, gamer, streamer, pilot, businessman, triathlete, and Christian. I love to use my skills to help and entertain others.</p>
+</section>
+
+<section class="split-section">
+<div class="split-card js-interactive-container" data-aos="fade-right" data-aos-duration="800" data-aos-delay="0">
+<h3><i class="fa-solid fa-1"></i> The One And Only</h3>
+<p>Jackson Weimer, otherwise known as jymer1102, or just "J", was born and raised in Springfield, Missouri. He is the first one in his family to do lots of the things he does to this day. Such as: triathlon, aviation, development, gaming, and owning a coffee business.</p>
+</div>
+ <div class="split-card js-interactive-container" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+<h3><i class="fa-solid fa-person-running"></i> Athletics</h3>
+<p>Like many kids, J grew up doing sports. As he got older, he tried out triathlons. He fell in love. He has competed in them ever since and competed in USA Triathlon Nationals when he was 15. His goal is to make it to the Iron Man World Championships in Kona, Hawaii.</p>
+</div> 
+<div class="split-card js-interactive-container" data-aos="fade-right" data-aos-duration="800" data-aos-delay="150">
+<h3><i class="fa-solid fa-code"></i> Development</h3>
+<p>J grew up adjusting and exploring new technology and software. He came to love the idea of learning how things work the way they do, and making them do that. He developed multiple apps. The reason? Because he wanted to learn, and he wanted to make something personal.</p>
+</div>
+<div class="split-card js-interactive-container" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+<h3><i class="fa-solid fa-plane-up"></i> Flight</h3>
+<p>J grew up loving planes. When he turned 14, he went on his first discovery flight, and he fell in love with aviation. He has been flying ever since.</p>
+</div>
+<div class="split-card js-interactive-container" data-aos="fade-right" data-aos-duration="800" data-aos-delay="150">
+<h3><i class="fa-solid fa-gamepad"></i><i class="fa-solid fa-video"></i> Game/Stream</h3>
+<p>J, of course, grew up like most boys. He loved video games. Eventually, he started thinking, "What if I could stream this decent gameplay?" and "How can I share this with the world and make content some people might like?" And that grew from there.</p>
+</div>
+<div class="split-card js-interactive-container" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+<h3><i class="fa-solid fa-cross"></i> Religion</h3>
+<p>Growing up, J was surrounded by Christian parents, friends, and mentors. Eventually, in the summer of 2023, he chose to give his life to Christ. J tries to incorporate his love and passion for Christ into his videos, streams, and work, the best he can.</p>
+</div>
+</section>
+</main>
+
+<footer>jymer1102 — built with care.</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+once: false,
+mirror: true,
+duration: 800,
+easing: 'ease-out-cubic'
+});
+</script>
+
+<script>
+const interactiveContainers = document.querySelectorAll('.js-interactive-container');
+
+interactiveContainers.forEach(container => {
+const updateGlowPosition = (clientX, clientY) => {
+const rect = container.getBoundingClientRect();
+const x = clientX - rect.left;
+const y = clientY - rect.top;
+container.style.setProperty('--mx', `${x}px`);
+container.style.setProperty('--my', `${y}px`);
+};
+
+container.addEventListener('mousemove', (e) => updateGlowPosition(e.clientX, e.clientY));
+container.addEventListener('pointerdown', (e) => updateGlowPosition(e.clientX, e.clientY));
+container.addEventListener('touchmove', (e) => {
+const touch = e.touches[0];
+if (touch) updateGlowPosition(touch.clientX, touch.clientY);
+});
+});
+</script>
+
+<script src="{{ '/scroll-reveal.js' | relative_url }}"></script>
+
+<script src="{{ '/theme-toggle.js' | relative_url }}"></script>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+const banner = document.getElementById('banner-container');
+if (banner) {
+const gifDuration = 9500; 
+setTimeout(() => {
+banner.classList.add('fade-out');
+}, gifDuration);
+}
+});
+</script>
+
+<script src="{{ '/favicon-animation.js' | relative_url }}"></script>
+</body>
+</html>

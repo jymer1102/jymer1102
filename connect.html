@@ -1,0 +1,369 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function () {
+try {
+var stored = localStorage.getItem('theme');
+var theme = stored;
+if (!theme) {
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+theme = 'dark';
+} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+theme = 'light';
+} else {
+theme = 'dark';
+}
+}
+document.documentElement.setAttribute('data-theme', theme);
+} catch (e) {
+document.documentElement.setAttribute('data-theme', 'dark');
+}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jymer1102 | Connect</title>
+<meta name="description" content="Reach out via socials or send a direct message to jymer1102.">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
+<link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
+
+<meta property="og:title" content="Connect | jymer1102">
+<meta property="og:description" content="Reach out via socials or send a direct message to jymer1102.">
+    <meta property="og:image" content="https://jymer1102.github.io/portfolio/images/social-card.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Connect | jymer1102">
+<meta name="twitter:description" content="Reach out via socials or send a direct message to jymer1102.">
+    <meta name="twitter:image" content="https://jymer1102.github.io/portfolio/images/social-card.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav id="top">
+<div class="nav-left">
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+<i class="fa-solid fa-moon"></i>
+</button>
+<a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
+</div>
+<div class="nav-links">
+<a href="{{ '/' | relative_url }}">Home</a>
+<a href="{{ '/creations/' | relative_url }}">Creations</a>
+<a href="{{ '/connect/' | relative_url }}" class="active">Connect</a>
+<a href="{{ '/playground/' | relative_url }}">Playground</a>
+</div>
+</nav>
+
+<header class="page-header" data-aos="fade-up" data-aos-duration="900">
+<p class="eyebrow">portfolio / connect</p>
+<h1 class="glow-text">Connect<span class="cursor">_</span></h1>
+<p class="subtitle">Reach out via socials or send a direct message.</p>
+</header>
+
+<p id="scroll-indicator">Scroll down to explore ↓</p>
+
+<main class="container reveal-on-scroll" id="connect-container">
+
+<section class="connect-section" data-aos="fade-up" data-aos-duration="800">
+<div class="connect-panel js-interactive-container">
+<ul class="connect-list">
+<li>
+<span class="connect-label"><i class="fa-solid fa-at"></i> Email</span>
+<a href="mailto:theoneandonly@jymer1102.me" id="email-link" class="connect-value">theoneandonly@jymer1102.me</a>
+</li>
+<li>
+<span class="connect-label"><i class="fa-solid fa-phone"></i> Phone</span>
+<a href="#" id="phone-link" class="connect-value">+1 (417) 872-3145</a>
+</li>
+<li>
+<span class="connect-label"><i class="fa-brands fa-linktree"></i> Linktree</span>
+<a href="https://linktr.ee/jymer1102" target="_blank" rel="noopener noreferrer" class="connect-value">linktr.ee/jymer1102</a>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="contact-section" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+<div class="form-container js-interactive-container">
+<form action="https://formspree.io/f/xlgqnkqn" method="POST" id="contact-form">
+
+<div class="form-group">
+<label for="name">Name</label>
+<div class="glow-input-wrapper">
+<input type="text" id="name" name="name" class="glow-input-hidden" placeholder="Your Name" required>
+<div class="glow-input-display">
+<span class="display-text"></span>
+<span class="custom-caret" style="display: none;"></span>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<label for="email">Email Address</label>
+<div class="glow-input-wrapper">
+<input type="email" id="email" name="_replyto" class="glow-input-hidden" placeholder="name@example.com" required>
+<div class="glow-input-display">
+<span class="display-text"></span>
+<span class="custom-caret" style="display: none;"></span>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<label for="subject">Subject</label>
+<select id="subject" name="subject" class="form-control">
+<option value="General Inquiry">General Inquiry</option>
+<option value="Project Proposal">Project Proposal</option>
+<option value="Collaboration">Collaboration</option>
+<option value="Just Saying Hi">Just Saying Hi</option>
+<option value="Testimony">Testimony</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="message">Message</label>
+<div class="glow-input-wrapper glow-textarea-wrapper">
+<textarea id="message" name="message" class="glow-input-hidden glow-textarea-hidden" placeholder="Write your message here..." required></textarea>
+<div class="glow-input-display glow-textarea-display">
+<span class="display-text"></span><span class="custom-caret" style="display: none;"></span>
+</div>
+</div>
+</div>
+
+<input type="hidden" name="_subject" value="New message from jymer1102.me!">
+
+<button type="submit" class="submit-btn" id="submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+
+<div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+</form>
+</div>
+</section>
+
+</main>
+
+<div id="phone-modal" class="phone-modal">
+<div class="phone-modal-content">
+<h3>Contact via Phone</h3>
+<p>Choose an option below:</p>
+<div class="phone-modal-actions">
+<a href="tel:+14178723145" class="modal-btn call-btn">
+<i class="fa-solid fa-phone"></i> Call
+</a>
+<a href="sms:+14178723145" class="modal-btn text-btn">
+<i class="fa-solid fa-comment-sms"></i> Text
+</a>
+</div>
+<button id="close-modal" class="modal-close-btn">Cancel</button>
+</div>
+</div>
+
+<div id="email-modal" class="phone-modal">
+<div class="phone-modal-content">
+<h3>Contact via Email</h3>
+<p>Choose an option below:</p>
+<div class="phone-modal-actions stack">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=theoneandonly@jymer1102.me" target="_blank" rel="noopener noreferrer" class="modal-btn call-btn">
+<i class="fa-brands fa-google"></i> Open in Gmail
+</a>
+<a href="mailto:theoneandonly@jymer1102.me" class="modal-btn text-btn">
+<i class="fa-solid fa-envelope"></i> Open Mail App
+</a>
+<button id="copy-email-btn" type="button" class="modal-btn text-btn">
+<i class="fa-solid fa-copy"></i> Copy Email
+</button>
+</div>
+<button id="close-email-modal" class="modal-close-btn">Cancel</button>
+</div>
+</div>
+
+
+<footer>jymer1102 — built with care.</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+once: false,
+mirror: true,
+duration: 800,
+easing: 'ease-out-cubic'
+});
+</script>
+
+<script>
+const phoneLink = document.getElementById('phone-link');
+const phoneModal = document.getElementById('phone-modal');
+const closeModal = document.getElementById('close-modal');
+
+phoneLink.addEventListener('click', (e) => {
+e.preventDefault();
+phoneModal.classList.add('is-visible');
+});
+
+closeModal.addEventListener('click', () => {
+phoneModal.classList.remove('is-visible');
+});
+
+phoneModal.addEventListener('click', (e) => {
+if (e.target === phoneModal) {
+phoneModal.classList.remove('is-visible');
+}
+});
+
+const emailLink = document.getElementById('email-link');
+const emailModal = document.getElementById('email-modal');
+const closeEmailModal = document.getElementById('close-email-modal');
+const copyEmailBtn = document.getElementById('copy-email-btn');
+const emailAddress = 'theoneandonly@jymer1102.me';
+const copyEmailDefaultHTML = copyEmailBtn.innerHTML;
+
+emailLink.addEventListener('click', (e) => {
+e.preventDefault();
+emailModal.classList.add('is-visible');
+});
+
+closeEmailModal.addEventListener('click', () => {
+emailModal.classList.remove('is-visible');
+});
+
+emailModal.addEventListener('click', (e) => {
+if (e.target === emailModal) {
+emailModal.classList.remove('is-visible');
+}
+});
+
+copyEmailBtn.addEventListener('click', async () => {
+try {
+await navigator.clipboard.writeText(emailAddress);
+copyEmailBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+} catch (err) {
+console.error('Copy failed:', err);
+copyEmailBtn.innerHTML = '<i class="fa-solid fa-xmark"></i> Copy failed';
+}
+setTimeout(() => {
+copyEmailBtn.innerHTML = copyEmailDefaultHTML;
+}, 1600);
+});
+</script>
+
+<script>
+document.querySelectorAll('.glow-input-wrapper').forEach(wrapper => {
+const hiddenInput = wrapper.querySelector('.glow-input-hidden');
+const displayText = wrapper.querySelector('.display-text');
+const displayBox = wrapper.querySelector('.glow-input-display');
+const caret = wrapper.querySelector('.custom-caret');
+
+hiddenInput.addEventListener('input', () => {
+displayText.textContent = hiddenInput.value;
+displayBox.scrollTop = hiddenInput.scrollTop;
+});
+
+hiddenInput.addEventListener('scroll', () => {
+displayBox.scrollTop = hiddenInput.scrollTop;
+});
+
+hiddenInput.addEventListener('focus', () => {
+caret.style.display = 'inline-block';
+});
+
+hiddenInput.addEventListener('blur', () => {
+caret.style.display = 'none';
+});
+});
+</script>
+
+<script>
+const interactiveContainers = document.querySelectorAll('.js-interactive-container');
+
+interactiveContainers.forEach(container => {
+const updateGlowPosition = (clientX, clientY) => {
+const rect = container.getBoundingClientRect();
+const x = clientX - rect.left;
+const y = clientY - rect.top;
+container.style.setProperty('--mx', `${x}px`);
+container.style.setProperty('--my', `${y}px`);
+};
+
+container.addEventListener('mousemove', (e) => updateGlowPosition(e.clientX, e.clientY));
+container.addEventListener('pointerdown', (e) => updateGlowPosition(e.clientX, e.clientY));
+container.addEventListener('touchmove', (e) => {
+const touch = e.touches[0];
+if (touch) updateGlowPosition(touch.clientX, touch.clientY);
+});
+});
+</script>
+
+<script>
+(function () {
+const form = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const statusBox = document.getElementById('form-status');
+const submitBtnDefaultHTML = submitBtn.innerHTML;
+
+const showStatus = (type, message) => {
+statusBox.classList.remove('status-success', 'status-error');
+statusBox.classList.add(type === 'success' ? 'status-success' : 'status-error');
+const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
+statusBox.innerHTML = `<i class="fa-solid ${icon}"></i><span>${message}</span>`;
+statusBox.classList.add('is-visible');
+};
+
+const hideStatus = () => {
+statusBox.classList.remove('is-visible');
+};
+
+form.addEventListener('submit', async (e) => {
+e.preventDefault();
+hideStatus();
+
+submitBtn.disabled = true;
+submitBtn.innerHTML = '<i class="fa-solid fa-spinner"></i> Sending…';
+
+try {
+const response = await fetch(form.action, {
+method: 'POST',
+body: new FormData(form),
+headers: { 'Accept': 'application/json' }
+});
+
+if (response.ok) {
+form.reset();
+// The custom glow-input fields mirror their hidden inputs in a
+// separate display span — clear those out too since form.reset()
+// only clears the real <input>/<textarea> elements.
+form.querySelectorAll('.display-text').forEach(span => span.textContent = '');
+showStatus('success', "Thanks — your message is on its way. I'll get back to you soon.");
+} else {
+const data = await response.json().catch(() => null);
+const detail = data && data.errors && data.errors.length
+? data.errors.map(err => err.message).join(', ')
+: 'Something went wrong sending your message.';
+showStatus('error', `${detail} Try again, or email me directly at theoneandonly@jymer1102.me.`);
+}
+} catch (err) {
+console.error('Form submission failed:', err);
+showStatus('error', "Couldn't reach the server. Try again, or email me directly at theoneandonly@jymer1102.me.");
+} finally {
+submitBtn.disabled = false;
+submitBtn.innerHTML = submitBtnDefaultHTML;
+}
+});
+})();
+</script>
+
+<script src="{{ '/scroll-reveal.js' | relative_url }}"></script>
+
+<script src="{{ '/theme-toggle.js' | relative_url }}"></script>
+
+<script src="{{ '/favicon-animation.js' | relative_url }}"></script>
+
+</body>
+</html>

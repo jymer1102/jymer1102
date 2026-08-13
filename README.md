@@ -1,10 +1,6 @@
 <div align="center">
 
-![Profile Banner](jymer1102_header.GIF)
-
-# 👋 Hi, I'm jymer1102!
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=F7F7F7&width=435&lines=Hi%2C+I'm+jymer1102!;Building+jymer1102.me;Learning+web+design!)](https://git.io/typing-svg)
+![README Banner](images/jymer1102_banner.gif)
 
 ---
 
@@ -51,7 +47,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ### 🛠️ My Skills & Interests
 * 🌐 **Web Design:** Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.
-* 💻 **Current Projects:** Tuning up my personal portfolio site (`jymer1102.me`).
+* 💻 **Current Projects:** Designing my zombie shooter game (`Zombified`).
 * 🚀 **Learning:** Getting the hang of GitHub and basic web tools.
 
 ---
@@ -72,10 +68,13 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### 🎵 Listening To
 <div align="center">
 
-[![Apple Music GitHub profile](https://music-profile.rayriffy.com/theme/dark.svg?uid=001396.90916c02bf7f45439497c8295a54ba75.1626)](https://music-profile.rayriffy.com)
+### 🎵 Listening To
+
+  <a href="https://music-profile.rayriffy.com">
+    <img src="https://music-profile.rayriffy.com/theme/dark.svg?uid=001396.90916c02bf7f45439497c8295a54ba75.1626" alt="Apple Music Profile"/>
+  </a>
 
 </div>
 
@@ -91,7 +90,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 👾 **Tag Mania** — [![Launch](https://img.shields.io/badge/Launch-9B59B6?style=flat-square)](https://jymer1102.github.io/Tag_Mania/)
 
-🧟 **Zombie Shooter** — [![In Progress](https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square)](#)
+🧟 **Zombified** — [![In Progress](https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square)](#)
 
 ---
 
