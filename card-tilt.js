@@ -9,7 +9,7 @@
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   /* ── Tunables ──────────────────────────────────────────────────────────── */
-  const SELECTORS    = '.split-card, .project-card';
+  const SELECTORS    = '.split-card, .project-card, .connect-panel, .form-container';
   const MAX_TILT     = 13;     // pointer tilt, degrees
   const LIFT_PX      = 12;     // max translateZ on pointer tilt
   const PERSPECTIVE  = 900;    // px – lower = more dramatic
