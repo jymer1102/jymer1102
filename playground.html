@@ -149,7 +149,7 @@ if (touch) updateGlowPosition(touch.clientX, touch.clientY);
 (function () {
 const DEFAULT_HTML = `<h1><i class="fa-solid fa-hand"></i> Hello, user!</h1>
 <p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
-<button id="demo-btn"><i class="fa-solid fa-arrow-pointer"></i> Click me!</button>`;
+<button id="demo-btn"><span><i class="fa-solid fa-arrow-pointer"></i> Click me!</span></button>`;
 
 const DEFAULT_CSS = `
 :root {
@@ -256,7 +256,7 @@ p {
   margin-bottom: 1.75rem;
 }
 
-/* Demo Button Styling */
+/* Demo Button Styling with 3D Tilt */
 #demo-btn {
   font-family: var(--font-family);
   font-size: 0.95rem;
@@ -266,22 +266,43 @@ p {
   border: 1px solid var(--border-color);
   padding: 12px 24px;
   border-radius: var(--radius);
-  transition: all 0.3s cubic-bezier(0.22, 0.8, 0.28, 1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  
+  will-change: transform;
+  transform-style: preserve-3d;
+  --tilt-rx: 0;
+  --tilt-ry: 0;
+
+  transition: transform 0.12s ease-out, 
+              border-color 0.3s cubic-bezier(0.22, 0.8, 0.28, 1), 
+              box-shadow 0.3s cubic-bezier(0.22, 0.8, 0.28, 1),
+              color 0.3s cubic-bezier(0.22, 0.8, 0.28, 1);
+}
+
+#demo-btn > * {
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
+  transform-style: preserve-3d;
+  transform: translateZ(12px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+  transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.28, 1);
 }
 
 #demo-btn:hover {
   border-color: var(--accent-color);
   color: var(--accent-bright);
   box-shadow: 0 0 20px var(--accent-glow);
-  transform: translateY(-2px);
+}
+
+#demo-btn:hover > * {
+  transform: translateZ(24px) scale(1.04) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
 }
 
 #demo-btn:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }`;
 
 const DEFAULT_JS = `document.getElementById('demo-btn').addEventListener('click', () => {
@@ -327,6 +348,33 @@ ${jsBox.value}
 } catch (err) {
 document.body.insertAdjacentHTML('beforeend', '<pre style="color:#c0392b;white-space:pre-wrap;font-family:monospace;margin-top:16px;">' + err + '</pre>');
 }
+
+(function() {
+  const btn = document.getElementById('demo-btn');
+  if (!btn) return;
+
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    
+    const rotateX = ((y - centerY) / centerY) * -12;
+    const rotateY = ((x - centerX) / centerX) * 12;
+    
+    btn.style.setProperty('--tilt-rx', rotateX);
+    btn.style.setProperty('--tilt-ry', rotateY);
+    btn.style.transform = \`perspective(1000px) rotateX(\${rotateX}deg) rotateY(\${rotateY}deg)\`;
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    btn.style.setProperty('--tilt-rx', '0');
+    btn.style.setProperty('--tilt-ry', '0');
+    btn.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  });
+})();
 <\/script>
 </body>
 </html>`;
