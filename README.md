@@ -43,9 +43,9 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ### ![](https://img.shields.io/badge/SKILLS_%26_INTERESTS-008080?style=for-the-badge&logo=googlechrome&logoColor=white)
 
 <p align="center">
-  🌐 <strong>Web Design:</strong> Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.<br/>
-  💻 <strong>Current Projects:</strong> Designing my zombie shooter game (<code>Zombified</code>).<br/>
-  🚀 <strong>Learning:</strong> Getting the hang of GitHub and basic web tools.
+  <img src="https://img.shields.io/badge/%F0%9F%8C%90-1A1A1A?style=flat-square" alt="globe" /> <strong>Web Design:</strong> Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.<br/><br/>
+  <img src="https://img.shields.io/badge/%F0%9F%92%BB-1A1A1A?style=flat-square" alt="laptop" /> <strong>Current Projects:</strong> Designing my zombie shooter game (<code>Zombified</code>).<br/><br/>
+  <img src="https://img.shields.io/badge/%F0%9F%9A%80-1A1A1A?style=flat-square" alt="rocket" /> <strong>Learning:</strong> Getting the hang of GitHub and basic web tools.
 </p>
 
 ---
