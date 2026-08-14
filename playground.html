@@ -33,30 +33,46 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
 <style>
+/* Lock Page Scroll Completely in Fullscreen Mode */
+html.has-fullscreen-active,
+body.has-fullscreen-active {
+  overflow: hidden !important;
+  height: 100% !important;
+  width: 100% !important;
+  touch-action: none !important;
+}
+
 /* Floating Exit Fullscreen Button (Hidden by Default) */
 .exit-fullscreen-overlay {
   display: none;
 }
 
-/* Universal Device-Fitting Fullscreen Styles */
+/* Universal Device Safe-Zone Fullscreen (ONLY Preview Box) */
 .playground-preview-wrap:fullscreen,
 .playground-preview-wrap:-webkit-full-screen,
 .playground-preview-wrap.is-fullscreen {
   position: fixed !important;
   inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
   width: 100vw !important;
   width: 100dvw !important;
   height: 100vh !important;
   height: 100dvh !important;
   z-index: 2147483646 !important;
   background: #ffffff !important;
-  padding: 0 !important;
   margin: 0 !important;
   border: none !important;
   border-radius: 0 !important;
   display: flex !important;
   flex-direction: column !important;
   box-sizing: border-box !important;
+  
+  /* Respect Safe Area (Notches, Home Indicator) via Padding */
+  padding-top: env(safe-area-inset-top, 0px) !important;
+  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+  padding-left: env(safe-area-inset-left, 0px) !important;
+  padding-right: env(safe-area-inset-right, 0px) !important;
 }
 
 .playground-preview-wrap:fullscreen .playground-preview,
@@ -398,6 +414,11 @@ const fullscreenBtn = document.getElementById('fullscreen-btn');
 const exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
 const previewWrap = document.querySelector('.playground-preview-wrap');
 
+/* Create placeholder to preserve layout position when reparenting to <body> */
+const previewPlaceholder = document.createElement('div');
+previewPlaceholder.style.display = 'none';
+previewWrap.parentNode.insertBefore(previewPlaceholder, previewWrap);
+
 function loadDefaults() {
 htmlBox.value = DEFAULT_HTML;
 cssBox.value = DEFAULT_CSS;
@@ -502,12 +523,18 @@ loadDefaults();
 runCode();
 });
 
-/* Fullscreen Preview Handler */
+/* Fullscreen Preview Handler with DOM Reparenting & Scroll Lock */
 function enterFullscreen() {
+  // Lock document scroll
+  document.documentElement.classList.add('has-fullscreen-active');
+  document.body.classList.add('has-fullscreen-active');
+  
+  // Move preview element directly to body to escape parent transforms/perspectives
+  document.body.appendChild(previewWrap);
   previewWrap.classList.add('is-fullscreen');
   fullscreenBtn.querySelector('i').className = 'fa-solid fa-minimize';
-  document.body.style.overflow = 'hidden';
-  
+
+  // Request browser native fullscreen if available
   if (previewWrap.requestFullscreen) {
     previewWrap.requestFullscreen().catch(() => {});
   } else if (previewWrap.webkitRequestFullscreen) {
@@ -516,10 +543,18 @@ function enterFullscreen() {
 }
 
 function exitFullscreen() {
+  // Unlock document scroll
+  document.documentElement.classList.remove('has-fullscreen-active');
+  document.body.classList.remove('has-fullscreen-active');
+  
+  // Restore preview element back to original place in layout
+  if (previewPlaceholder.parentNode) {
+    previewPlaceholder.parentNode.insertBefore(previewWrap, previewPlaceholder);
+  }
   previewWrap.classList.remove('is-fullscreen');
   fullscreenBtn.querySelector('i').className = 'fa-solid fa-maximize';
-  document.body.style.overflow = '';
-  
+
+  // Exit browser native fullscreen if active
   if (document.fullscreenElement || document.webkitFullscreenElement) {
     if (document.exitFullscreen) {
       document.exitFullscreen().catch(() => {});
@@ -540,9 +575,7 @@ function toggleFullscreen() {
 
 function handleFullscreenChange() {
   if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-    previewWrap.classList.remove('is-fullscreen');
-    fullscreenBtn.querySelector('i').className = 'fa-solid fa-maximize';
-    document.body.style.overflow = '';
+    exitFullscreen();
   }
 }
 
@@ -553,7 +586,7 @@ document.addEventListener('fullscreenchange', handleFullscreenChange);
 document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && (previewWrap.classList.contains('is-fullscreen') || document.fullscreenElement)) {
+  if (e.key === 'Escape') {
     exitFullscreen();
   }
 });
