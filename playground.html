@@ -120,7 +120,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 
 <div class="playground-preview-wrap">
 <div class="playground-preview-label">Preview</div>
-<iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" referrerpolicy="no-referrer"></iframe>
+<iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allowfullscreen referrerpolicy="no-referrer"></iframe>
 </div>
 
 </div>
@@ -183,8 +183,6 @@ const DEFAULT_CSS = `
   --font-mono: 'JetBrains Mono', monospace;
 }
 
-/* Light theme overrides — applied when the site (and this preview) is
-   switched to light mode. Mirrors the main site's palette. */
 :root[data-theme="light"] {
   --bg-color: #f4f5f8;
   --card-bg: #ffffff;
@@ -200,7 +198,6 @@ const DEFAULT_CSS = `
   box-sizing: border-box;
 }
 
-/* Base Custom Cursor */
 html, body {
   background-color: var(--bg-color);
   color: var(--text-main);
@@ -215,12 +212,10 @@ html, body {
   cursor: url('/jymer1102/images/cursor/custom-j-cursor.png') 0 0, default;
 }
 
-/* Interactive Element Custom Pointer Cursor */
 a, button, select, input[type="submit"] {
   cursor: url('/jymer1102/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer !important;
 }
 
-/* Heading Styling */
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
@@ -242,7 +237,6 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* Blinking Terminal Caret */
 h1::after {
   content: '';
   display: inline-block;
@@ -264,7 +258,6 @@ h1::after {
   }
 }
 
-/* Paragraph Text */
 p {
   color: var(--text-muted);
   font-size: 1rem;
@@ -273,7 +266,6 @@ p {
   margin-bottom: 1.75rem;
 }
 
-/* Demo Button Styling with 3D Tilt */
 #demo-btn {
   font-family: var(--font-family);
   font-size: 0.95rem;
@@ -459,8 +451,6 @@ fullscreenBtn.addEventListener('click', toggleFullscreen);
 document.addEventListener('fullscreenchange', updateFullscreenIcon);
 document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
 
-// If the person toggles light/dark mode on the site while this page is
-// open, refresh the preview immediately so it follows along.
 new MutationObserver(runCode).observe(document.documentElement, {
 attributes: true,
 attributeFilter: ['data-theme']
