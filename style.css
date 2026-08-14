@@ -743,8 +743,8 @@ border: 1px solid rgba(255, 255, 255, 0.08);
 transition: transform 0.35s var(--ease), background 0.35s var(--ease), box-shadow 0.35s var(--ease);
 overflow: hidden;
 transform-style: preserve-3d;
-transform: translateZ(28px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
-box-shadow: 0 22px 30px -14px rgba(0, 0, 0, 0.55);
+transform: translateZ(0);
+box-shadow: none;
 }
 
 .project-img {
@@ -821,14 +821,22 @@ flex-direction: column;
 gap: 32px;
 padding: 32px 36px;
 border-radius: var(--radius-lg);
+background: transparent;
+border: 1px solid transparent;
+transform-style: preserve-3d;
+transform: translateZ(0);
+box-shadow: none;
+transition: transform 0.35s var(--ease), background 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.connect-panel:hover .connect-list,
+.connect-panel:focus-within .connect-list {
 background: rgba(255, 255, 255, 0.045);
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.08);
-transform-style: preserve-3d;
+border-color: rgba(255, 255, 255, 0.08);
 transform: translateZ(34px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
 box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6);
-transition: transform 0.12s ease-out;
 }
 
 .connect-list li {
@@ -903,14 +911,22 @@ transform-style: preserve-3d;
 #contact-form {
 padding: 30px 34px;
 border-radius: var(--radius-lg);
+background: transparent;
+border: 1px solid transparent;
+transform-style: preserve-3d;
+transform: translateZ(0);
+box-shadow: none;
+transition: transform 0.35s var(--ease), background 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.form-container:hover #contact-form,
+.form-container:focus-within #contact-form {
 background: rgba(255, 255, 255, 0.045);
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-border: 1px solid rgba(255, 255, 255, 0.08);
-transform-style: preserve-3d;
+border-color: rgba(255, 255, 255, 0.08);
 transform: translateZ(34px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
 box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6);
-transition: transform 0.12s ease-out;
 }
 
 .form-group {
