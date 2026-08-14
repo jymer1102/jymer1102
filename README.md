@@ -75,7 +75,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 <p align="center">
   <img src="https://img.shields.io/badge/NOVA_AI-8A2BE2?style=flat-square" alt="Nova AI" /> • <a href="https://nova-ai-mk9x.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=flat-square" alt="Launch" /></a><br/><br/>
   <img src="https://img.shields.io/badge/SCREEN_PET-4A90E2?style=flat-square" alt="Screen Pet" /> • <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=flat-square" alt="Launch" /></a><br/><br/>
-  <img src="https://img.shields.io/badge/BLOB_FIDGET-2ECC71?style=flat-square" alt="Blob Fidget" /> • <a href="https://blob-fidget.base44.app/"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat-square" alt="Launch" /></a><br/><br/>
+  <img src="https://img.shields.io/badge/BLOB_FIDGET-2ECC71?style=flat-square" alt="Blob Fidget" /> • <a href="https://jymer1102.github.io/Blob-Fidget/"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat-square" alt="Launch" /></a><br/><br/>
   <img src="https://img.shields.io/badge/TAG_MANIA-E53935?style=flat-square" alt="Tag Mania" /> • <a href="https://jymer1102.github.io/Tag_Mania/"><img src="https://img.shields.io/badge/Launch-E53935?style=flat-square" alt="Launch" /></a><br/><br/>
   <img src="https://img.shields.io/badge/ZOMBIFIED-FF8C00?style=flat-square" alt="Zombified" /> • <a href="#"><img src="https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square" alt="In Progress" /></a>
 </p>
