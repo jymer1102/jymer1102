@@ -34,7 +34,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 *“Design is not just what it looks like and feels like. Design is how it works.”* — **Steve Jobs**
 
-![](https://img.shields.io/badge/%E2%9C%A8-808080?style=flat-square)
+![](https://img.shields.io/badge/%E2%9C%A8-1A1A1A?style=flat-square)
 
 *“For God did not call us to be impure, but to live a holy life.”* — **1 Thessalonians 4:7**
 
@@ -57,7 +57,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-#### ![](https://img.shields.io/badge/LIKE_WHAT_I_DO%3F_CONSIDER_DONATING%21-00457C?style=for-the-badge)
+#### ![](https://img.shields.io/badge/LIKE_WHAT_I_DO%3F_CONSIDER_DONATING%21-1A1A1A?style=for-the-badge)
 [![PayPal](https://img.shields.io/badge/PAYPAL-00457C?style=for-the-badge&logo=paypal&logoColor=white&labelColor=1a1a1a)](https://www.paypal.me/jymer1102)
 
 ---
