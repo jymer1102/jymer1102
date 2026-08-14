@@ -32,6 +32,22 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
+<style>
+/* Native Fullscreen Styling for Preview Frame */
+#preview-frame:fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  border: none !important;
+  background: #ffffff;
+}
+#preview-frame:-webkit-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  border: none !important;
+  background: #ffffff;
+}
+</style>
+
 <link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
 
@@ -79,10 +95,11 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <div class="playground-toolbar">
 <div class="playground-tabs"></div>
 <div class="playground-actions">
-<button id="run-btn" class="playground-btn primary" type="button"><i class="fa-solid fa-play"></i></button>
-<button id="clear-btn" class="playground-btn" type="button">l<i class="fa-solid fa-circle-xmark"></i></button>
-<button id="download-btn" class="playground-btn" type="button"><i class="fa-solid fa-download"></i></button>
-<button id="reset-btn" class="playground-btn" type="button"><i class="fa-solid fa-arrows-rotate"></i></button>
+<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><i class="fa-solid fa-play"></i></button>
+<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><i class="fa-solid fa-circle-xmark"></i></button>
+<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><i class="fa-solid fa-download"></i></button>
+<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><i class="fa-solid fa-expand"></i></button>
+<button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><i class="fa-solid fa-arrows-rotate"></i></button>
 </div>
 </div>
 
@@ -317,6 +334,7 @@ const runBtn = document.getElementById('run-btn');
 const clearBtn = document.getElementById('clear-btn');
 const resetBtn = document.getElementById('reset-btn');
 const downloadBtn = document.getElementById('download-btn');
+const fullscreenBtn = document.getElementById('fullscreen-btn');
 
 function loadDefaults() {
 htmlBox.value = DEFAULT_HTML;
@@ -410,6 +428,36 @@ resetBtn.addEventListener('click', () => {
 loadDefaults();
 runCode();
 });
+
+/* Fullscreen Toggle Functionality */
+function toggleFullscreen() {
+  if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+    if (frame.requestFullscreen) {
+      frame.requestFullscreen();
+    } else if (frame.webkitRequestFullscreen) {
+      frame.webkitRequestFullscreen();
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
+function updateFullscreenIcon() {
+  const icon = fullscreenBtn.querySelector('i');
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    icon.className = 'fa-solid fa-compress';
+  } else {
+    icon.className = 'fa-solid fa-expand';
+  }
+}
+
+fullscreenBtn.addEventListener('click', toggleFullscreen);
+document.addEventListener('fullscreenchange', updateFullscreenIcon);
+document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
 
 // If the person toggles light/dark mode on the site while this page is
 // open, refresh the preview immediately so it follows along.
