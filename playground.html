@@ -33,13 +33,40 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
 <style>
-/* Native Fullscreen Styling for Preview Frame */
+/* Guaranteed Fullscreen Preview Styling */
+.playground-preview-wrap.is-fullscreen {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  background: #ffffff;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.playground-preview-wrap.is-fullscreen .playground-preview {
+  flex: 1 !important;
+  height: 100% !important;
+  width: 100vw !important;
+  border: none !important;
+}
+
+.playground-preview-wrap.is-fullscreen .playground-preview-label {
+  display: none !important;
+}
+
 #preview-frame:fullscreen {
   width: 100vw !important;
   height: 100vh !important;
   border: none !important;
   background: #ffffff;
 }
+
 #preview-frame:-webkit-full-screen {
   width: 100vw !important;
   height: 100vh !important;
@@ -120,7 +147,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 
 <div class="playground-preview-wrap">
 <div class="playground-preview-label">Preview</div>
-<iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allowfullscreen referrerpolicy="no-referrer"></iframe>
+<iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
 </div>
 
 </div>
@@ -327,6 +354,7 @@ const clearBtn = document.getElementById('clear-btn');
 const resetBtn = document.getElementById('reset-btn');
 const downloadBtn = document.getElementById('download-btn');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
+const previewWrap = document.querySelector('.playground-preview-wrap');
 
 function loadDefaults() {
 htmlBox.value = DEFAULT_HTML;
@@ -364,7 +392,8 @@ document.body.insertAdjacentHTML('beforeend', '<pre style="color:#c0392b;white-s
   if (!btn) return;
 
   btn.addEventListener('mousemove', (e) => {
-    const rect = btn.getBoundingClientRect();
+    const target = e.currentTarget;
+    const rect = target.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
@@ -374,15 +403,16 @@ document.body.insertAdjacentHTML('beforeend', '<pre style="color:#c0392b;white-s
     const rotateX = ((y - centerY) / centerY) * -12;
     const rotateY = ((x - centerX) / centerX) * 12;
     
-    btn.style.setProperty('--tilt-rx', rotateX);
-    btn.style.setProperty('--tilt-ry', rotateY);
-    btn.style.transform = \`perspective(1000px) rotateX(\${rotateX}deg) rotateY(\${rotateY}deg)\`;
+    target.style.setProperty('--tilt-rx', rotateX);
+    target.style.setProperty('--tilt-ry', rotateY);
+    target.style.transform = \`perspective(1000px) rotateX(\${rotateX}deg) rotateY(\${rotateY}deg)\`;
   });
 
-  btn.addEventListener('mouseleave', () => {
-    btn.style.setProperty('--tilt-rx', '0');
-    btn.style.setProperty('--tilt-ry', '0');
-    btn.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  btn.addEventListener('mouseleave', (e) => {
+    const target = e.currentTarget;
+    target.style.setProperty('--tilt-rx', '0');
+    target.style.setProperty('--tilt-ry', '0');
+    target.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
   });
 })();
 <\/script>
@@ -421,35 +451,45 @@ loadDefaults();
 runCode();
 });
 
-/* Fullscreen Toggle Functionality */
+/* Reliable Fullscreen Toggle Logic */
 function toggleFullscreen() {
-  if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-    if (frame.requestFullscreen) {
-      frame.requestFullscreen();
-    } else if (frame.webkitRequestFullscreen) {
-      frame.webkitRequestFullscreen();
+  const isFS = previewWrap.classList.toggle('is-fullscreen');
+  const icon = fullscreenBtn.querySelector('i');
+
+  if (isFS) {
+    icon.className = 'fa-solid fa-compress';
+    document.body.style.overflow = 'hidden';
+    
+    if (previewWrap.requestFullscreen) {
+      previewWrap.requestFullscreen().catch(() => {});
+    } else if (previewWrap.webkitRequestFullscreen) {
+      previewWrap.webkitRequestFullscreen();
     }
   } else {
-    if (document.exitFullscreen) {
-      document.exitFullscreen();
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
+    icon.className = 'fa-solid fa-expand';
+    document.body.style.overflow = '';
+    
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
     }
   }
 }
 
-function updateFullscreenIcon() {
-  const icon = fullscreenBtn.querySelector('i');
-  if (document.fullscreenElement || document.webkitFullscreenElement) {
-    icon.className = 'fa-solid fa-compress';
-  } else {
-    icon.className = 'fa-solid fa-expand';
+function handleFullscreenChange() {
+  if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+    previewWrap.classList.remove('is-fullscreen');
+    fullscreenBtn.querySelector('i').className = 'fa-solid fa-expand';
+    document.body.style.overflow = '';
   }
 }
 
 fullscreenBtn.addEventListener('click', toggleFullscreen);
-document.addEventListener('fullscreenchange', updateFullscreenIcon);
-document.addEventListener('webkitfullscreenchange', updateFullscreenIcon);
+document.addEventListener('fullscreenchange', handleFullscreenChange);
+document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
 new MutationObserver(runCode).observe(document.documentElement, {
 attributes: true,
