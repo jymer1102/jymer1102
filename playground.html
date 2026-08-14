@@ -33,7 +33,14 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
 <style>
-/* Universal Responsive Fullscreen Overlay */
+/* Floating Exit Fullscreen Button (Hidden by Default) */
+.exit-fullscreen-overlay {
+  display: none;
+}
+
+/* Universal Device-Fitting Fullscreen Styles */
+.playground-preview-wrap:fullscreen,
+.playground-preview-wrap:-webkit-full-screen,
 .playground-preview-wrap.is-fullscreen {
   position: fixed !important;
   inset: 0 !important;
@@ -41,13 +48,9 @@ document.documentElement.setAttribute('data-theme', 'dark');
   width: 100dvw !important;
   height: 100vh !important;
   height: 100dvh !important;
-  z-index: 999999 !important;
-  background: #ffffff;
+  z-index: 2147483646 !important;
+  background: #ffffff !important;
   padding: 0 !important;
-  padding-top: env(safe-area-inset-top) !important;
-  padding-bottom: env(safe-area-inset-bottom) !important;
-  padding-left: env(safe-area-inset-left) !important;
-  padding-right: env(safe-area-inset-right) !important;
   margin: 0 !important;
   border: none !important;
   border-radius: 0 !important;
@@ -56,6 +59,8 @@ document.documentElement.setAttribute('data-theme', 'dark');
   box-sizing: border-box !important;
 }
 
+.playground-preview-wrap:fullscreen .playground-preview,
+.playground-preview-wrap:-webkit-full-screen .playground-preview,
 .playground-preview-wrap.is-fullscreen .playground-preview {
   flex: 1 1 auto !important;
   height: 100% !important;
@@ -63,26 +68,47 @@ document.documentElement.setAttribute('data-theme', 'dark');
   border: none !important;
 }
 
+.playground-preview-wrap:fullscreen .playground-preview-label,
+.playground-preview-wrap:-webkit-full-screen .playground-preview-label,
 .playground-preview-wrap.is-fullscreen .playground-preview-label {
   display: none !important;
 }
 
-#preview-frame:fullscreen {
-  width: 100vw !important;
-  width: 100dvw !important;
-  height: 100vh !important;
-  height: 100dvh !important;
-  border: none !important;
-  background: #ffffff;
+/* Floating Top-Middle Exit Button in Fullscreen Mode */
+.playground-preview-wrap:fullscreen .exit-fullscreen-overlay,
+.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay,
+.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  position: fixed !important;
+  top: max(16px, env(safe-area-inset-top)) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 2147483647 !important;
+  padding: 8px 18px !important;
+  background: rgba(17, 17, 22, 0.88) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 30px !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  transition: all 0.2s ease !important;
+  opacity: 0.9;
 }
 
-#preview-frame:-webkit-full-screen {
-  width: 100vw !important;
-  width: 100dvw !important;
-  height: 100vh !important;
-  height: 100dvh !important;
-  border: none !important;
-  background: #ffffff;
+.playground-preview-wrap:fullscreen .exit-fullscreen-overlay:hover,
+.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay:hover,
+.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay:hover {
+  opacity: 1;
+  background: rgba(30, 86, 224, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateX(-50%) scale(1.05) !important;
 }
 </style>
 
@@ -136,7 +162,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><i class="fa-solid fa-play"></i></button>
 <button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><i class="fa-solid fa-circle-xmark"></i></button>
 <button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><i class="fa-solid fa-download"></i></button>
-<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><i class="fa-solid fa-expand"></i></button>
+<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><i class="fa-solid fa-maximize"></i></button>
 <button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><i class="fa-solid fa-arrows-rotate"></i></button>
 </div>
 </div>
@@ -158,6 +184,9 @@ document.documentElement.setAttribute('data-theme', 'dark');
 
 <div class="playground-preview-wrap">
 <div class="playground-preview-label">Preview</div>
+<button id="exit-fullscreen-btn" class="exit-fullscreen-overlay" type="button" aria-label="Exit Fullscreen">
+  <i class="fa-solid fa-minimize"></i> Exit Fullscreen
+</button>
 <iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
 </div>
 
@@ -366,6 +395,7 @@ const clearBtn = document.getElementById('clear-btn');
 const resetBtn = document.getElementById('reset-btn');
 const downloadBtn = document.getElementById('download-btn');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
+const exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
 const previewWrap = document.querySelector('.playground-preview-wrap');
 
 function loadDefaults() {
@@ -472,45 +502,61 @@ loadDefaults();
 runCode();
 });
 
-/* Device-Agnostic Responsive Fullscreen Logic */
-function toggleFullscreen() {
-  const isFS = previewWrap.classList.toggle('is-fullscreen');
-  const icon = fullscreenBtn.querySelector('i');
+/* Fullscreen Preview Handler */
+function enterFullscreen() {
+  previewWrap.classList.add('is-fullscreen');
+  fullscreenBtn.querySelector('i').className = 'fa-solid fa-minimize';
+  document.body.style.overflow = 'hidden';
+  
+  if (previewWrap.requestFullscreen) {
+    previewWrap.requestFullscreen().catch(() => {});
+  } else if (previewWrap.webkitRequestFullscreen) {
+    previewWrap.webkitRequestFullscreen();
+  }
+}
 
+function exitFullscreen() {
+  previewWrap.classList.remove('is-fullscreen');
+  fullscreenBtn.querySelector('i').className = 'fa-solid fa-maximize';
+  document.body.style.overflow = '';
+  
+  if (document.fullscreenElement || document.webkitFullscreenElement) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
+function toggleFullscreen() {
+  const isFS = previewWrap.classList.contains('is-fullscreen') || !!document.fullscreenElement || !!document.webkitFullscreenElement;
   if (isFS) {
-    icon.className = 'fa-solid fa-compress';
-    document.body.style.overflow = 'hidden';
-    
-    if (previewWrap.requestFullscreen) {
-      previewWrap.requestFullscreen().catch(() => {});
-    } else if (previewWrap.webkitRequestFullscreen) {
-      previewWrap.webkitRequestFullscreen();
-    }
+    exitFullscreen();
   } else {
-    icon.className = 'fa-solid fa-expand';
-    document.body.style.overflow = '';
-    
-    if (document.fullscreenElement || document.webkitFullscreenElement) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
-      }
-    }
+    enterFullscreen();
   }
 }
 
 function handleFullscreenChange() {
   if (!document.fullscreenElement && !document.webkitFullscreenElement) {
     previewWrap.classList.remove('is-fullscreen');
-    fullscreenBtn.querySelector('i').className = 'fa-solid fa-expand';
+    fullscreenBtn.querySelector('i').className = 'fa-solid fa-maximize';
     document.body.style.overflow = '';
   }
 }
 
 fullscreenBtn.addEventListener('click', toggleFullscreen);
+exitFullscreenBtn.addEventListener('click', exitFullscreen);
+
 document.addEventListener('fullscreenchange', handleFullscreenChange);
 document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && (previewWrap.classList.contains('is-fullscreen') || document.fullscreenElement)) {
+    exitFullscreen();
+  }
+});
 
 new MutationObserver(runCode).observe(document.documentElement, {
 attributes: true,
