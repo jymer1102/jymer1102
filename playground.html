@@ -7,73 +7,30 @@ permalink: /playground/
 <meta charset="UTF-8">
 <script>
 (function () {
-try {
-var stored = localStorage.getItem('theme');
-var theme = stored;
-if (!theme) {
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-theme = 'dark';
-} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-theme = 'light';
-} else {
-theme = 'dark';
-}
-}
-document.documentElement.setAttribute('data-theme', theme);
-} catch (e) {
-document.documentElement.setAttribute('data-theme', 'dark');
-}
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored;
+    if (!theme) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        theme = 'light';
+      } else {
+        theme = 'dark';
+      }
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>jymer1102 | Playground</title>
 <meta name="description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
-
-<style>
-/* Guaranteed Fullscreen Preview Styling */
-.playground-preview-wrap.is-fullscreen {
-  position: fixed !important;
-  inset: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  z-index: 999999 !important;
-  background: #ffffff;
-  padding: 0 !important;
-  margin: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-.playground-preview-wrap.is-fullscreen .playground-preview {
-  flex: 1 !important;
-  height: 100% !important;
-  width: 100vw !important;
-  border: none !important;
-}
-
-.playground-preview-wrap.is-fullscreen .playground-preview-label {
-  display: none !important;
-}
-
-#preview-frame:fullscreen {
-  width: 100vw !important;
-  height: 100vh !important;
-  border: none !important;
-  background: #ffffff;
-}
-
-#preview-frame:-webkit-full-screen {
-  width: 100vw !important;
-  height: 100vh !important;
-  border: none !important;
-  background: #ffffff;
-}
-</style>
 
 <link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
@@ -93,109 +50,108 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <body>
 
 <nav id="top">
-<div class="nav-left">
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-<i class="fa-solid fa-moon"></i>
-</button>
-<a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
-</div>
-<div class="nav-links">
-<a href="{{ '/' | relative_url }}">Home</a>
-<a href="{{ '/creations/' | relative_url }}">Creations</a>
-<a href="{{ '/connect/' | relative_url }}">Connect</a>
-<a href="{{ '/playground/' | relative_url }}" class="active">Playground</a>
-</div>
+  <div class="nav-left">
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
+  </div>
+  <div class="nav-links">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    <a href="{{ '/creations/' | relative_url }}">Creations</a>
+    <a href="{{ '/connect/' | relative_url }}">Connect</a>
+    <a href="{{ '/playground/' | relative_url }}" class="active">Playground</a>
+  </div>
 </nav>
 
 <header class="page-header" data-aos="fade-up" data-aos-duration="900">
-<p class="eyebrow">jymer1102 / try code</p>
-<h1 class="glow-text">Try Code For Yourself<span class="cursor">_</span></h1>
-<p class="subtitle">Show off your skills or use AI on this blank HTML / CSS / JS sandbox — nothing you write here is saved unless you download your code, share what you created and tag me @jymer1102! The possibilities are endless. You have control. Enjoy!</p>
+  <p class="eyebrow">jymer1102 / try code</p>
+  <h1 class="glow-text">Try Code For Yourself<span class="cursor">_</span></h1>
+  <p class="subtitle">Show off your skills or use AI on this blank HTML / CSS / JS sandbox — nothing you write here is saved unless you download your code, share what you created and tag me @jymer1102! The possibilities are endless. You have control. Enjoy!</p>
 </header>
 
 <p id="scroll-indicator">Scroll down to explore ↓</p>
 
 <main class="container reveal-on-scroll" id="playground-container">
-<section class="playground-section" data-aos="fade-up" data-aos-duration="800">
-<div class="playground-wrapper js-interactive-container">
+  <section class="playground-section" data-aos="fade-up" data-aos-duration="800">
+    <div class="playground-wrapper js-interactive-container">
 
-<div class="playground-toolbar">
-<div class="playground-tabs"></div>
-<div class="playground-actions">
-<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><i class="fa-solid fa-play"></i></button>
-<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><i class="fa-solid fa-circle-xmark"></i></button>
-<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><i class="fa-solid fa-download"></i></button>
-<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><i class="fa-solid fa-expand"></i></button>
-<button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><i class="fa-solid fa-arrows-rotate"></i></button>
-</div>
-</div>
+      <div class="playground-toolbar">
+        <div class="playground-tabs"></div>
+        <div class="playground-actions">
+          <button id="run-btn" class="playground-btn primary" type="button" aria-label="Run Code"><i class="fa-solid fa-play"></i></button>
+          <button id="clear-btn" class="playground-btn" type="button" aria-label="Clear Code"><i class="fa-solid fa-circle-xmark"></i></button>
+          <button id="download-btn" class="playground-btn" type="button" aria-label="Download Zip"><i class="fa-solid fa-download"></i></button>
+          <button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><i class="fa-solid fa-arrows-rotate"></i></button>
+        </div>
+      </div>
 
-<div class="playground-editors">
-<div class="playground-pane">
-<div class="playground-pane-label">HTML</div>
-<textarea id="html-code" class="playground-editor" spellcheck="false"></textarea>
-</div>
-<div class="playground-pane">
-<div class="playground-pane-label">CSS</div>
-<textarea id="css-code" class="playground-editor" spellcheck="false"></textarea>
-</div>
-<div class="playground-pane">
-<div class="playground-pane-label">JS</div>
-<textarea id="js-code" class="playground-editor" spellcheck="false"></textarea>
-</div>
-</div>
+      <div class="playground-editors">
+        <div class="playground-pane">
+          <div class="playground-pane-label">HTML</div>
+          <textarea id="html-code" class="playground-editor" spellcheck="false"></textarea>
+        </div>
+        <div class="playground-pane">
+          <div class="playground-pane-label">CSS</div>
+          <textarea id="css-code" class="playground-editor" spellcheck="false"></textarea>
+        </div>
+        <div class="playground-pane">
+          <div class="playground-pane-label">JS</div>
+          <textarea id="js-code" class="playground-editor" spellcheck="false"></textarea>
+        </div>
+      </div>
 
-<div class="playground-preview-wrap">
-<div class="playground-preview-label">Preview</div>
-<iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
-</div>
+      <div class="playground-preview-wrap">
+        <div class="playground-preview-label">Preview</div>
+        <iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" referrerpolicy="no-referrer"></iframe>
+      </div>
 
-</div>
-</section>
+    </div>
+  </section>
 </main>
 
 <footer>jymer1102 — built with care.</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-AOS.init({
-once: false,
-mirror: true,
-duration: 800,
-easing: 'ease-out-cubic'
-});
+  AOS.init({
+    once: false,
+    mirror: true,
+    duration: 800,
+    easing: 'ease-out-cubic'
+  });
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
 <script>
-const interactiveContainers = document.querySelectorAll('.js-interactive-container');
+  const interactiveContainers = document.querySelectorAll('.js-interactive-container');
 
-interactiveContainers.forEach(container => {
-const updateGlowPosition = (clientX, clientY) => {
-const rect = container.getBoundingClientRect();
-const x = clientX - rect.left;
-const y = clientY - rect.top;
-container.style.setProperty('--mx', `${x}px`);
-container.style.setProperty('--my', `${y}px`);
-};
+  interactiveContainers.forEach(container => {
+    const updateGlowPosition = (clientX, clientY) => {
+      const rect = container.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+      container.style.setProperty('--mx', `${x}px`);
+      container.style.setProperty('--my', `${y}px`);
+    };
 
-container.addEventListener('mousemove', (e) => updateGlowPosition(e.clientX, e.clientY));
-container.addEventListener('pointerdown', (e) => updateGlowPosition(e.clientX, e.clientY));
-container.addEventListener('touchmove', (e) => {
-const touch = e.touches[0];
-if (touch) updateGlowPosition(touch.clientX, touch.clientY);
-});
-});
+    container.addEventListener('mousemove', (e) => updateGlowPosition(e.clientX, e.clientY));
+    container.addEventListener('pointerdown', (e) => updateGlowPosition(e.clientX, e.clientY));
+    container.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      if (touch) updateGlowPosition(touch.clientX, touch.clientY);
+    });
+  });
 </script>
 
 <script>
 (function () {
-const DEFAULT_HTML = `<h1><i class="fa-solid fa-hand"></i> Hello, user!</h1>
+  const DEFAULT_HTML = `<h1><i class="fa-solid fa-hand"></i> Hello, user!</h1>
 <p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
 <button id="demo-btn"><span><i class="fa-solid fa-arrow-pointer"></i> Click me!</span></button>`;
 
-const DEFAULT_CSS = `
+  const DEFAULT_CSS = `
 :root {
   --bg-color: #0a0a0c;
   --card-bg: #111116;
@@ -277,12 +233,8 @@ h1::after {
 }
 
 @keyframes blink {
-  0%, 45% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 0;
-  }
+  0%, 45% { opacity: 1; }
+  50%, 100% { opacity: 0; }
 }
 
 p {
@@ -306,12 +258,10 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  
   will-change: transform;
   transform-style: preserve-3d;
   --tilt-rx: 0;
   --tilt-ry: 0;
-
   transition: transform 0.12s ease-out, 
               border-color 0.3s cubic-bezier(0.22, 0.8, 0.28, 1), 
               box-shadow 0.3s cubic-bezier(0.22, 0.8, 0.28, 1),
@@ -341,41 +291,39 @@ p {
   transform: translateY(-1px);
 }`;
 
-const DEFAULT_JS = `document.getElementById('demo-btn').addEventListener('click', () => {
+  const DEFAULT_JS = `document.getElementById('demo-btn').addEventListener('click', () => {
   alert('Hello from your code!');
 });`;
 
-const htmlBox = document.getElementById('html-code');
-const cssBox = document.getElementById('css-code');
-const jsBox = document.getElementById('js-code');
-const frame = document.getElementById('preview-frame');
-const runBtn = document.getElementById('run-btn');
-const clearBtn = document.getElementById('clear-btn');
-const resetBtn = document.getElementById('reset-btn');
-const downloadBtn = document.getElementById('download-btn');
-const fullscreenBtn = document.getElementById('fullscreen-btn');
-const previewWrap = document.querySelector('.playground-preview-wrap');
+  const htmlBox = document.getElementById('html-code');
+  const cssBox = document.getElementById('css-code');
+  const jsBox = document.getElementById('js-code');
+  const frame = document.getElementById('preview-frame');
+  const runBtn = document.getElementById('run-btn');
+  const clearBtn = document.getElementById('clear-btn');
+  const resetBtn = document.getElementById('reset-btn');
+  const downloadBtn = document.getElementById('download-btn');
 
-function loadDefaults() {
-htmlBox.value = DEFAULT_HTML;
-cssBox.value = DEFAULT_CSS;
-jsBox.value = DEFAULT_JS;
-}
+  function loadDefaults() {
+    htmlBox.value = DEFAULT_HTML;
+    cssBox.value = DEFAULT_CSS;
+    jsBox.value = DEFAULT_JS;
+  }
 
-function clearCode() {
-htmlBox.value = '';
-cssBox.value = '';
-jsBox.value = '';
-runCode();
-}
+  function clearCode() {
+    htmlBox.value = '';
+    cssBox.value = '';
+    jsBox.value = '';
+    runCode();
+  }
 
-function runCode() {
-const siteTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-const doc = `<!DOCTYPE html>
+  function runCode() {
+    const siteTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const doc = `<!DOCTYPE html>
 <html data-theme="${siteTheme}">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>${cssBox.value}</style>
 </head>
 <body>
@@ -392,8 +340,7 @@ document.body.insertAdjacentHTML('beforeend', '<pre style="color:#c0392b;white-s
   if (!btn) return;
 
   btn.addEventListener('mousemove', (e) => {
-    const target = e.currentTarget;
-    const rect = target.getBoundingClientRect();
+    const rect = btn.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
@@ -403,111 +350,70 @@ document.body.insertAdjacentHTML('beforeend', '<pre style="color:#c0392b;white-s
     const rotateX = ((y - centerY) / centerY) * -12;
     const rotateY = ((x - centerX) / centerX) * 12;
     
-    target.style.setProperty('--tilt-rx', rotateX);
-    target.style.setProperty('--tilt-ry', rotateY);
-    target.style.transform = \`perspective(1000px) rotateX(\${rotateX}deg) rotateY(\${rotateY}deg)\`;
+    btn.style.setProperty('--tilt-rx', rotateX);
+    btn.style.setProperty('--tilt-ry', rotateY);
+    btn.style.transform = \`perspective(1000px) rotateX(\${rotateX}deg) rotateY(\${rotateY}deg)\`;
   });
 
-  btn.addEventListener('mouseleave', (e) => {
-    const target = e.currentTarget;
-    target.style.setProperty('--tilt-rx', '0');
-    target.style.setProperty('--tilt-ry', '0');
-    target.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+  btn.addEventListener('mouseleave', () => {
+    btn.style.setProperty('--tilt-rx', '0');
+    btn.style.setProperty('--tilt-ry', '0');
+    btn.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
   });
 })();
 <\/script>
 </body>
 </html>`;
-frame.srcdoc = doc;
-}
+    frame.srcdoc = doc;
+  }
 
-let debounceTimer;
-function scheduleRun() {
-clearTimeout(debounceTimer);
-debounceTimer = setTimeout(runCode, 400);
-}
+  let debounceTimer;
+  function scheduleRun() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(runCode, 400);
+  }
 
-loadDefaults();
-runCode();
+  loadDefaults();
+  runCode();
 
-[htmlBox, cssBox, jsBox].forEach((box) => {
-box.addEventListener('input', scheduleRun);
-box.addEventListener('keydown', (e) => {
-if (e.key === 'Tab') {
-e.preventDefault();
-const start = box.selectionStart;
-const end = box.selectionEnd;
-box.value = box.value.substring(0, start) + '  ' + box.value.substring(end);
-box.selectionStart = box.selectionEnd = start + 2;
-scheduleRun();
-}
-});
-});
-
-runBtn.addEventListener('click', runCode);
-clearBtn.addEventListener('click', clearCode);
-resetBtn.addEventListener('click', () => {
-loadDefaults();
-runCode();
-});
-
-/* Reliable Fullscreen Toggle Logic */
-function toggleFullscreen() {
-  const isFS = previewWrap.classList.toggle('is-fullscreen');
-  const icon = fullscreenBtn.querySelector('i');
-
-  if (isFS) {
-    icon.className = 'fa-solid fa-compress';
-    document.body.style.overflow = 'hidden';
-    
-    if (previewWrap.requestFullscreen) {
-      previewWrap.requestFullscreen().catch(() => {});
-    } else if (previewWrap.webkitRequestFullscreen) {
-      previewWrap.webkitRequestFullscreen();
-    }
-  } else {
-    icon.className = 'fa-solid fa-expand';
-    document.body.style.overflow = '';
-    
-    if (document.fullscreenElement || document.webkitFullscreenElement) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen().catch(() => {});
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen();
+  [htmlBox, cssBox, jsBox].forEach((box) => {
+    box.addEventListener('input', scheduleRun);
+    box.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        const start = box.selectionStart;
+        const end = box.selectionEnd;
+        box.value = box.value.substring(0, start) + '  ' + box.value.substring(end);
+        box.selectionStart = box.selectionEnd = start + 2;
+        scheduleRun();
       }
-    }
-  }
-}
+    });
+  });
 
-function handleFullscreenChange() {
-  if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-    previewWrap.classList.remove('is-fullscreen');
-    fullscreenBtn.querySelector('i').className = 'fa-solid fa-expand';
-    document.body.style.overflow = '';
-  }
-}
+  runBtn.addEventListener('click', runCode);
+  clearBtn.addEventListener('click', clearCode);
+  resetBtn.addEventListener('click', () => {
+    loadDefaults();
+    runCode();
+  });
 
-fullscreenBtn.addEventListener('click', toggleFullscreen);
-document.addEventListener('fullscreenchange', handleFullscreenChange);
-document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+  new MutationObserver(runCode).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['data-theme']
+  });
 
-new MutationObserver(runCode).observe(document.documentElement, {
-attributes: true,
-attributeFilter: ['data-theme']
-});
-
-async function downloadZip() {
-const originalLabel = downloadBtn.innerHTML;
-try {
-downloadBtn.disabled = true;
-downloadBtn.textContent = 'Zipping…';
-const zip = new JSZip();
-const fullHtml = `<!DOCTYPE html>
+  async function downloadZip() {
+    const originalLabel = downloadBtn.innerHTML;
+    try {
+      downloadBtn.disabled = true;
+      downloadBtn.textContent = 'Zipping…';
+      const zip = new JSZip();
+      const fullHtml = `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>My Code</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -516,38 +422,35 @@ ${htmlBox.value}
 </body>
 </html>`;
 
-zip.file('index.html', fullHtml);
-zip.file('style.css', cssBox.value);
-zip.file('script.js', jsBox.value);
+      zip.file('index.html', fullHtml);
+      zip.file('style.css', cssBox.value);
+      zip.file('script.js', jsBox.value);
 
-const blob = await zip.generateAsync({ type: 'blob' });
-const url = URL.createObjectURL(blob);
-const a = document.createElement('a');
-a.href = url;
-a.download = 'my-code.zip';
-document.body.appendChild(a);
-a.click();
-a.remove();
-URL.revokeObjectURL(url);
-} catch (err) {
-console.error('Download failed:', err);
-alert('Something went wrong creating your zip. Please try again.');
-} finally {
-downloadBtn.disabled = false;
-downloadBtn.innerHTML = originalLabel;
-}
-}
+      const blob = await zip.generateAsync({ type: 'blob' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'my-code.zip';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Download failed:', err);
+      alert('Something went wrong creating your zip. Please try again.');
+    } finally {
+      downloadBtn.disabled = false;
+      downloadBtn.innerHTML = originalLabel;
+    }
+  }
 
-downloadBtn.addEventListener('click', downloadZip);
+  downloadBtn.addEventListener('click', downloadZip);
 })();
 </script>
 
 <script src="{{ '/scroll-reveal.js' | relative_url }}"></script>
-
 <script src="{{ '/theme-toggle.js' | relative_url }}"></script>
-
 <script src="{{ '/card-tilt.js' | relative_url }}"></script>
-
 <script src="{{ '/favicon-animation.js' | relative_url }}"></script>
 </body>
 </html>
