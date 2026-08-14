@@ -1,665 +1,822 @@
----
-permalink: /playground/
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<script>
-(function () {
-try {
-var stored = localStorage.getItem('theme');
-var theme = stored;
-if (!theme) {
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-theme = 'dark';
-} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-theme = 'light';
-} else {
-theme = 'dark';
-}
-}
-document.documentElement.setAttribute('data-theme', theme);
-} catch (e) {
-document.documentElement.setAttribute('data-theme', 'dark');
-}
-})();
-</script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>jymer1102 | Playground</title>
-<meta name="description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
-<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
-
-<style>
-/* Floating Exit Fullscreen Button (Hidden by Default) */
-.exit-fullscreen-overlay {
-  display: none;
-}
-
-/* HIDE EVERYTHING ELSE ON THE PAGE WHEN FULLSCREEN IS ACTIVE */
-body.preview-fullscreen-active > nav,
-body.preview-fullscreen-active > header,
-body.preview-fullscreen-active > #scroll-indicator,
-body.preview-fullscreen-active > main,
-body.preview-fullscreen-active > footer {
-  display: none !important;
-}
-
-/* Complete Page Lockdown during Fullscreen */
-html.preview-fullscreen-active,
-body.preview-fullscreen-active {
-  overflow: hidden !important;
-  height: 100dvh !important;
-  width: 100dvw !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: #ffffff !important;
-}
-
-/* Preview Wrap Takes Over Full Screen Completely */
-.playground-preview-wrap.is-fullscreen,
-.playground-preview-wrap:fullscreen,
-.playground-preview-wrap:-webkit-full-screen {
-  position: fixed !important;
-  inset: 0 !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100vw !important;
-  width: 100dvw !important;
-  height: 100vh !important;
-  height: 100dvh !important;
-  z-index: 2147483647 !important;
-  background: #ffffff !important;
-  margin: 0 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  box-sizing: border-box !important;
-  
-  /* Respect Safe Area (Notches / Home Indicator) */
-  padding-top: env(safe-area-inset-top, 0px) !important;
-  padding-bottom: env(safe-area-inset-bottom, 0px) !important;
-  padding-left: env(safe-area-inset-left, 0px) !important;
-  padding-right: env(safe-area-inset-right, 0px) !important;
-}
-
-/* Force Iframe to Expand to Fill Complete Viewport */
-.playground-preview-wrap.is-fullscreen #preview-frame,
-.playground-preview-wrap:fullscreen #preview-frame,
-.playground-preview-wrap:-webkit-full-screen #preview-frame {
-  flex: 1 1 auto !important;
-  height: 100% !important;
-  width: 100% !important;
-  border: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.playground-preview-wrap.is-fullscreen .playground-preview-label,
-.playground-preview-wrap:fullscreen .playground-preview-label,
-.playground-preview-wrap:-webkit-full-screen .playground-preview-label {
-  display: none !important;
-}
-
-/* Floating Exit Button */
-.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay,
-.playground-preview-wrap:fullscreen .exit-fullscreen-overlay,
-.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 8px;
-  position: fixed !important;
-  top: max(16px, env(safe-area-inset-top)) !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  z-index: 2147483647 !important;
-  padding: 8px 18px !important;
-  background: rgba(17, 17, 22, 0.88) !important;
-  color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-radius: 30px !important;
-  font-family: system-ui, -apple-system, sans-serif !important;
-  font-size: 0.85rem !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
-  transition: all 0.2s ease !important;
-  opacity: 0.9;
-}
-
-.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay:hover,
-.playground-preview-wrap:fullscreen .exit-fullscreen-overlay:hover,
-.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay:hover {
-  opacity: 1;
-  background: rgba(30, 86, 224, 0.95) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-  transform: translateX(-50%) scale(1.05) !important;
-}
-</style>
-
-<link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
-<link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
-
-<meta property="og:title" content="Playground | jymer1102">
-<meta property="og:description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
-<meta property="og:image" content="https://jymer1102.github.io/jymer1102/images/social-card.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Playground | jymer1102">
-<meta name="twitter:description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
-<meta name="twitter:image" content="https://jymer1102.github.io/jymer1102/images/social-card.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<nav id="top">
-<div class="nav-left">
-<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-<i class="fa-solid fa-moon"></i>
-</button>
-<a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
-</div>
-<div class="nav-links">
-<a href="{{ '/' | relative_url }}">Home</a>
-<a href="{{ '/creations/' | relative_url }}">Creations</a>
-<a href="{{ '/connect/' | relative_url }}">Connect</a>
-<a href="{{ '/playground/' | relative_url }}" class="active">Playground</a>
-</div>
-</nav>
-
-<header class="page-header" data-aos="fade-up" data-aos-duration="900">
-<p class="eyebrow">jymer1102 / try code</p>
-<h1 class="glow-text">Try Code For Yourself<span class="cursor">_</span></h1>
-<p class="subtitle">Show off your skills or use AI on this blank HTML / CSS / JS sandbox — nothing you write here is saved unless you download your code, share what you created and tag me @jymer1102! The possibilities are endless. You have control. Enjoy!</p>
-</header>
-
-<p id="scroll-indicator">Scroll down to explore ↓</p>
-
-<main class="container reveal-on-scroll" id="playground-container">
-<section class="playground-section" data-aos="fade-up" data-aos-duration="800">
-<div class="playground-wrapper js-interactive-container">
-
-<div class="playground-toolbar">
-<div class="playground-tabs"></div>
-<div class="playground-actions">
-<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><i class="fa-solid fa-play"></i></button>
-<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><i class="fa-solid fa-circle-xmark"></i></button>
-<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><i class="fa-solid fa-download"></i></button>
-<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><i class="fa-solid fa-maximize"></i></button>
-<button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><i class="fa-solid fa-arrows-rotate"></i></button>
-</div>
-</div>
-
-<div class="playground-editors">
-<div class="playground-pane">
-<div class="playground-pane-label">HTML</div>
-<textarea id="html-code" class="playground-editor" spellcheck="false"></textarea>
-</div>
-<div class="playground-pane">
-<div class="playground-pane-label">CSS</div>
-<textarea id="css-code" class="playground-editor" spellcheck="false"></textarea>
-</div>
-<div class="playground-pane">
-<div class="playground-pane-label">JS</div>
-<textarea id="js-code" class="playground-editor" spellcheck="false"></textarea>
-</div>
-</div>
-
-<div class="playground-preview-wrap">
-<div class="playground-preview-label">Preview</div>
-<button id="exit-fullscreen-btn" class="exit-fullscreen-overlay" type="button" aria-label="Exit Fullscreen">
-  <i class="fa-solid fa-minimize"></i> Exit Fullscreen
-</button>
-<iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
-</div>
-
-</div>
-</section>
-</main>
-
-<footer>jymer1102 — built with care.</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-AOS.init({
-once: false,
-mirror: true,
-duration: 800,
-easing: 'ease-out-cubic'
-});
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-
-<script>
-const interactiveContainers = document.querySelectorAll('.js-interactive-container');
-
-interactiveContainers.forEach(container => {
-const updateGlowPosition = (clientX, clientY) => {
-const rect = container.getBoundingClientRect();
-const x = clientX - rect.left;
-const y = clientY - rect.top;
-container.style.setProperty('--mx', `${x}px`);
-container.style.setProperty('--my', `${y}px`);
-};
-
-container.addEventListener('mousemove', (e) => updateGlowPosition(e.clientX, e.clientY));
-container.addEventListener('pointerdown', (e) => updateGlowPosition(e.clientX, e.clientY));
-container.addEventListener('touchmove', (e) => {
-const touch = e.touches[0];
-if (touch) updateGlowPosition(touch.clientX, touch.clientY);
-});
-});
-</script>
-
-<script>
-(function () {
-const DEFAULT_HTML = `<h1><i class="fa-solid fa-hand"></i> Hello, user!</h1>
-<p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
-<button id="demo-btn"><span><i class="fa-solid fa-arrow-pointer"></i> Click me!</span></button>`;
-
-const DEFAULT_CSS = `
-:root {
-  --bg-color: #0a0a0c;
-  --card-bg: #111116;
-  --text-main: #f7f7f7;
-  --text-muted: #a3a3ac;
-  --accent-color: #1E56E0;
-  --accent-bright: #4FA9FF;
-  --accent-glow: rgba(30, 86, 224, 0.35);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --radius: 12px;
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-}
-
-:root[data-theme="light"] {
-  --bg-color: #f4f5f8;
-  --card-bg: #ffffff;
-  --text-main: #15151a;
-  --text-muted: #46464f;
-  --accent-bright: #145dc7;
-  --border-color: rgba(10, 10, 12, 0.09);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  font-family: var(--font-family);
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-  cursor: url('/jymer1102/images/cursor/custom-j-cursor.png') 0 0, default;
-}
-
-a, button, select, input[type="submit"] {
-  cursor: url('/jymer1102/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer !important;
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 1rem;
-  background: linear-gradient(120deg, #ffffff 0%, #ffffff 45%, var(--accent-bright) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
-
-:root[data-theme="light"] h1 {
-  background: linear-gradient(120deg, #0a0a0c 0%, #0a0a0c 45%, var(--accent-bright) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h1::after {
-  content: '';
-  display: inline-block;
-  width: 0.4ch;
-  height: 1em;
-  background-color: var(--accent-bright);
-  margin-left: 0;
-  box-shadow: 0 0 10px var(--accent-glow);
-  animation: blink 1.1s step-end infinite;
-  -webkit-text-fill-color: initial;
-}
-
-@keyframes blink {
-  0%, 45% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 0;
-  }
-}
-
-p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 480px;
-  margin-bottom: 1.75rem;
-}
-
-#demo-btn {
-  font-family: var(--font-family);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-main);
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  padding: 12px 24px;
-  border-radius: var(--radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  
-  will-change: transform;
-  transform-style: preserve-3d;
-  --tilt-rx: 0;
-  --tilt-ry: 0;
-
-  transition: transform 0.12s ease-out, 
-              border-color 0.3s cubic-bezier(0.22, 0.8, 0.28, 1), 
-              box-shadow 0.3s cubic-bezier(0.22, 0.8, 0.28, 1),
-              color 0.3s cubic-bezier(0.22, 0.8, 0.28, 1);
-}
-
-#demo-btn > * {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transform-style: preserve-3d;
-  transform: translateZ(12px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
-  transition: transform 0.35s cubic-bezier(0.22, 0.8, 0.28, 1);
-}
-
-#demo-btn:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-bright);
-  box-shadow: 0 0 20px var(--accent-glow);
-}
-
-#demo-btn:hover > * {
-  transform: translateZ(24px) scale(1.04) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
-}
-
-#demo-btn:active {
-  transform: translateY(-1px);
-}`;
-
-const DEFAULT_JS = `document.getElementById('demo-btn').addEventListener('click', () => {
-  alert('Hello from your code!');
-});`;
-
-const htmlBox = document.getElementById('html-code');
-const cssBox = document.getElementById('css-code');
-const jsBox = document.getElementById('js-code');
-const frame = document.getElementById('preview-frame');
-const runBtn = document.getElementById('run-btn');
-const clearBtn = document.getElementById('clear-btn');
-const resetBtn = document.getElementById('reset-btn');
-const downloadBtn = document.getElementById('download-btn');
-const fullscreenBtn = document.getElementById('fullscreen-btn');
-const exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
-const previewWrap = document.querySelector('.playground-preview-wrap');
-
-/* Placeholder to preserve DOM location on restoration */
-const previewPlaceholder = document.createElement('div');
-previewPlaceholder.style.display = 'none';
-previewWrap.parentNode.insertBefore(previewPlaceholder, previewWrap);
-
-function loadDefaults() {
-htmlBox.value = DEFAULT_HTML;
-cssBox.value = DEFAULT_CSS;
-jsBox.value = DEFAULT_JS;
-}
-
-function clearCode() {
-htmlBox.value = '';
-cssBox.value = '';
-jsBox.value = '';
-runCode();
-}
-
-function runCode() {
-const siteTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-const doc = `<!DOCTYPE html>
-<html data-theme="${siteTheme}">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
-<style>${cssBox.value}</style>
-</head>
-<body>
-${htmlBox.value}
-<script>
-try {
-${jsBox.value}
-} catch (err) {
-document.body.insertAdjacentHTML('beforeend', '<pre style="color:#c0392b;white-space:pre-wrap;font-family:monospace;margin-top:16px;">' + err + '</pre>');
-}
-
-(function() {
-  const btn = document.getElementById('demo-btn');
-  if (!btn) return;
-
-  const handlePointerMove = (e) => {
-    const target = e.currentTarget;
-    const rect = target.getBoundingClientRect();
-    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
-
-    const x = clientX - rect.left;
-    const y = clientY - rect.top;
-    
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    
-    const rotateX = ((y - centerY) / centerY) * -12;
-    const rotateY = ((x - centerX) / centerX) * 12;
-    
-    target.style.setProperty('--tilt-rx', rotateX);
-    target.style.setProperty('--tilt-ry', rotateY);
-    target.style.transform = \`perspective(1000px) rotateX(\${rotateX}deg) rotateY(\${rotateY}deg)\`;
-  };
-
-  const handlePointerLeave = (e) => {
-    const target = e.currentTarget;
-    target.style.setProperty('--tilt-rx', '0');
-    target.style.setProperty('--tilt-ry', '0');
-    target.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-  };
-
-  btn.addEventListener('mousemove', handlePointerMove);
-  btn.addEventListener('touchmove', handlePointerMove, { passive: true });
-  btn.addEventListener('mouseleave', handlePointerLeave);
-  btn.addEventListener('touchend', handlePointerLeave);
-})();
-<\/script>
-</body>
-</html>`;
-frame.srcdoc = doc;
-}
-
-let debounceTimer;
-function scheduleRun() {
-clearTimeout(debounceTimer);
-debounceTimer = setTimeout(runCode, 400);
-}
-
-loadDefaults();
-runCode();
-
-[htmlBox, cssBox, jsBox].forEach((box) => {
-box.addEventListener('input', scheduleRun);
-box.addEventListener('keydown', (e) => {
-if (e.key === 'Tab') {
-e.preventDefault();
-const start = box.selectionStart;
-const end = box.selectionEnd;
-box.value = box.value.substring(0, start) + '  ' + box.value.substring(end);
-box.selectionStart = box.selectionEnd = start + 2;
-scheduleRun();
-}
-});
-});
-
-runBtn.addEventListener('click', runCode);
-clearBtn.addEventListener('click', clearCode);
-resetBtn.addEventListener('click', () => {
-loadDefaults();
-runCode();
-});
-
-/* Fullscreen Handler */
-function enterFullscreen() {
-  document.documentElement.classList.add('preview-fullscreen-active');
-  document.body.classList.add('preview-fullscreen-active');
-  
-  // Move preview element directly under <body> so all other <body> children can be hidden cleanly
-  document.body.appendChild(previewWrap);
-  previewWrap.classList.add('is-fullscreen');
-  fullscreenBtn.querySelector('i').className = 'fa-solid fa-minimize';
-
-  // Request native browser fullscreen if supported
-  if (previewWrap.requestFullscreen) {
-    previewWrap.requestFullscreen().catch(() => {});
-  } else if (previewWrap.webkitRequestFullscreen) {
-    previewWrap.webkitRequestFullscreen();
-  }
-}
-
-function exitFullscreen() {
-  document.documentElement.classList.remove('preview-fullscreen-active');
-  document.body.classList.remove('preview-fullscreen-active');
-  
-  // Restore preview back to its original slot in the layout
-  if (previewPlaceholder.parentNode) {
-    previewPlaceholder.parentNode.insertBefore(previewWrap, previewPlaceholder);
-  }
-  previewWrap.classList.remove('is-fullscreen');
-  fullscreenBtn.querySelector('i').className = 'fa-solid fa-maximize';
-
-  if (document.fullscreenElement || document.webkitFullscreenElement) {
-    if (document.exitFullscreen) {
-      document.exitFullscreen().catch(() => {});
-    } else if (document.webkitExitFullscreen) {
-      document.webkitExitFullscreen();
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Pet Playground</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      user-select: none;
     }
-  }
-}
+    body {
+      overflow: hidden;
+      background-color: #1a1a2e;
+      color: #fff;
+    }
+    #canvas-container {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
 
-function toggleFullscreen() {
-  const isFS = previewWrap.classList.contains('is-fullscreen') || !!document.fullscreenElement || !!document.webkitFullscreenElement;
-  if (isFS) {
-    exitFullscreen();
-  } else {
-    enterFullscreen();
-  }
-}
+    /* --- TOP RIGHT BUTTONS --- */
+    .top-right-controls {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      display: flex;
+      gap: 10px;
+    }
 
-function handleFullscreenChange() {
-  if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-    exitFullscreen();
-  }
-}
+    .top-btn {
+      background: rgba(20, 20, 35, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .top-btn:hover {
+      background: rgba(40, 40, 65, 0.9);
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
 
-fullscreenBtn.addEventListener('click', toggleFullscreen);
-exitFullscreenBtn.addEventListener('click', exitFullscreen);
+    /* --- THEME POPUP MENU --- */
+    .theme-popup {
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      z-index: 10;
+      background: rgba(20, 20, 35, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 12px;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    .theme-popup.active {
+      display: flex;
+    }
+    .theme-option {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid transparent;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      font-size: 0.85rem;
+      transition: background 0.2s;
+    }
+    .theme-option:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-document.addEventListener('fullscreenchange', handleFullscreenChange);
-document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    /* --- PET NOTE & CUSTOMIZER PANEL (LEFT) --- */
+    .pet-card {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      background: rgba(20, 20, 35, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 18px;
+      width: 300px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      display: none;
+    }
+    .pet-card.active {
+      display: block;
+    }
+    .pet-card h3 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .close-btn {
+      background: none;
+      border: none;
+      color: #aaa;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    .close-btn:hover {
+      color: #fff;
+    }
+    
+    .control-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    label {
+      font-size: 0.85rem;
+      color: #ddd;
+    }
+    input[type="color"] {
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      background: none;
+    }
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    exitFullscreen();
-  }
-});
+    input[type="text"], textarea {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      color: white;
+      padding: 8px 10px;
+      margin-bottom: 10px;
+      outline: none;
+      font-size: 0.85rem;
+    }
+    textarea {
+      height: 80px;
+      resize: none;
+    }
 
-new MutationObserver(runCode).observe(document.documentElement, {
-attributes: true,
-attributeFilter: ['data-theme']
-});
+    .btn-group {
+      display: flex;
+      gap: 8px;
+    }
+    .btn-group button {
+      flex: 1;
+      padding: 8px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-save {
+      background: #4f46e5;
+      color: white;
+    }
+    .btn-save:hover {
+      background: #6366f1;
+    }
+    .btn-delete {
+      background: #e11d48;
+      color: white;
+    }
+    .btn-delete:hover {
+      background: #f43f5e;
+    }
+  </style>
 
-async function downloadZip() {
-const originalLabel = downloadBtn.innerHTML;
-try {
-downloadBtn.disabled = true;
-downloadBtn.textContent = 'Zipping…';
-const zip = new JSZip();
-const fullHtml = `<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>My Code</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
 </head>
 <body>
-${htmlBox.value}
-<script src="script.js"><\/script>
-</body>
-</html>`;
 
-zip.file('index.html', fullHtml);
-zip.file('style.css', cssBox.value);
-zip.file('script.js', jsBox.value);
+  <div id="canvas-container"></div>
 
-const blob = await zip.generateAsync({ type: 'blob' });
-const url = URL.createObjectURL(blob);
-const a = document.createElement('a');
-a.href = url;
-a.download = 'my-code.zip';
-document.body.appendChild(a);
-a.click();
-a.remove();
-URL.revokeObjectURL(url);
-} catch (err) {
-console.error('Download failed:', err);
-alert('Something went wrong creating your zip. Please try again.');
-} finally {
-downloadBtn.disabled = false;
-downloadBtn.innerHTML = originalLabel;
-}
-}
+  <div class="top-right-controls">
+    <button class="top-btn" id="addPetBtn">➕ Add Pet</button>
+    <button class="top-btn" id="themeToggleBtn">🎨 Color Scheme</button>
+  </div>
 
-downloadBtn.addEventListener('click', downloadZip);
-})();
-</script>
+  <div class="theme-popup" id="themePopup">
+    <button class="theme-option" data-theme="midnight">🌌 Midnight Blue</button>
+    <button class="theme-option" data-theme="sunset">🌅 Pastel Sunset</button>
+    <button class="theme-option" data-theme="cyber">🌆 Cyberpunk</button>
+    <button class="theme-option" data-theme="mint">🌿 Minty Fresh</button>
+    <button class="theme-option" data-theme="clean">🤍 Clean White</button>
+  </div>
 
-<script src="{{ '/scroll-reveal.js' | relative_url }}"></script>
+  <div class="pet-card" id="petCard">
+    <h3>
+      <span>Pet Details</span>
+      <button class="close-btn" id="closeCardBtn">✕</button>
+    </h3>
+    
+    <div class="control-group">
+      <label for="petColor">Pet Color:</label>
+      <input type="color" id="petColor" value="#ff6b81">
+    </div>
 
-<script src="{{ '/theme-toggle.js' | relative_url }}"></script>
+    <input type="text" id="noteTitle" placeholder="Pet Name / Title...">
+    <textarea id="noteInput" placeholder="Add a note for this pet..."></textarea>
+    
+    <div class="btn-group">
+      <button class="btn-save" id="saveNoteBtn">Save Note</button>
+      <button class="btn-delete" id="deleteNoteBtn">Delete Pet</button>
+    </div>
+  </div>
 
-<script src="{{ '/card-tilt.js' | relative_url }}"></script>
+  <script>
+    // --- THEME DATA ---
+    const themes = {
+      midnight: { bg: 0x1a1a2e, floor: 0x16213e, light: 0xffffff },
+      sunset:   { bg: 0xffd1dc, floor: 0xfbc4ab, light: 0xfff0e6 },
+      cyber:    { bg: 0x0f051d, floor: 0x240046, light: 0x00ffff },
+      mint:     { bg: 0xe8f5e9, floor: 0xc8e6c9, light: 0xffffff },
+      clean:    { bg: 0xf8f9fa, floor: 0xe9ecef, light: 0xffffff }
+    };
 
-<script src="{{ '/favicon-animation.js' | relative_url }}"></script>
+    // --- THREE.JS SETUP ---
+    const container = document.getElementById('canvas-container');
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(themes.midnight.bg);
+
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 9, 17);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    container.appendChild(renderer.domElement);
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.maxPolarAngle = Math.PI / 2 - 0.02; 
+    controls.mouseButtons = { LEFT: null, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.ROTATE };
+
+    // --- LIGHTS & FLOOR ---
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+    dirLight.position.set(10, 20, 10);
+    dirLight.castShadow = true;
+    dirLight.shadow.mapSize.width = 1024;
+    dirLight.shadow.mapSize.height = 1024;
+    scene.add(dirLight);
+
+    const arenaSize = 24;
+    const floorGeo = new THREE.PlaneGeometry(arenaSize, arenaSize);
+    const floorMat = new THREE.MeshStandardMaterial({ color: themes.midnight.floor, roughness: 0.8 });
+    const floor = new THREE.Mesh(floorGeo, floorMat);
+    floor.rotation.x = -Math.PI / 2;
+    floor.receiveShadow = true;
+    scene.add(floor);
+
+    const gridHelper = new THREE.GridHelper(arenaSize, 24, 0xffffff, 0xffffff);
+    gridHelper.position.y = 0.01;
+    gridHelper.material.opacity = 0.12;
+    gridHelper.material.transparent = true;
+    scene.add(gridHelper);
+
+    // --- PARTICLE SYSTEM FOR POP EFFECT ---
+    const activeParticles = [];
+
+    function triggerPopEffect(position, colorHex) {
+      const particleCount = 30;
+      const geometry = new THREE.BufferGeometry();
+      const positions = [];
+      const velocities = [];
+
+      for (let i = 0; i < particleCount; i++) {
+        positions.push(position.x, position.y, position.z);
+        
+        // Random spherical explosion direction
+        const speed = 0.08 + Math.random() * 0.12;
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos((Math.random() * 2) - 1);
+
+        velocities.push(
+          speed * Math.sin(phi) * Math.cos(theta),
+          speed * Math.sin(phi) * Math.sin(theta) + 0.05,
+          speed * Math.cos(phi)
+        );
+      }
+
+      geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+      
+      const pMaterial = new THREE.PointsMaterial({
+        color: colorHex,
+        size: 0.22,
+        transparent: true,
+        opacity: 1,
+        depthWrite: false
+      });
+
+      const pSystem = new THREE.Points(geometry, pMaterial);
+      scene.add(pSystem);
+
+      activeParticles.push({
+        system: pSystem,
+        velocities: velocities,
+        life: 1.0 // 1s lifetime
+      });
+    }
+
+    function updateParticles(delta) {
+      for (let i = activeParticles.length - 1; i >= 0; i--) {
+        const p = activeParticles[i];
+        p.life -= delta * 1.8;
+
+        if (p.life <= 0) {
+          scene.remove(p.system);
+          p.system.geometry.dispose();
+          p.system.material.dispose();
+          activeParticles.splice(i, 1);
+          continue;
+        }
+
+        const positions = p.system.geometry.attributes.position.array;
+        for (let j = 0; j < positions.length / 3; j++) {
+          positions[j * 3]     += p.velocities[j * 3];
+          positions[j * 3 + 1] += p.velocities[j * 3 + 1];
+          positions[j * 3 + 2] += p.velocities[j * 3 + 2];
+          
+          p.velocities[j * 3 + 1] -= 0.003; // Slight gravity
+        }
+        
+        p.system.geometry.attributes.position.needsUpdate = true;
+        p.system.material.opacity = p.life;
+      }
+    }
+
+    // --- PET CLASS & GENERATION ---
+    let pets = [];
+    let selectedPet = null;
+
+    const blackMat = new THREE.MeshBasicMaterial({ color: 0x111111 });
+    const whiteMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+
+    class Pet {
+      constructor(color = null) {
+        this.group = new THREE.Group();
+        this.color = color || '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+        this.material = new THREE.MeshStandardMaterial({ color: this.color, roughness: 0.4 });
+        
+        this.title = "";
+        this.note = "";
+
+        // Completely Randomized Features
+        this.scaleX = 0.7 + Math.random() * 0.5;
+        this.scaleY = 0.7 + Math.random() * 0.5;
+        this.scaleZ = 0.7 + Math.random() * 0.5;
+        
+        this.eyesGroup = new THREE.Group();
+        this.happyEyesGroup = new THREE.Group();
+        this.buildBody();
+
+        // Title Label Sprite (hovering, facing camera)
+        this.labelSprite = null;
+        this.updateLabel();
+
+        // Roaming state
+        this.group.position.set((Math.random() - 0.5) * 14, 0, (Math.random() - 0.5) * 14);
+        this.targetPos = this.group.position.clone();
+        this.speed = 0.03 + Math.random() * 0.02;
+        this.changeTargetTimer = 0;
+
+        // Drag/Physics State
+        this.isHeld = false;
+        this.velocity = new THREE.Vector3();
+        this.liftHeight = 1.8;
+
+        // Animation States (Wiggle & Pop)
+        this.isWiggling = false;
+        this.wiggleTimer = 0;
+        this.isPopping = false;
+        this.popTimer = 0;
+
+        scene.add(this.group);
+        pets.push(this);
+      }
+
+      buildBody() {
+        // Body Shape
+        const shapes = ['sphere', 'box', 'cylinder'];
+        const chosen = shapes[Math.floor(Math.random() * shapes.length)];
+        let bodyGeo;
+        if (chosen === 'sphere') bodyGeo = new THREE.SphereGeometry(1, 32, 32);
+        else if (chosen === 'box') bodyGeo = new THREE.BoxGeometry(1.5, 1.5, 1.5);
+        else bodyGeo = new THREE.CylinderGeometry(0.8, 0.8, 1.4, 32);
+
+        this.bodyMesh = new THREE.Mesh(bodyGeo, this.material);
+        this.bodyMesh.scale.set(this.scaleX, this.scaleY, this.scaleZ);
+        this.bodyMesh.castShadow = true;
+        this.group.add(this.bodyMesh);
+
+        // --- NORMAL EYES ---
+        this.group.add(this.eyesGroup);
+        const eyeType = Math.floor(Math.random() * 3);
+        const eyeSize = eyeType === 1 ? 0.22 : (eyeType === 2 ? 0.08 : 0.14);
+        const leftEye = new THREE.Mesh(new THREE.SphereGeometry(eyeSize, 16, 16), eyeType === 2 ? blackMat : whiteMat);
+        leftEye.position.set(-0.35 * this.scaleX, 0.2 * this.scaleY, 0.85 * this.scaleZ);
+        this.eyesGroup.add(leftEye);
+
+        const rightEye = leftEye.clone();
+        rightEye.position.x = 0.35 * this.scaleX;
+        this.eyesGroup.add(rightEye);
+
+        if (eyeType !== 2) {
+          const pupil = new THREE.Mesh(new THREE.SphereGeometry(eyeSize * 0.5, 16, 16), blackMat);
+          pupil.position.set(-0.35 * this.scaleX, 0.2 * this.scaleY, 0.85 * this.scaleZ + eyeSize * 0.7);
+          this.eyesGroup.add(pupil);
+
+          const pupilR = pupil.clone();
+          pupilR.position.x = 0.35 * this.scaleX;
+          this.eyesGroup.add(pupilR);
+        }
+
+        // --- HAPPY CLOSED EYES (^ ^) ---
+        this.group.add(this.happyEyesGroup);
+        this.happyEyesGroup.visible = false;
+        
+        const happyEyeGeo = new THREE.TorusGeometry(0.12 * this.scaleX, 0.03, 8, 16, Math.PI);
+        const happyEyeL = new THREE.Mesh(happyEyeGeo, blackMat);
+        happyEyeL.position.set(-0.35 * this.scaleX, 0.2 * this.scaleY, 0.88 * this.scaleZ);
+        happyEyeL.rotation.x = Math.PI;
+        this.happyEyesGroup.add(happyEyeL);
+
+        const happyEyeR = happyEyeL.clone();
+        happyEyeR.position.x = 0.35 * this.scaleX;
+        this.happyEyesGroup.add(happyEyeR);
+
+        // Nose Type
+        const noseGeo = new THREE.SphereGeometry(0.1, 16, 16);
+        const nose = new THREE.Mesh(noseGeo, blackMat);
+        nose.position.set(0, 0, 0.95 * this.scaleZ);
+        this.group.add(nose);
+
+        // Ear Type
+        const earType = Math.floor(Math.random() * 3);
+        let earGeo = earType === 0 ? new THREE.ConeGeometry(0.25, 0.6, 16) : new THREE.SphereGeometry(0.25, 16, 16);
+        const leftEar = new THREE.Mesh(earGeo, this.material);
+        leftEar.position.set(-0.5 * this.scaleX, 0.8 * this.scaleY, 0);
+        leftEar.rotation.z = 0.3;
+        leftEar.castShadow = true;
+        this.group.add(leftEar);
+
+        const rightEar = leftEar.clone();
+        rightEar.position.x = 0.5 * this.scaleX;
+        rightEar.rotation.z = -0.3;
+        this.group.add(rightEar);
+
+        // Tail Type
+        const tailGeo = new THREE.CylinderGeometry(0.06, 0.04, 0.8, 16);
+        const tail = new THREE.Mesh(tailGeo, this.material);
+        tail.position.set(0, -0.1 * this.scaleY, -0.9 * this.scaleZ);
+        tail.rotation.x = -Math.PI / 4;
+        tail.castShadow = true;
+        this.group.add(tail);
+
+        this.group.position.y = this.scaleY;
+      }
+
+      updateLabel() {
+        if (this.labelSprite) {
+          this.group.remove(this.labelSprite);
+          this.labelSprite.geometry.dispose();
+          this.labelSprite.material.dispose();
+          this.labelSprite = null;
+        }
+
+        if (!this.title.trim()) return;
+
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = 512;
+        canvas.height = 128;
+
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.65)';
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.roundRect(16, 16, 480, 96, 24);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.font = 'Bold 42px "Segoe UI", sans-serif';
+        ctx.fillStyle = '#ffffff';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(this.title, 256, 64);
+
+        const texture = new THREE.CanvasTexture(canvas);
+        const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true, depthTest: false });
+        this.labelSprite = new THREE.Sprite(spriteMat);
+        
+        this.labelSprite.position.set(0, this.scaleY * 1.5 + 0.8, 0);
+        this.labelSprite.scale.set(2.4, 0.6, 1);
+        
+        this.group.add(this.labelSprite);
+      }
+
+      setColor(hex) {
+        this.color = hex;
+        this.material.color.set(hex);
+      }
+
+      // Trigger Happy Edit Wiggle
+      triggerWiggle() {
+        this.isWiggling = true;
+        this.wiggleTimer = 1.2; // 1.2 seconds of wiggling
+        this.eyesGroup.visible = false;
+        this.happyEyesGroup.visible = true;
+      }
+
+      // Trigger Pop & Removal
+      pop() {
+        this.isPopping = true;
+        this.popTimer = 0.25; // Pop duration
+      }
+
+      destroy() {
+        scene.remove(this.group);
+      }
+
+      update(delta) {
+        // --- POP ANIMATION ---
+        if (this.isPopping) {
+          this.popTimer -= delta;
+          const scaleProgress = Math.max(0, this.popTimer / 0.25);
+          this.group.scale.setScalar(scaleProgress * 1.3); // Quick swell then shrink
+
+          if (this.popTimer <= 0) {
+            triggerPopEffect(this.group.position, this.color);
+            this.destroy();
+            pets = pets.filter(p => p !== this);
+          }
+          return;
+        }
+
+        // --- HAPPY WIGGLE ANIMATION ---
+        if (this.isWiggling) {
+          this.wiggleTimer -= delta;
+          
+          // Side-to-side rotation + rapid hop bounce
+          this.group.rotation.z = Math.sin(this.wiggleTimer * 22) * 0.25;
+          this.group.position.y = this.scaleY + Math.abs(Math.sin(this.wiggleTimer * 18)) * 0.4;
+
+          if (this.wiggleTimer <= 0) {
+            this.isWiggling = false;
+            this.group.rotation.z = 0;
+            this.eyesGroup.visible = true;
+            this.happyEyesGroup.visible = false;
+          }
+          return;
+        }
+
+        if (this.isHeld) return; 
+
+        // Bounce & Gravity physics
+        if (this.group.position.y > this.scaleY || this.velocity.y !== 0) {
+          this.velocity.y -= 9.8 * 0.0015;
+          this.group.position.add(this.velocity);
+
+          const limit = arenaSize / 2 - 1;
+          this.group.position.x = Math.max(-limit, Math.min(limit, this.group.position.x));
+          this.group.position.z = Math.max(-limit, Math.min(limit, this.group.position.z));
+
+          if (this.group.position.y <= this.scaleY) {
+            this.group.position.y = this.scaleY;
+            this.velocity.set(0, 0, 0); 
+          }
+          return;
+        }
+
+        // Roaming
+        this.changeTargetTimer -= delta;
+        if (this.changeTargetTimer <= 0) {
+          this.targetPos.set((Math.random() - 0.5) * (arenaSize - 4), this.scaleY, (Math.random() - 0.5) * (arenaSize - 4));
+          this.changeTargetTimer = 4 + Math.random() * 5;
+        }
+
+        const dist = this.group.position.distanceTo(this.targetPos);
+        if (dist > 0.2) {
+          const dir = new THREE.Vector3().subVectors(this.targetPos, this.group.position).normalize();
+          this.group.position.addScaledVector(dir, this.speed);
+          
+          const angle = Math.atan2(dir.x, dir.z);
+          this.group.rotation.y = THREE.MathUtils.lerp(this.group.rotation.y, angle, 0.1);
+
+          this.group.position.y = this.scaleY + Math.abs(Math.sin(Date.now() * 0.008)) * 0.15;
+        } else {
+          this.group.position.y = THREE.MathUtils.lerp(this.group.position.y, this.scaleY, 0.1);
+        }
+      }
+    }
+
+    // Spawn initial roaming pets immediately
+    new Pet('#ff6b81');
+    new Pet('#4ecdc4');
+
+    // --- INTERACTION & DRAG/THROW PHYSICS ---
+    const raycaster = new THREE.Raycaster();
+    const mouse = new THREE.Vector2();
+    const dragPlane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+    const planeIntersect = new THREE.Vector3();
+    let previousMousePos = new THREE.Vector3();
+
+    // Interaction distinction variables
+    let pendingPet = null;
+    let isDraggingPet = false;
+    let startScreenPos = { x: 0, y: 0 };
+
+    window.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.top-right-controls') || e.target.closest('.pet-card') || e.target.closest('.theme-popup')) return;
+
+      mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+      startScreenPos = { x: e.clientX, y: e.clientY };
+
+      raycaster.setFromCamera(mouse, camera);
+
+      const petMeshes = pets.map(p => p.group.children).flat();
+      const intersects = raycaster.intersectObjects(petMeshes, true);
+
+      if (intersects.length > 0) {
+        let obj = intersects[0].object;
+        while (obj.parent && !(obj.parent instanceof THREE.Scene) && !pets.find(p => p.group === obj)) {
+          obj = obj.parent;
+        }
+        pendingPet = pets.find(p => p.group === obj);
+        isDraggingPet = false;
+      } else {
+        pendingPet = null;
+      }
+    });
+
+    window.addEventListener('pointermove', (e) => {
+      if (!pendingPet) return;
+
+      const distMoved = Math.hypot(e.clientX - startScreenPos.x, e.clientY - startScreenPos.y);
+
+      if (distMoved > 5 && !isDraggingPet) {
+        isDraggingPet = true;
+        pendingPet.isHeld = true;
+
+        dragPlane.constant = -(pendingPet.scaleY + pendingPet.liftHeight);
+        
+        mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+        raycaster.setFromCamera(mouse, camera);
+        raycaster.ray.intersectPlane(dragPlane, planeIntersect);
+        previousMousePos.copy(planeIntersect);
+
+        controls.enabled = false;
+      }
+
+      if (isDraggingPet) {
+        mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+        raycaster.setFromCamera(mouse, camera);
+        if (raycaster.ray.intersectPlane(dragPlane, planeIntersect)) {
+          pendingPet.group.position.x = planeIntersect.x;
+          pendingPet.group.position.z = planeIntersect.z;
+          pendingPet.group.position.y = pendingPet.scaleY + pendingPet.liftHeight;
+
+          pendingPet.velocity.subVectors(planeIntersect, previousMousePos).multiplyScalar(0.2);
+          previousMousePos.copy(planeIntersect);
+        }
+      }
+    });
+
+    window.addEventListener('pointerup', (e) => {
+      if (e.target.closest('.top-right-controls') || e.target.closest('.pet-card') || e.target.closest('.theme-popup')) return;
+
+      if (pendingPet) {
+        if (isDraggingPet) {
+          pendingPet.isHeld = false;
+          pendingPet.velocity.y = 0.1;
+        } else {
+          selectPet(pendingPet);
+        }
+      } else {
+        const distMoved = Math.hypot(e.clientX - startScreenPos.x, e.clientY - startScreenPos.y);
+        if (distMoved <= 5) {
+          selectPet(null);
+        }
+      }
+
+      pendingPet = null;
+      isDraggingPet = false;
+      controls.enabled = true;
+    });
+
+    // --- UI EVENT HANDLING ---
+    const addPetBtn = document.getElementById('addPetBtn');
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themePopup = document.getElementById('themePopup');
+    const petCard = document.getElementById('petCard');
+    const closeCardBtn = document.getElementById('closeCardBtn');
+    const petColorInput = document.getElementById('petColor');
+    const noteTitle = document.getElementById('noteTitle');
+    const noteInput = document.getElementById('noteInput');
+    const saveNoteBtn = document.getElementById('saveNoteBtn');
+    const deleteNoteBtn = document.getElementById('deleteNoteBtn');
+
+    // Add Pet Button
+    addPetBtn.addEventListener('click', () => {
+      const newPet = new Pet();
+      selectPet(newPet);
+    });
+
+    // Toggle Theme Menu
+    themeToggleBtn.addEventListener('click', () => {
+      themePopup.classList.toggle('active');
+    });
+
+    // Change Theme
+    document.querySelectorAll('.theme-option').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const themeKey = e.target.getAttribute('data-theme');
+        const t = themes[themeKey];
+        scene.background.setHex(t.bg);
+        floorMat.color.setHex(t.floor);
+        dirLight.color.setHex(t.light);
+        themePopup.classList.remove('active');
+      });
+    });
+
+    // Pet Selection Handler
+    function selectPet(pet) {
+      selectedPet = pet;
+      if (pet) {
+        petColorInput.value = '#' + pet.material.color.getHexString();
+        noteTitle.value = pet.title;
+        noteInput.value = pet.note;
+        petCard.classList.add('active');
+      } else {
+        petCard.classList.remove('active');
+      }
+    }
+
+    closeCardBtn.addEventListener('click', () => selectPet(null));
+
+    // Live Color Change
+    petColorInput.addEventListener('input', (e) => {
+      if (selectedPet) {
+        selectedPet.setColor(e.target.value);
+      }
+    });
+
+    // Save Note: Wiggle pet & close card automatically
+    saveNoteBtn.addEventListener('click', () => {
+      if (selectedPet) {
+        selectedPet.title = noteTitle.value;
+        selectedPet.note = noteInput.value;
+        selectedPet.updateLabel();
+        selectedPet.triggerWiggle();
+        selectPet(null);
+      }
+    });
+
+    // Delete Pet: Pop animation & particle burst
+    deleteNoteBtn.addEventListener('click', () => {
+      if (selectedPet) {
+        selectedPet.pop();
+        selectPet(null);
+      }
+    });
+
+    // Window Resize Handler
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    // --- ANIMATION LOOP ---
+    const clock = new THREE.Clock();
+    function animate() {
+      requestAnimationFrame(animate);
+      const delta = clock.getDelta();
+
+      pets.forEach(pet => pet.update(delta));
+      updateParticles(delta);
+
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
 </body>
 </html>
