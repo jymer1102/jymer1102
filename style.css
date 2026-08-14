@@ -738,13 +738,13 @@ border-radius: var(--radius-md);
 display: flex;
 justify-content: center;
 align-items: center;
-background: rgba(255, 255, 255, 0.035);
-border: 1px solid rgba(255, 255, 255, 0.08);
+background: rgba(255, 255, 255, 0.045);
+border: 1px solid rgba(255, 255, 255, 0.09);
 transition: transform 0.35s var(--ease), background 0.35s var(--ease), box-shadow 0.35s var(--ease);
 overflow: hidden;
 transform-style: preserve-3d;
-transform: translateZ(0);
-box-shadow: none;
+transform: rotateY(calc(var(--tilt-ry) * -1deg)) rotateX(calc(var(--tilt-rx) * -1deg)) translateZ(38px);
+box-shadow: 0 26px 34px -14px rgba(0, 0, 0, 0.6);
 }
 
 .project-img {
@@ -755,9 +755,9 @@ display: block;
 }
 
 .project-card:hover .project-icon {
-transform: translateZ(54px) scale(1.14) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
-background: rgba(255, 255, 255, 0.06);
-box-shadow: 0 36px 46px -16px rgba(0, 0, 0, 0.65);
+transform: rotateY(calc(var(--tilt-ry) * -1deg)) rotateX(calc(var(--tilt-rx) * -1deg)) translateZ(60px) scale(1.14);
+background: rgba(255, 255, 255, 0.07);
+box-shadow: 0 38px 48px -16px rgba(0, 0, 0, 0.7);
 }
 
 .project-tag {
@@ -821,22 +821,14 @@ flex-direction: column;
 gap: 32px;
 padding: 32px 36px;
 border-radius: var(--radius-lg);
-background: transparent;
-border: 1px solid transparent;
-transform-style: preserve-3d;
-transform: translateZ(0);
-box-shadow: none;
-transition: transform 0.35s var(--ease), background 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-
-.connect-panel:hover .connect-list,
-.connect-panel:focus-within .connect-list {
 background: rgba(255, 255, 255, 0.045);
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-border-color: rgba(255, 255, 255, 0.08);
-transform: translateZ(34px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
-box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6);
+border: 1px solid rgba(255, 255, 255, 0.08);
+transform-style: preserve-3d;
+transform: rotateY(calc(var(--tilt-ry) * -1deg)) rotateX(calc(var(--tilt-rx) * -1deg)) translateZ(38px);
+box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.65);
+transition: transform 0.35s var(--ease);
 }
 
 .connect-list li {
@@ -911,22 +903,14 @@ transform-style: preserve-3d;
 #contact-form {
 padding: 30px 34px;
 border-radius: var(--radius-lg);
-background: transparent;
-border: 1px solid transparent;
-transform-style: preserve-3d;
-transform: translateZ(0);
-box-shadow: none;
-transition: transform 0.35s var(--ease), background 0.35s var(--ease), border-color 0.35s var(--ease), box-shadow 0.35s var(--ease);
-}
-
-.form-container:hover #contact-form,
-.form-container:focus-within #contact-form {
 background: rgba(255, 255, 255, 0.045);
 backdrop-filter: blur(10px);
 -webkit-backdrop-filter: blur(10px);
-border-color: rgba(255, 255, 255, 0.08);
-transform: translateZ(34px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
-box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6);
+border: 1px solid rgba(255, 255, 255, 0.08);
+transform-style: preserve-3d;
+transform: rotateY(calc(var(--tilt-ry) * -1deg)) rotateX(calc(var(--tilt-rx) * -1deg)) translateZ(38px);
+box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.65);
+transition: transform 0.35s var(--ease);
 }
 
 .form-group {
