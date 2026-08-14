@@ -740,10 +740,11 @@ justify-content: center;
 align-items: center;
 background: rgba(255, 255, 255, 0.035);
 border: 1px solid rgba(255, 255, 255, 0.08);
-transition: transform 0.35s var(--ease), background 0.35s var(--ease);
+transition: transform 0.35s var(--ease), background 0.35s var(--ease), box-shadow 0.35s var(--ease);
 overflow: hidden;
 transform-style: preserve-3d;
-transform: translateZ(20px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+transform: translateZ(28px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+box-shadow: 0 22px 30px -14px rgba(0, 0, 0, 0.55);
 }
 
 .project-img {
@@ -754,8 +755,9 @@ display: block;
 }
 
 .project-card:hover .project-icon {
-transform: translateZ(52px) scale(1.14) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+transform: translateZ(54px) scale(1.14) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
 background: rgba(255, 255, 255, 0.06);
+box-shadow: 0 36px 46px -16px rgba(0, 0, 0, 0.65);
 }
 
 .project-tag {
@@ -803,7 +805,7 @@ width: 100%;
 margin: 0 auto;
 background: linear-gradient(160deg, var(--bg-card-from), var(--bg-card-to));
 border-radius: var(--radius-lg);
-padding: 48px;
+padding: 24px;
 transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
 will-change: transform;
 transform-style: preserve-3d;
@@ -817,8 +819,16 @@ list-style: none;
 display: flex;
 flex-direction: column;
 gap: 32px;
+padding: 32px 36px;
+border-radius: var(--radius-lg);
+background: rgba(255, 255, 255, 0.045);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.08);
 transform-style: preserve-3d;
-transform: translateZ(6px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+transform: translateZ(34px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6);
+transition: transform 0.12s ease-out;
 }
 
 .connect-list li {
@@ -880,7 +890,7 @@ width: 100%;
 margin: 0 auto;
 background: linear-gradient(160deg, var(--bg-card-from), var(--bg-card-to));
 border-radius: var(--radius-lg);
-padding: 44px;
+padding: 22px;
 box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
 transition: transform 0.12s ease-out, box-shadow 0.12s ease-out;
 will-change: transform;
@@ -891,8 +901,16 @@ transform-style: preserve-3d;
 
 /* Form Field Spacing */
 #contact-form {
+padding: 30px 34px;
+border-radius: var(--radius-lg);
+background: rgba(255, 255, 255, 0.045);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.08);
 transform-style: preserve-3d;
-transform: translateZ(6px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+transform: translateZ(34px) rotateX(calc(var(--tilt-rx) * -1deg)) rotateY(calc(var(--tilt-ry) * -1deg));
+box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.6);
+transition: transform 0.12s ease-out;
 }
 
 .form-group {
@@ -1211,7 +1229,12 @@ padding-top: 130px;
 
 .connect-panel,
 .form-container {
-padding: 30px 20px;
+padding: 16px;
+}
+
+.connect-list,
+#contact-form {
+padding: 22px 20px;
 }
 
 .connect-list li {
