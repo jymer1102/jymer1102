@@ -33,24 +33,35 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
 <style>
-/* Lock Page Scroll Completely in Fullscreen Mode */
-html.has-fullscreen-active,
-body.has-fullscreen-active {
-  overflow: hidden !important;
-  height: 100% !important;
-  width: 100% !important;
-  touch-action: none !important;
-}
-
 /* Floating Exit Fullscreen Button (Hidden by Default) */
 .exit-fullscreen-overlay {
   display: none;
 }
 
-/* Universal Device Safe-Zone Fullscreen (ONLY Preview Box) */
+/* HIDE EVERYTHING ELSE ON THE PAGE WHEN FULLSCREEN IS ACTIVE */
+body.preview-fullscreen-active > nav,
+body.preview-fullscreen-active > header,
+body.preview-fullscreen-active > #scroll-indicator,
+body.preview-fullscreen-active > main,
+body.preview-fullscreen-active > footer {
+  display: none !important;
+}
+
+/* Complete Page Lockdown during Fullscreen */
+html.preview-fullscreen-active,
+body.preview-fullscreen-active {
+  overflow: hidden !important;
+  height: 100dvh !important;
+  width: 100dvw !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #ffffff !important;
+}
+
+/* Preview Wrap Takes Over Full Screen Completely */
+.playground-preview-wrap.is-fullscreen,
 .playground-preview-wrap:fullscreen,
-.playground-preview-wrap:-webkit-full-screen,
-.playground-preview-wrap.is-fullscreen {
+.playground-preview-wrap:-webkit-full-screen {
   position: fixed !important;
   inset: 0 !important;
   top: 0 !important;
@@ -59,7 +70,7 @@ body.has-fullscreen-active {
   width: 100dvw !important;
   height: 100vh !important;
   height: 100dvh !important;
-  z-index: 2147483646 !important;
+  z-index: 2147483647 !important;
   background: #ffffff !important;
   margin: 0 !important;
   border: none !important;
@@ -68,32 +79,35 @@ body.has-fullscreen-active {
   flex-direction: column !important;
   box-sizing: border-box !important;
   
-  /* Respect Safe Area (Notches, Home Indicator) via Padding */
+  /* Respect Safe Area (Notches / Home Indicator) */
   padding-top: env(safe-area-inset-top, 0px) !important;
   padding-bottom: env(safe-area-inset-bottom, 0px) !important;
   padding-left: env(safe-area-inset-left, 0px) !important;
   padding-right: env(safe-area-inset-right, 0px) !important;
 }
 
-.playground-preview-wrap:fullscreen .playground-preview,
-.playground-preview-wrap:-webkit-full-screen .playground-preview,
-.playground-preview-wrap.is-fullscreen .playground-preview {
+/* Force Iframe to Expand to Fill Complete Viewport */
+.playground-preview-wrap.is-fullscreen #preview-frame,
+.playground-preview-wrap:fullscreen #preview-frame,
+.playground-preview-wrap:-webkit-full-screen #preview-frame {
   flex: 1 1 auto !important;
   height: 100% !important;
   width: 100% !important;
   border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
+.playground-preview-wrap.is-fullscreen .playground-preview-label,
 .playground-preview-wrap:fullscreen .playground-preview-label,
-.playground-preview-wrap:-webkit-full-screen .playground-preview-label,
-.playground-preview-wrap.is-fullscreen .playground-preview-label {
+.playground-preview-wrap:-webkit-full-screen .playground-preview-label {
   display: none !important;
 }
 
-/* Floating Top-Middle Exit Button in Fullscreen Mode */
+/* Floating Exit Button */
+.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay,
 .playground-preview-wrap:fullscreen .exit-fullscreen-overlay,
-.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay,
-.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay {
+.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay {
   display: inline-flex !important;
   align-items: center;
   gap: 8px;
@@ -118,9 +132,9 @@ body.has-fullscreen-active {
   opacity: 0.9;
 }
 
+.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay:hover,
 .playground-preview-wrap:fullscreen .exit-fullscreen-overlay:hover,
-.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay:hover,
-.playground-preview-wrap.is-fullscreen .exit-fullscreen-overlay:hover {
+.playground-preview-wrap:-webkit-full-screen .exit-fullscreen-overlay:hover {
   opacity: 1;
   background: rgba(30, 86, 224, 0.95) !important;
   border-color: rgba(255, 255, 255, 0.5) !important;
@@ -414,7 +428,7 @@ const fullscreenBtn = document.getElementById('fullscreen-btn');
 const exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
 const previewWrap = document.querySelector('.playground-preview-wrap');
 
-/* Create placeholder to preserve layout position when reparenting to <body> */
+/* Placeholder to preserve DOM location on restoration */
 const previewPlaceholder = document.createElement('div');
 previewPlaceholder.style.display = 'none';
 previewWrap.parentNode.insertBefore(previewPlaceholder, previewWrap);
@@ -523,18 +537,17 @@ loadDefaults();
 runCode();
 });
 
-/* Fullscreen Preview Handler with DOM Reparenting & Scroll Lock */
+/* Fullscreen Handler */
 function enterFullscreen() {
-  // Lock document scroll
-  document.documentElement.classList.add('has-fullscreen-active');
-  document.body.classList.add('has-fullscreen-active');
+  document.documentElement.classList.add('preview-fullscreen-active');
+  document.body.classList.add('preview-fullscreen-active');
   
-  // Move preview element directly to body to escape parent transforms/perspectives
+  // Move preview element directly under <body> so all other <body> children can be hidden cleanly
   document.body.appendChild(previewWrap);
   previewWrap.classList.add('is-fullscreen');
   fullscreenBtn.querySelector('i').className = 'fa-solid fa-minimize';
 
-  // Request browser native fullscreen if available
+  // Request native browser fullscreen if supported
   if (previewWrap.requestFullscreen) {
     previewWrap.requestFullscreen().catch(() => {});
   } else if (previewWrap.webkitRequestFullscreen) {
@@ -543,18 +556,16 @@ function enterFullscreen() {
 }
 
 function exitFullscreen() {
-  // Unlock document scroll
-  document.documentElement.classList.remove('has-fullscreen-active');
-  document.body.classList.remove('has-fullscreen-active');
+  document.documentElement.classList.remove('preview-fullscreen-active');
+  document.body.classList.remove('preview-fullscreen-active');
   
-  // Restore preview element back to original place in layout
+  // Restore preview back to its original slot in the layout
   if (previewPlaceholder.parentNode) {
     previewPlaceholder.parentNode.insertBefore(previewWrap, previewPlaceholder);
   }
   previewWrap.classList.remove('is-fullscreen');
   fullscreenBtn.querySelector('i').className = 'fa-solid fa-maximize';
 
-  // Exit browser native fullscreen if active
   if (document.fullscreenElement || document.webkitFullscreenElement) {
     if (document.exitFullscreen) {
       document.exitFullscreen().catch(() => {});
