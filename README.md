@@ -21,7 +21,7 @@
 
 ---
 
-### ![](https://img.shields.io/badge/SKILLS_%26_TECHNOLOGIES-20232A?style=for-the-badge&logo=codeforces&logoColor=white)
+### ![](https://img.shields.io/badge/SKILLS_%26_TECHNOLOGIES-20232A?style=for-the-badge&logo=github&logoColor=white)
 [![My Skills](https://skillicons.dev/icons?i=github,vscode,discord,spotify,instagram,windows&theme=dark)](https://skillicons.dev)
 
 ---
@@ -34,13 +34,13 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 *“Design is not just what it looks like and feels like. Design is how it works.”* — **Steve Jobs**
 
-![](https://img.shields.io/badge/✨-SPARKLES-FFD700?style=flat-square)
+![](https://img.shields.io/badge/%E2%9C%A8-FFD700?style=flat-square)
 
 *“For God did not call us to be impure, but to live a holy life.”* — **1 Thessalonians 4:7**
 
 ---
 
-### ![](https://img.shields.io/badge/SKILLS_%26_INTERESTS-008080?style=for-the-badge&logo=gnubash&logoColor=white)
+### ![](https://img.shields.io/badge/SKILLS_%26_INTERESTS-008080?style=for-the-badge&logo=googlechrome&logoColor=white)
 
 <p align="center">
   🌐 <strong>Web Design:</strong> Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.<br/>
@@ -50,7 +50,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### ![](https://img.shields.io/badge/CONNECT_WITH_ME-1A1A1A?style=for-the-badge&logo=linktree&logoColor=white)
+### ![](https://img.shields.io/badge/CONNECT_WITH_ME-1A1A1A?style=for-the-badge&logo=message&logoColor=white)
 
 [![Linktree](https://img.shields.io/badge/LINKTREE-39E09B?style=for-the-badge&logo=linktree&logoColor=white&labelColor=1a1a1a)](https://linktr.ee/jymer1102)
 [![Website](https://img.shields.io/badge/WEBSITE-7B2CBF?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1a1a1a)](http://jymer1102.me)
@@ -71,16 +71,16 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ### ![](https://img.shields.io/badge/MY_CREATIONS-FF4500?style=for-the-badge&logo=gamepad&logoColor=white)
 
 <p align="center">
-  ![](https://img.shields.io/badge/NOVA_AI-FF5733?style=flat-square) — [![Launch](https://img.shields.io/badge/Launch-FF5733?style=flat-square)](https://nova-ai-mk9x.onrender.com/)<br/><br/>
-  ![](https://img.shields.io/badge/SCREEN_PET-4A90E2?style=flat-square) — [![Launch](https://img.shields.io/badge/Launch-4A90E2?style=flat-square)](https://screen-pet.base44.app/)<br/><br/>
-  ![](https://img.shields.io/badge/BLOB_FIDGET-2ECC71?style=flat-square) — [![Launch](https://img.shields.io/badge/Launch-2ECC71?style=flat-square)](https://blob-fidget.base44.app/)<br/><br/>
-  ![](https://img.shields.io/badge/TAG_MANIA-9B59B6?style=flat-square) — [![Launch](https://img.shields.io/badge/Launch-9B59B6?style=flat-square)](https://jymer1102.github.io/Tag_Mania/)<br/><br/>
-  ![](https://img.shields.io/badge/ZOMBIFIED-FF8C00?style=flat-square) — [![In Progress](https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square)](#)
+  <img src="https://img.shields.io/badge/NOVA_AI-FF5733?style=flat-square" alt="Nova AI" /> — <a href="https://nova-ai-mk9x.onrender.com/"><img src="https://img.shields.io/badge/Launch-FF5733?style=flat-square" alt="Launch" /></a><br/><br/>
+  <img src="https://img.shields.io/badge/SCREEN_PET-4A90E2?style=flat-square" alt="Screen Pet" /> — <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=flat-square" alt="Launch" /></a><br/><br/>
+  <img src="https://img.shields.io/badge/BLOB_FIDGET-2ECC71?style=flat-square" alt="Blob Fidget" /> — <a href="https://blob-fidget.base44.app/"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat-square" alt="Launch" /></a><br/><br/>
+  <img src="https://img.shields.io/badge/TAG_MANIA-9B59B6?style=flat-square" alt="Tag Mania" /> — <a href="https://jymer1102.github.io/Tag_Mania/"><img src="https://img.shields.io/badge/Launch-9B59B6?style=flat-square" alt="Launch" /></a><br/><br/>
+  <img src="https://img.shields.io/badge/ZOMBIFIED-FF8C00?style=flat-square" alt="Zombified" /> — <a href="#"><img src="https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square" alt="In Progress" /></a>
 </p>
 
 ---
 
-### ![](https://img.shields.io/badge/QUOTE_%26_JOKE_OF_THE_DAY-410093?style=for-the-badge&logo=bookstack&logoColor=white)
+### ![](https://img.shields.io/badge/QUOTE_%26_JOKE_OF_THE_DAY-410093?style=for-the-badge&logo=github&logoColor=white)
 
 ![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
 
