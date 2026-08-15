@@ -777,6 +777,8 @@ transform: scale(1.05);
 .icon-nova   { border-color: rgba(186, 50, 250, 0.25); box-shadow: 0 0 16px rgba(186, 50, 250, 0.08); }
 .icon-pet    { border-color: rgba(43, 156, 183, 0.25); box-shadow: 0 0 16px rgba(43, 156, 183, 0.08); }
 .icon-blob   { border-color: rgba(46, 204, 113, 0.25); box-shadow: 0 0 16px rgba(46, 204, 113, 0.08); }
+.icon-note   { border-color: rgba(255, 208, 0, 0.25); box-shadow: 0 0 16px rgba(255, 208, 0, 0.08); }
+
 .icon-tag    { border-color: rgba(155, 89, 182, 0.25); box-shadow: 0 0 16px rgba(155, 89, 182, 0.08); }
 .icon-zombie { border-color: rgba(255, 165, 0, 0.25);   box-shadow: 0 0 16px rgba(255, 165, 0, 0.08); }
 
