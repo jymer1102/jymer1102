@@ -53,7 +53,7 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ### ![](https://img.shields.io/badge/CONNECT_WITH_ME-1A1A1A?style=for-the-badge&logo=message&logoColor=white)
 
 [![Linktree](https://img.shields.io/badge/LINKTREE-39E09B?style=for-the-badge&logo=linktree&logoColor=white&labelColor=1a1a1a)](https://linktr.ee/jymer1102)
-[![Website](https://img.shields.io/badge/WEBSITE-7B2CBF?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1a1a1a)](http://jymer1102.me)
+[![Website](https://img.shields.io/badge/WEBSITE-7B2CBF?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1a1a1a)](http://jymer1102.com)
 
 ---
 
@@ -73,10 +73,10 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 ### ![](https://img.shields.io/badge/MY_CREATIONS-FF4500?style=for-the-badge&logo=gamepad&logoColor=white)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/NOVA_AI-8A2BE2?style=flat-square" alt="Nova AI" /> • <a href="https://nova-ai-mk9x.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=flat-square" alt="Launch" /></a><br/><br/>
+  <img src="https://img.shields.io/badge/agent1102-8A2BE2?style=flat-square" alt="agent1102" /> • <a href="https://agent1102.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=flat-square" alt="Launch" /></a><br/><br/>
   <img src="https://img.shields.io/badge/SCREEN_PET-4A90E2?style=flat-square" alt="Screen Pet" /> • <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=flat-square" alt="Launch" /></a><br/><br/>
   <img src="https://img.shields.io/badge/BLOB_FIDGET-2ECC71?style=flat-square" alt="Blob Fidget" /> • <a href="https://jymer1102.github.io/Blob-Fidget/"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat-square" alt="Launch" /></a><br/><br/>
-  <img src="https://img.shields.io/badge/TAG_MANIA-E53935?style=flat-square" alt="Tag Mania" /> • <a href="https://jymer1102.github.io/Tag_Mania/"><img src="https://img.shields.io/badge/Launch-E53935?style=flat-square" alt="Launch" /></a><br/><br/>
+  <img src="https://img.shields.io/badge/TAG_MANIA-E53935?style=flat-square" alt="Tag Mania" /> • <a href="https://jymer1102.github.io/Tag-Mania/"><img src="https://img.shields.io/badge/Launch-E53935?style=flat-square" alt="Launch" /></a><br/><br/>
   <img src="https://img.shields.io/badge/NOTE_PETS-FFD700?style=flat-square&logoColor=black" alt="Note Pets" /> • <a href="https://jymer1102.github.io/Note-Pets/"><img src="https://img.shields.io/badge/Launch-FFD700?style=flat-square&logoColor=black" alt="Launch" /></a><br/><br/>
   <img src="https://img.shields.io/badge/ZOMBIFIED-FF8C00?style=flat-square" alt="Zombified" /> • <a href="#"><img src="https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square" alt="In Progress" /></a>
 </p>
