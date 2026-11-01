@@ -28,7 +28,7 @@
 
 ### ![](https://img.shields.io/badge/ABOUT_ME-7B2CBF?style=for-the-badge&logo=markdown&logoColor=white)
 
-I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile! :octocat: :bowtie: :neckbeard:
+I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!
 
 <br/>
 
