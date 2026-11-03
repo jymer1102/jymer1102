@@ -29,7 +29,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <title>jymer1102 | Playground</title>
 <meta name="description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
 <style>
@@ -162,7 +162,7 @@ body.preview-fullscreen-active {
 <nav id="top">
 <div class="nav-left">
 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-<i class="fa-solid fa-moon"></i>
+<i class="ri-moon-fill"></i>
 </button>
 <a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
 </div>
@@ -189,11 +189,11 @@ body.preview-fullscreen-active {
 <div class="playground-toolbar">
 <div class="playground-tabs"></div>
 <div class="playground-actions">
-<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><i class="fa-solid fa-play"></i></button>
-<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><i class="fa-solid fa-circle-xmark"></i></button>
-<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><i class="fa-solid fa-download"></i></button>
-<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><i class="fa-solid fa-maximize"></i></button>
-<button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><i class="fa-solid fa-arrows-rotate"></i></button>
+<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><i class="ri-play-large-fill"></i></button>
+<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><i class="ri-close-circle-fill"></i></button>
+<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><i class="ri-download-2-fill"></i></button>
+<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><i class="ri-fullscreen-fill"></i></button>
+<button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><i class="ri-restart-fill"></i></button>
 </div>
 </div>
 
@@ -215,7 +215,7 @@ body.preview-fullscreen-active {
 <div class="playground-preview-wrap">
 <div class="playground-preview-label">Preview</div>
 <button id="exit-fullscreen-btn" class="exit-fullscreen-overlay" type="button" aria-label="Exit Fullscreen">
-  <i class="fa-solid fa-minimize"></i> Exit Fullscreen
+  <i class="ri-fullscreen-exit-fill"></i> Exit Fullscreen
 </button>
 <iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
 </div>
@@ -261,9 +261,9 @@ if (touch) updateGlowPosition(touch.clientX, touch.clientY);
 
 <script>
 (function () {
-const DEFAULT_HTML = `<h1><i class="fa-solid fa-hand"></i> Hello, user!</h1>
+const DEFAULT_HTML = `<h1><i class="ri-emotion-happy-fill"></i> Hello, user!</h1>
 <p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
-<button id="demo-btn"><span><i class="fa-solid fa-arrow-pointer"></i> Click me!</span></button>`;
+<button id="demo-btn"><span><i class="ri-cursor-fill"></i> Click me!</span></button>`;
 
 const DEFAULT_CSS = `
 :root {
@@ -433,7 +433,7 @@ const doc = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css">
 <style>${cssBox.value}</style>
 </head>
 <body>
@@ -525,7 +525,7 @@ function enterFullscreen() {
   // Move preview element directly under <body> so all other <body> children can be hidden cleanly
   document.body.appendChild(previewWrap);
   previewWrap.classList.add('is-fullscreen');
-  fullscreenBtn.querySelector('i').className = 'fa-solid fa-minimize';
+  fullscreenBtn.querySelector('i').className = 'ri-fullscreen-exit-fill';
 
   // Request native browser fullscreen if supported
   if (previewWrap.requestFullscreen) {
@@ -544,7 +544,7 @@ function exitFullscreen() {
     previewPlaceholder.parentNode.insertBefore(previewWrap, previewPlaceholder);
   }
   previewWrap.classList.remove('is-fullscreen');
-  fullscreenBtn.querySelector('i').className = 'fa-solid fa-maximize';
+  fullscreenBtn.querySelector('i').className = 'ri-fullscreen-fill';
 
   if (document.fullscreenElement || document.webkitFullscreenElement) {
     if (document.exitFullscreen) {
@@ -599,7 +599,7 @@ const fullHtml = `<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>My Code</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
