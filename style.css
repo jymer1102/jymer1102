@@ -330,6 +330,24 @@ box-shadow: 0 0 12px var(--accent-glow);
 transform: scale(1.06);
 }
 
+/* Remix glyphs carry built-in padding, so card-title icons get a slight optical bump */
+.split-card h3 [class^="ri-"],
+.split-card h3 [class*=" ri-"] {
+font-size: 1.2em;
+}
+
+.split-card h3 i + i {
+margin-left: 4px;
+}
+
+/* Remix Icon (filled set): consistent alignment + optical size across the site */
+[class^="ri-"],
+[class*=" ri-"] {
+display: inline-block;
+line-height: 1;
+vertical-align: -0.125em;
+}
+
 .theme-toggle i {
 display: inline-block;
 }
@@ -857,6 +875,7 @@ align-items: center;
 .connect-label i {
 margin-right: 6px;
 color: var(--accent-bright);
+font-size: 1.2em;
 }
 
 .connect-value {
@@ -974,6 +993,7 @@ caret-color: var(--accent-bright);
 display: inline-flex;
 justify-content: center;
 align-items: center;
+gap: 8px;
 width: 100%;
 padding: 14px 24px;
 background: linear-gradient(160deg, var(--bg-card-from), var(--bg-card-to));
@@ -1008,7 +1028,7 @@ transform: none !important;
 box-shadow: none !important;
 }
 
-.submit-btn .fa-spinner {
+.submit-btn .ri-loader-4-fill {
 animation: spin 0.8s linear infinite;
 }
 
@@ -1043,6 +1063,7 @@ max-height: 200px;
 .form-status i {
 margin-top: 2px;
 flex-shrink: 0;
+font-size: 1.2em;
 }
 
 .form-status.status-success {
@@ -1516,6 +1537,10 @@ border: 1px solid var(--border);
 background: var(--bg-raised);
 color: var(--text-1);
 transition: border-color 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.playground-btn i {
+font-size: 1.3em;
 }
 
 .playground-btn:hover {
