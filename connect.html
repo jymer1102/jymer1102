@@ -29,7 +29,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <title>jymer1102 | Connect</title>
 <meta name="description" content="Reach out via socials or send a direct message to jymer1102.">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.css">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
 <link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
@@ -52,7 +52,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <nav id="top">
 <div class="nav-left">
 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-<i class="fa-solid fa-moon"></i>
+<i class="ri-moon-fill"></i>
 </button>
 <a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
 </div>
@@ -78,15 +78,15 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <div class="connect-panel js-interactive-container">
 <ul class="connect-list">
 <li>
-<span class="connect-label"><i class="fa-solid fa-at"></i> Email</span>
+<span class="connect-label"><i class="ri-at-fill"></i> Email</span>
 <a href="mailto:theoneandonly@jymer1102.com" id="email-link" class="connect-value">theoneandonly@jymer1102.com</a>
 </li>
 <li>
-<span class="connect-label"><i class="fa-solid fa-phone"></i> Phone</span>
+<span class="connect-label"><i class="ri-phone-fill"></i> Phone</span>
 <a href="#" id="phone-link" class="connect-value">+1 (417) 000-0000</a>
 </li>
 <li>
-<span class="connect-label"><i class="fa-brands fa-linktree"></i> Linktree</span>
+<span class="connect-label"><i class="ri-links-fill"></i> Linktree</span>
 <a href="https://linktr.ee/jymer1102" target="_blank" rel="noopener noreferrer" class="connect-value">linktr.ee/jymer1102</a>
 </li>
 </ul>
@@ -142,7 +142,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 
 <input type="hidden" name="_subject" value="New message from jymer1102.me!">
 
-<button type="submit" class="submit-btn" id="submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+<button type="submit" class="submit-btn" id="submit-btn"><i class="ri-send-plane-fill"></i> Send Message</button>
 
 <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
 </form>
@@ -157,10 +157,10 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <p>Choose an option below:</p>
 <div class="phone-modal-actions">
 <a href="tel:+14170000000" class="modal-btn call-btn">
-<i class="fa-solid fa-phone"></i> Call
+<i class="ri-phone-fill"></i> Call
 </a>
 <a href="sms:+14170000000" class="modal-btn text-btn">
-<i class="fa-solid fa-comment-sms"></i> Text
+<i class="ri-message-3-fill"></i> Text
 </a>
 </div>
 <button id="close-modal" class="modal-close-btn">Cancel</button>
@@ -173,13 +173,13 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <p>Choose an option below:</p>
 <div class="phone-modal-actions stack">
 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=theoneandonly@jymer1102.me" target="_blank" rel="noopener noreferrer" class="modal-btn call-btn">
-<i class="fa-brands fa-google"></i> Open in Gmail
+<i class="ri-google-fill"></i> Open in Gmail
 </a>
 <a href="mailto:theoneandonly@jymer1102.me" class="modal-btn text-btn">
-<i class="fa-solid fa-envelope"></i> Open Mail App
+<i class="ri-mail-fill"></i> Open Mail App
 </a>
 <button id="copy-email-btn" type="button" class="modal-btn text-btn">
-<i class="fa-solid fa-copy"></i> Copy Email
+<i class="ri-file-copy-fill"></i> Copy Email
 </button>
 </div>
 <button id="close-email-modal" class="modal-close-btn">Cancel</button>
@@ -244,10 +244,10 @@ emailModal.classList.remove('is-visible');
 copyEmailBtn.addEventListener('click', async () => {
 try {
 await navigator.clipboard.writeText(emailAddress);
-copyEmailBtn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+copyEmailBtn.innerHTML = '<i class="ri-checkbox-circle-fill"></i> Copied!';
 } catch (err) {
 console.error('Copy failed:', err);
-copyEmailBtn.innerHTML = '<i class="fa-solid fa-xmark"></i> Copy failed';
+copyEmailBtn.innerHTML = '<i class="ri-close-circle-fill"></i> Copy failed';
 }
 setTimeout(() => {
 copyEmailBtn.innerHTML = copyEmailDefaultHTML;
@@ -312,8 +312,8 @@ const submitBtnDefaultHTML = submitBtn.innerHTML;
 const showStatus = (type, message) => {
 statusBox.classList.remove('status-success', 'status-error');
 statusBox.classList.add(type === 'success' ? 'status-success' : 'status-error');
-const icon = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
-statusBox.innerHTML = `<i class="fa-solid ${icon}"></i><span>${message}</span>`;
+const icon = type === 'success' ? 'ri-checkbox-circle-fill' : 'ri-error-warning-fill';
+statusBox.innerHTML = `<i class="${icon}"></i><span>${message}</span>`;
 statusBox.classList.add('is-visible');
 };
 
@@ -326,7 +326,7 @@ e.preventDefault();
 hideStatus();
 
 submitBtn.disabled = true;
-submitBtn.innerHTML = '<i class="fa-solid fa-spinner"></i> Sending…';
+submitBtn.innerHTML = '<i class="ri-loader-4-fill"></i> Sending…';
 
 try {
 const response = await fetch(form.action, {
