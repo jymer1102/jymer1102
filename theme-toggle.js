@@ -8,7 +8,7 @@
     function updateIcon(theme) {
         var icon = document.querySelector('#theme-toggle i');
         if (!icon) return;
-        icon.className = (theme === 'light' ? 'fa-solid fa-sun' : 'fa-solid fa-moon') + (icon.classList.contains('icon-spin') ? ' icon-spin' : '');
+        icon.className = (theme === 'light' ? 'ri-sun-fill' : 'ri-moon-fill') + (icon.classList.contains('icon-spin') ? ' icon-spin' : '');
     }
 
     function currentTheme() {
