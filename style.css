@@ -330,29 +330,35 @@ box-shadow: 0 0 12px var(--accent-glow);
 transform: scale(1.06);
 }
 
-/* Remix glyphs carry built-in padding, so card-title icons get a slight optical bump */
-.split-card h3 [class^="ri-"],
-.split-card h3 [class*=" ri-"] {
-font-size: 1.2em;
+/* Reicon glyphs sit inside a padded 24px grid, so icons next to text get a slight optical bump.
+   (--ri-size is the component's own sizing variable; it defaults to 1em.) */
+.split-card h3 re-icon,
+.connect-label re-icon,
+.form-status re-icon {
+--ri-size: 1.2em;
 }
 
-.split-card h3 i + i {
+.playground-btn re-icon {
+--ri-size: 1.3em;
+}
+
+.split-card h3 re-icon + re-icon {
 margin-left: 4px;
 }
 
-/* Remix Icon (filled set): consistent alignment + optical size across the site */
-[class^="ri-"],
-[class*=" ri-"] {
+/* Reicon: reserve the icon's box until the script upgrades the element (no layout shift) */
+re-icon:not(:defined) {
 display: inline-block;
-line-height: 1;
-vertical-align: -0.125em;
+width: 1em;
+height: 1em;
+vertical-align: middle;
 }
 
-.theme-toggle i {
+.theme-toggle re-icon {
 display: inline-block;
 }
 
-.theme-toggle i.icon-spin {
+.theme-toggle re-icon.icon-spin {
 animation: themeIconSpin 0.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -369,7 +375,7 @@ transform: rotate(360deg) scale(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-.theme-toggle i.icon-spin {
+.theme-toggle re-icon.icon-spin {
 animation: none;
 }
 }
@@ -872,10 +878,10 @@ display: inline-flex;
 align-items: center;
 }
 
+.connect-label re-icon,
 .connect-label i {
 margin-right: 6px;
 color: var(--accent-bright);
-font-size: 1.2em;
 }
 
 .connect-value {
@@ -885,6 +891,7 @@ text-decoration: none;
 transition: color 0.25s var(--ease);
 }
 
+.connect-value re-icon,
 .connect-value i {
 margin-right: 6px;
 color: var(--accent-bright);
@@ -1028,7 +1035,7 @@ transform: none !important;
 box-shadow: none !important;
 }
 
-.submit-btn .ri-loader-4-fill {
+.submit-btn re-icon[icon="loader"] {
 animation: spin 0.8s linear infinite;
 }
 
@@ -1060,10 +1067,9 @@ transform: translateY(0);
 max-height: 200px;
 }
 
-.form-status i {
+.form-status re-icon {
 margin-top: 2px;
 flex-shrink: 0;
-font-size: 1.2em;
 }
 
 .form-status.status-success {
@@ -1537,10 +1543,6 @@ border: 1px solid var(--border);
 background: var(--bg-raised);
 color: var(--text-1);
 transition: border-color 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease);
-}
-
-.playground-btn i {
-font-size: 1.3em;
 }
 
 .playground-btn:hover {
