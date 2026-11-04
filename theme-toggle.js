@@ -6,9 +6,9 @@
     var SPIN_DURATION = 500;
 
     function updateIcon(theme) {
-        var icon = document.querySelector('#theme-toggle i');
+        var icon = document.querySelector('#theme-toggle re-icon');
         if (!icon) return;
-        icon.className = (theme === 'light' ? 'ri-sun-fill' : 'ri-moon-fill') + (icon.classList.contains('icon-spin') ? ' icon-spin' : '');
+        icon.setAttribute('icon', theme === 'light' ? 'sun' : 'moon');
     }
 
     function currentTheme() {
@@ -21,7 +21,7 @@
         var btn = document.getElementById('theme-toggle');
         if (btn) {
             btn.addEventListener('click', function () {
-                var icon = document.querySelector('#theme-toggle i');
+                var icon = document.querySelector('#theme-toggle re-icon');
                 var next = currentTheme() === 'dark' ? 'light' : 'dark';
 
                 if (icon) {
