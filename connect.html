@@ -53,7 +53,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <nav id="top">
 <div class="nav-left">
 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-<re-icon icon="moon" weight="filled" decorative></re-icon>
+<re-icon icon="moon" weight="outline" decorative></re-icon>
 </button>
 <a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
 </div>
@@ -79,11 +79,11 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <div class="connect-panel js-interactive-container">
 <ul class="connect-list">
 <li>
-<span class="connect-label"><re-icon icon="at-sign" weight="filled" decorative></re-icon> Email</span>
+<span class="connect-label"><re-icon icon="at-sign" weight="outline" decorative></re-icon> Email</span>
 <a href="mailto:theoneandonly@jymer1102.com" id="email-link" class="connect-value">theoneandonly@jymer1102.com</a>
 </li>
 <li>
-<span class="connect-label"><re-icon icon="phone" weight="filled" decorative></re-icon> Phone</span>
+<span class="connect-label"><re-icon icon="phone" weight="outline" decorative></re-icon> Phone</span>
 <a href="#" id="phone-link" class="connect-value">+1 (417) 000-0000</a>
 </li>
 <li>
@@ -143,7 +143,7 @@ document.documentElement.setAttribute('data-theme', 'dark');
 
 <input type="hidden" name="_subject" value="New message from jymer1102.me!">
 
-<button type="submit" class="submit-btn" id="submit-btn"><re-icon icon="send" weight="filled" decorative></re-icon> Send Message</button>
+<button type="submit" class="submit-btn" id="submit-btn"><re-icon icon="send" weight="outline" decorative></re-icon> Send Message</button>
 
 <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
 </form>
@@ -158,10 +158,10 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <p>Choose an option below:</p>
 <div class="phone-modal-actions">
 <a href="tel:+14170000000" class="modal-btn call-btn">
-<re-icon icon="phone" weight="filled" decorative></re-icon> Call
+<re-icon icon="phone" weight="outline" decorative></re-icon> Call
 </a>
 <a href="sms:+14170000000" class="modal-btn text-btn">
-<re-icon icon="chat-dots" weight="filled" decorative></re-icon> Text
+<re-icon icon="chat-dots" weight="outline" decorative></re-icon> Text
 </a>
 </div>
 <button id="close-modal" class="modal-close-btn">Cancel</button>
@@ -177,10 +177,10 @@ document.documentElement.setAttribute('data-theme', 'dark');
 <i class="fa-brands fa-google"></i> Open in Gmail
 </a>
 <a href="mailto:theoneandonly@jymer1102.me" class="modal-btn text-btn">
-<re-icon icon="envelope" weight="filled" decorative></re-icon> Open Mail App
+<re-icon icon="envelope" weight="outline" decorative></re-icon> Open Mail App
 </a>
 <button id="copy-email-btn" type="button" class="modal-btn text-btn">
-<re-icon icon="copy" weight="filled" decorative></re-icon> Copy Email
+<re-icon icon="copy" weight="outline" decorative></re-icon> Copy Email
 </button>
 </div>
 <button id="close-email-modal" class="modal-close-btn">Cancel</button>
@@ -245,10 +245,10 @@ emailModal.classList.remove('is-visible');
 copyEmailBtn.addEventListener('click', async () => {
 try {
 await navigator.clipboard.writeText(emailAddress);
-copyEmailBtn.innerHTML = '<re-icon icon="tick-circle" weight="filled" decorative></re-icon> Copied!';
+copyEmailBtn.innerHTML = '<re-icon icon="check-circle" weight="outline" decorative></re-icon> Copied!';
 } catch (err) {
 console.error('Copy failed:', err);
-copyEmailBtn.innerHTML = '<re-icon icon="close-circle" weight="filled" decorative></re-icon> Copy failed';
+copyEmailBtn.innerHTML = '<re-icon icon="x-circle" weight="outline" decorative></re-icon> Copy failed';
 }
 setTimeout(() => {
 copyEmailBtn.innerHTML = copyEmailDefaultHTML;
@@ -313,8 +313,8 @@ const submitBtnDefaultHTML = submitBtn.innerHTML;
 const showStatus = (type, message) => {
 statusBox.classList.remove('status-success', 'status-error');
 statusBox.classList.add(type === 'success' ? 'status-success' : 'status-error');
-const icon = type === 'success' ? 'tick-circle' : 'alert-circle';
-statusBox.innerHTML = `<re-icon icon="${icon}" weight="filled" decorative></re-icon><span>${message}</span>`;
+const icon = type === 'success' ? 'check-circle' : 'alert-circle';
+statusBox.innerHTML = `<re-icon icon="${icon}" weight="outline" decorative></re-icon><span>${message}</span>`;
 statusBox.classList.add('is-visible');
 };
 
@@ -327,7 +327,7 @@ e.preventDefault();
 hideStatus();
 
 submitBtn.disabled = true;
-submitBtn.innerHTML = '<re-icon icon="loader" weight="filled" decorative></re-icon> Sending…';
+submitBtn.innerHTML = '<re-icon icon="loader" weight="outline" decorative></re-icon> Sending…';
 
 try {
 const response = await fetch(form.action, {
