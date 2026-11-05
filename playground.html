@@ -162,7 +162,7 @@ body.preview-fullscreen-active {
 <nav id="top">
 <div class="nav-left">
 <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
-<re-icon icon="moon" weight="filled" decorative></re-icon>
+<re-icon icon="moon" weight="outline" decorative></re-icon>
 </button>
 <a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
 </div>
@@ -189,10 +189,10 @@ body.preview-fullscreen-active {
 <div class="playground-toolbar">
 <div class="playground-tabs"></div>
 <div class="playground-actions">
-<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><re-icon icon="play" weight="filled" decorative></re-icon></button>
-<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><re-icon icon="close-circle" weight="filled" decorative></re-icon></button>
-<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><re-icon icon="download" weight="filled" decorative></re-icon></button>
-<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><re-icon icon="maximize" weight="filled" decorative></re-icon></button>
+<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><re-icon icon="play" weight="outline" decorative></re-icon></button>
+<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><re-icon icon="x-circle" weight="outline" decorative></re-icon></button>
+<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><re-icon icon="download" weight="outline" decorative></re-icon></button>
+<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><re-icon icon="maximize" weight="outline" decorative></re-icon></button>
 <button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><re-icon icon="refresh" weight="outline" decorative></re-icon></button>
 </div>
 </div>
@@ -215,7 +215,7 @@ body.preview-fullscreen-active {
 <div class="playground-preview-wrap">
 <div class="playground-preview-label">Preview</div>
 <button id="exit-fullscreen-btn" class="exit-fullscreen-overlay" type="button" aria-label="Exit Fullscreen">
-  <re-icon icon="minimize" weight="filled" decorative></re-icon> Exit Fullscreen
+  <re-icon icon="minimize" weight="outline" decorative></re-icon> Exit Fullscreen
 </button>
 <iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
 </div>
@@ -263,7 +263,7 @@ if (touch) updateGlowPosition(touch.clientX, touch.clientY);
 (function () {
 const DEFAULT_HTML = `<h1><re-icon icon="handshake"></re-icon> Hello, user!</h1>
 <p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
-<button id="demo-btn"><span><re-icon icon="cursor" weight="filled" decorative></re-icon> Click me!</span></button>`;
+<button id="demo-btn"><span><re-icon icon="cursor" weight="outline" decorative></re-icon> Click me!</span></button>`;
 
 const DEFAULT_CSS = `
 :root {
