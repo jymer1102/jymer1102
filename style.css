@@ -1347,6 +1347,11 @@ gap: 300px;
   13. Scroll Indicator, Cursors & Modals
   -------------------------------------------------------------------------- */
 #scroll-indicator {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+white-space: nowrap;
 position: fixed;
 bottom: calc(30px + env(safe-area-inset-bottom, 0px));
 left: 50%;
@@ -1361,6 +1366,10 @@ z-index: 999;
 transition: opacity 0.5s var(--ease);
 pointer-events: none;
 animation: indicatorPulse 2s infinite var(--ease);
+}
+
+#scroll-indicator re-icon {
+--ri-size: 1.9em;
 }
 
 #scroll-indicator.is-hidden {
