@@ -26,8 +26,30 @@ document.documentElement.setAttribute('data-theme', 'dark');
 })();
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>jymer1102 | Playground</title>
-<meta name="description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
+<!-- Primary SEO -->
+<title>Playground | jymer1102 – Jackson Weimer</title>
+<meta name="description" content="A free live HTML, CSS and JavaScript playground by Jackson Weimer (jymer1102). Write code, see it run instantly and download your project. Nothing is saved.">
+<meta name="author" content="Jackson Weimer">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://jymer1102.com/playground/">
+<!-- Open Graph (Facebook, LinkedIn, Discord, iMessage and others) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jymer1102">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Playground | jymer1102 – Jackson Weimer">
+<meta property="og:description" content="A free live HTML, CSS and JavaScript playground by Jackson Weimer (jymer1102). Write code, see it run instantly and download your project. Nothing is saved.">
+<meta property="og:url" content="https://jymer1102.com/playground/">
+<meta property="og:image" content="https://jymer1102.com/images/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="480">
+<meta property="og:image:alt" content="jymer1102 written in glowing blue neon letters on a dark background">
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Playground | jymer1102 – Jackson Weimer">
+<meta name="twitter:description" content="A free live HTML, CSS and JavaScript playground by Jackson Weimer (jymer1102). Write code, see it run instantly and download your project. Nothing is saved.">
+<meta name="twitter:image" content="https://jymer1102.com/images/social-card.png">
+<meta name="twitter:image:alt" content="jymer1102 written in glowing blue neon letters on a dark background">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
@@ -144,14 +166,6 @@ body.preview-fullscreen-active {
 <link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
 
-<meta property="og:title" content="Playground | jymer1102">
-<meta property="og:description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
-<meta property="og:image" content="https://jymer1102.github.io/jymer1102/images/social-card.png">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Playground | jymer1102">
-<meta name="twitter:description" content="A blank HTML/CSS/JS playground to try out code for fun — nothing is saved.">
-<meta name="twitter:image" content="https://jymer1102.github.io/jymer1102/images/social-card.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
@@ -224,7 +238,15 @@ body.preview-fullscreen-active {
 </section>
 </main>
 
-<footer>"Look to the horizon, spread your wings, and fly." - Tom Reilly</footer>
+<footer>
+<p class="footer-quote">"Look to the horizon, spread your wings, and fly." - Tom Reilly</p>
+<p class="footer-copy">&copy; <span data-year>2026</span> jymer1102. All rights reserved.</p>
+<div class="footer-legal" role="navigation" aria-label="Legal">
+<a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+<a href="{{ '/terms/' | relative_url }}">Terms of Service</a>
+<button type="button" class="link-btn" data-cookie-settings>Cookie Settings</button>
+</div>
+</footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -261,7 +283,7 @@ if (touch) updateGlowPosition(touch.clientX, touch.clientY);
 
 <script>
 (function () {
-const DEFAULT_HTML = `<h1><re-icon icon="handshake" weight="outline" decorative></re-icon> Hello, user!</h1>
+const DEFAULT_HTML = `<h1><re-icon icon="hand" weight="outline" decorative></re-icon> Hello, user!</h1>
 <p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
 <button id="demo-btn"><span><re-icon icon="cursor" weight="outline" decorative></re-icon> Click me!</span></button>`;
 
@@ -639,6 +661,8 @@ downloadBtn.addEventListener('click', downloadZip);
 <script src="{{ '/scroll-reveal.js' | relative_url }}"></script>
 
 <script src="{{ '/theme-toggle.js' | relative_url }}"></script>
+
+<script src="{{ '/cookie-consent.js' | relative_url }}" defer></script>
 
 <script src="{{ '/card-tilt.js' | relative_url }}"></script>
 
