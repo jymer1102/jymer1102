@@ -1,0 +1,14 @@
+# robots.txt for https://jymer1102.com
+# Every crawler (including Googlebot) may crawl the whole site, including
+# CSS, JavaScript and images, which Google needs in order to render the pages.
+
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+Sitemap: https://jymer1102.com/sitemap.xml
