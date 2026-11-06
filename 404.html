@@ -26,8 +26,10 @@ permalink: /404.html
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jymer1102 | 404 Not Found</title>
-    <meta name="description" content="Page not found on jymer1102's portfolio.">
+    <title>Page Not Found | jymer1102</title>
+    <meta name="description" content="Page not found on the website of Jackson Weimer (jymer1102).">
+    <meta name="robots" content="noindex, follow">
+    <meta name="author" content="Jackson Weimer">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
@@ -72,7 +74,15 @@ permalink: /404.html
 
     </main>
 
-    <footer class="error-footer">"Look to the horizon, spread your wings, and fly." - Tom Reilly</footer>
+    <footer class="error-footer">
+    <p class="footer-quote">"Look to the horizon, spread your wings, and fly." - Tom Reilly</p>
+    <p class="footer-copy">&copy; <span data-year>2026</span> jymer1102. All rights reserved.</p>
+    <div class="footer-legal" role="navigation" aria-label="Legal">
+    <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+    <a href="{{ '/terms/' | relative_url }}">Terms of Service</a>
+    <button type="button" class="link-btn" data-cookie-settings>Cookie Settings</button>
+    </div>
+    </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -107,6 +117,8 @@ permalink: /404.html
 
     <script src="{{ '/scroll-reveal.js' | relative_url }}"></script>
     <script src="{{ '/theme-toggle.js' | relative_url }}"></script>
+
+    <script src="{{ '/cookie-consent.js' | relative_url }}" defer></script>
     <script src="{{ '/card-tilt.js' | relative_url }}"></script>
     <script src="{{ '/favicon-animation.js' | relative_url }}"></script>
 
