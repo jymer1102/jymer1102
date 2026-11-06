@@ -1,0 +1,200 @@
+---
+permalink: /privacy/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>
+(function () {
+try {
+var stored = localStorage.getItem('theme');
+var theme = stored;
+if (!theme) {
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+theme = 'dark';
+} else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+theme = 'light';
+} else {
+theme = 'dark';
+}
+}
+document.documentElement.setAttribute('data-theme', theme);
+} catch (e) {
+document.documentElement.setAttribute('data-theme', 'dark');
+}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Primary SEO -->
+<title>Privacy Policy | jymer1102 – Jackson Weimer</title>
+<meta name="description" content="How jymer1102.com, the website of Jackson Weimer, handles your information, including the contact form, cookies and third-party services.">
+<meta name="author" content="Jackson Weimer">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="https://jymer1102.com/privacy/">
+<!-- Open Graph (Facebook, LinkedIn, Discord, iMessage and others) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jymer1102">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Privacy Policy | jymer1102 – Jackson Weimer">
+<meta property="og:description" content="How jymer1102.com, the website of Jackson Weimer, handles your information, including the contact form, cookies and third-party services.">
+<meta property="og:url" content="https://jymer1102.com/privacy/">
+<meta property="og:image" content="https://jymer1102.com/images/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="480">
+<meta property="og:image:alt" content="jymer1102 written in glowing blue neon letters on a dark background">
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy | jymer1102 – Jackson Weimer">
+<meta name="twitter:description" content="How jymer1102.com, the website of Jackson Weimer, handles your information, including the contact form, cookies and third-party services.">
+<meta name="twitter:image" content="https://jymer1102.com/images/social-card.png">
+<meta name="twitter:image:alt" content="jymer1102 written in glowing blue neon letters on a dark background">
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
+<link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/reicon@1.2.5/cdn/reicon.js" defer></script>
+</head>
+<body>
+
+<nav id="top">
+<div class="nav-left">
+<button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+<re-icon icon="moon" weight="outline" decorative></re-icon>
+</button>
+<a href="{{ '/' | relative_url }}#top" class="logo">jymer1102</a>
+</div>
+<div class="nav-links">
+<a href="{{ '/' | relative_url }}">Home</a>
+<a href="{{ '/creations/' | relative_url }}">Creations</a>
+<a href="{{ '/connect/' | relative_url }}">Connect</a>
+<a href="{{ '/playground/' | relative_url }}">Playground</a>
+</div>
+</nav>
+
+<main class="legal-page">
+
+<header class="legal-head">
+<p class="eyebrow">jymer1102 / legal</p>
+<h1 class="glow-text">Privacy Policy</h1>
+<p class="legal-meta">Effective November 6, 2026</p>
+</header>
+
+<div class="legal-panel legal-content">
+<p>This Privacy Policy explains what information jymer1102.com (the “Site”) collects, how it is used, and the choices you have. The Site is a personal website and portfolio run by Jackson Weimer, who also goes by jymer1102 (“I”, “me” or “my”). By using the Site you acknowledge this policy. If you do not agree with it, please do not use the Site.</p>
+
+<h2>1. The short version</h2>
+<ul>
+<li>The only personal information I receive is what you choose to send me through the contact form or by email.</li>
+<li>The Site currently has no advertising, no analytics and no tracking cookies.</li>
+<li>Your browser stores two small items for the Site: your light or dark theme, and your cookie choice.</li>
+<li>I do not sell your personal information.</li>
+</ul>
+
+<h2>2. Information I collect</h2>
+
+<h3>2.1 Information you give me</h3>
+<p>The contact form asks for your name, email address, a subject and a message, plus anything else you choose to write. If you email me directly, I receive your email address and whatever you send. Please do not include sensitive information (such as health, financial or government ID details) in a message.</p>
+
+<h3>2.2 Information collected automatically</h3>
+<p>When your browser loads the Site it sends standard technical information, such as your IP address, browser type and version, device and operating system, the page you asked for, the page you came from, and the date and time. This is received by my hosting provider (GitHub Pages) and by the third-party services listed in Section 5 that deliver fonts and code libraries to your browser. I do not run analytics on the Site or build visitor profiles from this information.</p>
+
+<h3>2.3 The code playground</h3>
+<p>Code you type into the Playground stays in your browser. It is not sent to me, not stored by me, and not saved after you leave, unless you choose to download it. The live preview runs in your browser, and if your own code asks for files from other websites, those requests go from your browser directly to those sites.</p>
+
+<h2>3. Cookies and similar technologies</h2>
+<p>The Site uses only the following items, both set by the Site itself (first-party) and both strictly necessary for the Site to remember your preferences:</p>
+<div class="legal-table-wrap">
+<table class="legal-table">
+<thead>
+<tr><th>Name</th><th>Purpose</th><th>Where</th><th>Duration</th></tr>
+</thead>
+<tbody>
+<tr><td><code>theme</code></td><td>Remembers whether you chose the light or dark theme.</td><td>Browser local storage</td><td>Until you clear your browser data</td></tr>
+<tr><td><code>jymer1102_consent</code></td><td>Remembers your answer to the cookie banner so it does not ask on every visit.</td><td>Cookie (with a local storage backup)</td><td>180 days</td></tr>
+</tbody>
+</table>
+</div>
+<p>There are currently no analytics, advertising or other non-essential cookies on the Site. If I ever add any, they will stay switched off unless you accept them in the cookie banner, and I will update this policy to name them.</p>
+
+<h3>Your choices</h3>
+<ul>
+<li>You can accept or decline optional cookies in the banner, and change your answer at any time with <button type="button" class="link-btn" data-cookie-settings>Cookie Settings</button>.</li>
+<li>If your browser sends a Global Privacy Control signal, the Site treats it as a request to decline optional cookies.</li>
+<li>You can also block or delete cookies and local storage in your browser settings. The Site will still work, but it will forget your theme.</li>
+</ul>
+
+<h2>4. How I use information, and why</h2>
+<ul>
+<li><strong>To reply to you.</strong> I use what you send through the contact form or email to read and answer your message. (Legal basis under GDPR: steps you request, and my legitimate interest in responding.)</li>
+<li><strong>To run and protect the Site.</strong> Technical data is processed by my hosting and delivery providers so the Site loads and stays secure. (Legitimate interests.)</li>
+<li><strong>To remember your choices.</strong> The two items in Section 3. (Legitimate interests, as they are strictly necessary.)</li>
+<li><strong>To follow the law.</strong> Where a legal obligation requires it.</li>
+</ul>
+<p>I do not use your information for automated decision-making or profiling.</p>
+
+<h2>5. Services that help run the Site</h2>
+<p>These providers process data on my behalf or deliver content to your browser. Each has its own privacy practices:</p>
+<ul>
+<li><strong>GitHub Pages</strong> hosts the Site. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Privacy Statement</a>.</li>
+<li><strong>Formspree</strong> receives and processes contact form submissions and forwards them to me by email. See the <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Formspree Privacy Policy</a>.</li>
+<li><strong>Google Fonts</strong> serves the Site’s web fonts. Google receives your IP address and browser details when the fonts load. See the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</li>
+<li><strong>jsDelivr</strong> delivers the icon libraries used on the Site. See the <a href="https://jsdelivr.com/privacy-policy-jsdelivr-net" target="_blank" rel="noopener noreferrer">jsDelivr Privacy Policy</a>.</li>
+<li><strong>unpkg</strong> delivers the scroll-animation library, and <strong>cdnjs (Cloudflare)</strong> delivers the file-zipping library used by the Playground’s download button. See the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare Privacy Policy</a>.</li>
+</ul>
+<p>The Site also links to other places, such as Linktree, Gmail, and projects hosted on GitHub Pages, Render and Base44. Once you follow a link, that site’s own privacy practices apply, and I am not responsible for them.</p>
+
+<h2>6. Sharing and selling</h2>
+<p>I share personal information only with the providers in Section 5 as needed to run the Site and the contact form, when the law requires it, or to protect the rights, safety or property of me or others. I do not sell your personal information, and I do not share it for cross-context behavioral advertising (as those terms are defined under California law). In the past 12 months I have not sold or shared personal information.</p>
+
+<h2>7. How long I keep information</h2>
+<p>I keep contact messages for as long as I need to respond and for reasonable record-keeping, then delete them. Formspree keeps submissions under its own retention schedule. The theme and consent items stay on your device until they expire or you clear them.</p>
+
+<h2>8. Your rights</h2>
+<p><strong>Everyone.</strong> You can ask me what personal information I hold about you (mainly any message you sent), and ask me to correct or delete it.</p>
+<p><strong>European Economic Area, United Kingdom and Switzerland.</strong> You may have the right to access, correct, erase or restrict the use of your personal data, to object to its use, to receive a portable copy, and to withdraw consent at any time (withdrawing does not affect earlier use). You also have the right to complain to your local data protection authority.</p>
+<p><strong>California.</strong> Under the CCPA/CPRA you may have the right to know what personal information is collected and how it is used, to delete it, to correct it, to opt out of its sale or sharing (which I do not do), and not to be treated differently for using these rights. You can use an authorized agent to make a request for you. The Site honors Global Privacy Control signals as an opt-out request.</p>
+<p><strong>Other U.S. states.</strong> Residents of other states may have similar rights. Email me and I will do my best to help.</p>
+<p>To make a request, email <a href="mailto:theoneandonly@jymer1102.com">theoneandonly@jymer1102.com</a>. I may need to confirm it is really you, and I will respond within the time the law requires (generally 30 to 45 days).</p>
+
+<h2>9. International transfers</h2>
+<p>I am based in the United States, and the providers in Section 5 process data in the United States and other countries. If you visit from outside the United States, your information may be transferred to and processed in countries whose data protection laws differ from yours. Where required, providers rely on safeguards such as standard contractual clauses.</p>
+
+<h2>10. Children</h2>
+<p>The Site is not directed to children under 13 (or under 16 where local law sets a higher age), and I do not knowingly collect their personal information. If you believe a child has sent me personal information, email me and I will delete it.</p>
+
+<h2>11. Security</h2>
+<p>I take reasonable steps to protect the information I receive, and the Site is served over HTTPS. No method of transmission or storage is perfectly secure, so I cannot guarantee absolute security.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>I may update this policy from time to time. When I do, I will change the effective date at the top of this page. If a change is significant, I will also ask for your cookie choice again.</p>
+
+<h2>13. Contact</h2>
+<p>Questions about this policy or your information: <a href="mailto:theoneandonly@jymer1102.com">theoneandonly@jymer1102.com</a>. You can also read the <a href="{{ '/terms/' | relative_url }}">Terms of Service</a>.</p>
+</div>
+
+</main>
+
+<footer>
+<p class="footer-quote">"Look to the horizon, spread your wings, and fly." - Tom Reilly</p>
+<p class="footer-copy">&copy; <span data-year>2026</span> jymer1102. All rights reserved.</p>
+<div class="footer-legal" role="navigation" aria-label="Legal">
+<a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a>
+<a href="{{ '/terms/' | relative_url }}">Terms of Service</a>
+<button type="button" class="link-btn" data-cookie-settings>Cookie Settings</button>
+</div>
+</footer>
+
+<script src="{{ '/theme-toggle.js' | relative_url }}"></script>
+
+<script src="{{ '/cookie-consent.js' | relative_url }}" defer></script>
+
+<script src="{{ '/favicon-animation.js' | relative_url }}"></script>
+
+</body>
+</html>
