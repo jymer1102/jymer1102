@@ -62,14 +62,6 @@ I'm a creator and designer building my digital corner of the internet. Welcome t
 
 ---
 
-### ![](https://img.shields.io/badge/LISTENING_TO-1DB954?style=for-the-badge&logo=applemusic&logoColor=white)
-
-<a href="https://music-profile.rayriffy.com">
-  <img src="https://music-profile.rayriffy.com/theme/dark.svg?uid=001396.90916c02bf7f45439497c8295a54ba75.1626" alt="Apple Music Profile"/>
-</a>
-
----
-
 ### ![](https://img.shields.io/badge/MY_CREATIONS-FF4500?style=for-the-badge&logo=gamepad&logoColor=white)
 
 <p align="center">
