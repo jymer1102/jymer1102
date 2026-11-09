@@ -1389,13 +1389,13 @@ transform: translate(-50%, -6px);
 }
 
 html, body {
-cursor: url('/jymer1102/images/cursor/custom-j-cursor.png') 0 0, default;
+cursor: url('/images/cursor/custom-j-cursor.png') 0 0, default;
 }
 
 a, button, .nav-cta, .btn-primary, select, input[type="submit"], .submit-btn,
 .logo, .theme-toggle, .playground-btn, .modal-close-btn, .modal-btn,
 select.form-control, .project-card:not(.in-progress) {
-cursor: url('/jymer1102/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer;
+cursor: url('/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer;
 }
 
 /* Phone Action Modal */
