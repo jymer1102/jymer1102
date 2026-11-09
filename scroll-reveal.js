@@ -1,9 +1,6 @@
 // Shared scroll behavior for the whole site:
 // - Fades the scroll indicator out over 0.5s once the user scrolls past 10px
-//   (CSS handles the actual 0.5s fade via the .is-hidden class / transition).
-// - Hides "reveal" containers (cards/panels) until the user starts scrolling,
-//   then fades them in. Scrolling back up to the top hides them again and
-//   brings the scroll indicator back.
+// - Hides "reveal" containers until the user starts scrolling
 (function () {
     function updateScrollState() {
         var indicator = document.getElementById('scroll-indicator');
@@ -17,12 +14,9 @@
         revealEls.forEach(function (el) {
             el.classList.toggle('is-visible', past10px);
         });
-
-        if (!past10px && window.AOS) {
-            AOS.refresh();
-        }
     }
 
+    // Throttle or passive listener for performance
     window.addEventListener('scroll', updateScrollState, { passive: true });
     window.addEventListener('DOMContentLoaded', updateScrollState);
 })();
