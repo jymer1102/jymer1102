@@ -41,7 +41,7 @@
 <br><hr><br>
 
 <!-- CREATIONS -->
-<h3><img src="https://cdn.simpleicons.org/steam/7B2CBF" width="20" /> My Creations</h3>
+<h3><img  width="20" /> My Creations</h3>
 
 <table align="center">
   <tr>
