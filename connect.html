@@ -393,5 +393,8 @@ submitBtn.innerHTML = submitBtnDefaultHTML;
 
 <script src="{{ '/favicon-animation.js' | relative_url }}"></script>
 
+<script>
+  document.querySelector('[data-year]').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
