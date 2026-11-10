@@ -11,26 +11,26 @@
 
 <br>
 
-<!-- CONNECT BUTTONS (Unified Dark Theme) -->
+<!-- CONNECT BUTTONS -->
 <a href="https://linktr.ee/jymer1102"><img src="https://img.shields.io/badge/Linktree-1A1A1A?style=for-the-badge&logo=linktree&logoColor=39E09B" alt="Linktree"></a>
 <a href="http://jymer1102.com"><img src="https://img.shields.io/badge/Website-1A1A1A?style=for-the-badge&logo=googlechrome&logoColor=7B2CBF" alt="Website"></a>
 <a href="https://www.paypal.me/jymer1102"><img src="https://img.shields.io/badge/Donate-1A1A1A?style=for-the-badge&logo=paypal&logoColor=00457C" alt="PayPal"></a>
 
 <br><br><hr><br>
 
-<!-- ABOUT & SKILLS (Side by side using invisible table) -->
+<!-- ABOUT & SKILLS -->
 <table style="border: none;" align="center">
   <tr style="border: none;">
     <td width="50%" align="center" style="border: none;">
       <h3><img src="https://cdn.simpleicons.org/target/7B2CBF" width="20" /> What I'm Up To</h3>
       <p align="left">
-        <img src="https://cdn.simpleicons.org/googlechrome/1A1A1A" width="16" /> <b>Web Design:</b> Exploring free web hosting and site builders. I love designing and tweaking websites; coding is not what I do, though.<br><br>
+        <img src="https://cdn.simpleicons.org/googleearth/1A1A1A" width="16" /> <b>Web Design:</b> Exploring free web hosting and site builders. I love designing and tweaking websites; coding is not what I do, though.<br><br>
         <img src="https://cdn.simpleicons.org/nodedotjs/1A1A1A" width="16" /> <b>Current Projects:</b> Designing my zombie shooter game (<code>Zombified</code>).<br><br>
         <img src="https://cdn.simpleicons.org/rocket/1A1A1A" width="16" /> <b>Learning:</b> Getting the hang of GitHub and basic web tools.
       </p>
     </td>
     <td width="50%" align="center" style="border: none;">
-      <h3><img src="https://cdn.simpleicons.org/codepen/7B2CBF" width="20" /> Skills & Tech</h3>
+      <h3><img src="https://cdn.simpleicons.org/git/7B2CBF" width="20" /> Skills & Tech</h3>
       <a href="https://skillicons.dev">
         <img src="https://skillicons.dev/icons?i=github,vscode,discord,spotify,instagram,windows&theme=dark&perline=3" alt="My Skills" />
       </a>
@@ -40,8 +40,8 @@
 
 <br><hr><br>
 
-<!-- CREATIONS (Structured 3-Column Grid) -->
-<h3><img src="https://cdn.simpleicons.org/epicgames/7B2CBF" width="20" /> My Creations</h3>
+<!-- CREATIONS -->
+<h3><img src="https://cdn.simpleicons.org/steam/7B2CBF" width="20" /> My Creations</h3>
 
 <table align="center">
   <tr>
@@ -76,7 +76,7 @@
 
 <br><hr><br>
 
-<!-- STATS & ACTIVITY (Compact Layout) -->
+<!-- STATS & ACTIVITY -->
 <h3><img src="https://cdn.simpleicons.org/github/7B2CBF" width="20" /> GitHub Analytics</h3>
 
 <img src="https://raw.githubusercontent.com/jymer1102/jymer1102/output/github-snake.svg" alt="Snake Animation" />
@@ -95,7 +95,7 @@
 
 <br><hr><br>
 
-<!-- DAILY CARDS (Side by side) -->
+<!-- DAILY CARDS -->
 <h3><img src="https://cdn.simpleicons.org/lightning/7B2CBF" width="20" /> Quote & Joke of the Day</h3>
 
 <table style="border: none;" align="center">
