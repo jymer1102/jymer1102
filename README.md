@@ -2,88 +2,69 @@
 
 ![README Banner](images/jymer1102_banner.gif)
 
----
+### I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!
 
-### ![](https://img.shields.io/badge/CONTRIBUTIONS_GRAPH-40C463?style=for-the-badge&logo=github&logoColor=white)
-![Snake Animation](https://raw.githubusercontent.com/jymer1102/jymer1102/output/github-snake.svg)
+> *"Design is not just what it looks like and feels like. Design is how it works."* — **Steve Jobs** <br>
+> *"For God did not call us to be impure, but to live a holy life."* — **1 Thessalonians 4:7**
 
----
+<br>
 
-### ![](https://img.shields.io/badge/GITHUB_TROPHIES-FFD700?style=for-the-badge&logo=github&logoColor=black)
-[![Github Trophies](https://github-profile-trophy-mirror.vercel.app/?username=jymer1102&theme=radical&no-bg=true&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
+[![Linktree](https://img.shields.io/badge/Linktree-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/jymer1102)
+[![Website](https://img.shields.io/badge/Website-7B2CBF?style=for-the-badge&logo=googlechrome&logoColor=white)](http://jymer1102.com)
+[![PayPal](https://img.shields.io/badge/Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/jymer1102)
 
----
+<br>
 
-### ![](https://img.shields.io/badge/STATS_%26_LANGUAGES-007ACC?style=for-the-badge&logo=chartdotjs&logoColor=white)
-![Jymer's GitHub Stats](https://github-stats-extended.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true)
-
-![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=dark&hide_border=true)
-
----
-
-### ![](https://img.shields.io/badge/SKILLS_%26_TECHNOLOGIES-20232A?style=for-the-badge&logo=github&logoColor=white)
+### 🛠️ Skills & Technologies
 [![My Skills](https://skillicons.dev/icons?i=github,vscode,discord,spotify,instagram,windows&theme=dark)](https://skillicons.dev)
 
----
+<br>
 
-### ![](https://img.shields.io/badge/ABOUT_ME-7B2CBF?style=for-the-badge&logo=markdown&logoColor=white)
+### 🎯 What I'm Up To
+🌐 **Web Design:** Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.<br>
+💻 **Current Projects:** Designing my zombie shooter game (`Zombified`).<br>
+🚀 **Learning:** Getting the hang of GitHub and basic web tools.
 
-I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!
+<br>
 
-<br/>
+### 👾 My Creations
 
-*“Design is not just what it looks like and feels like. Design is how it works.”* — **Steve Jobs**
+| Project | Status / Link |
+| :---: | :---: |
+| ![](https://img.shields.io/badge/agent1102-8A2BE2?style=flat-square) | [![Launch](https://img.shields.io/badge/Launch-8A2BE2?style=flat-square)](https://agent1102.onrender.com/) |
+| ![](https://img.shields.io/badge/SCREEN_PET-4A90E2?style=flat-square) | [![Launch](https://img.shields.io/badge/Launch-4A90E2?style=flat-square)](https://screen-pet.base44.app/) |
+| ![](https://img.shields.io/badge/BLOB_FIDGET-2ECC71?style=flat-square) | [![Launch](https://img.shields.io/badge/Launch-2ECC71?style=flat-square)](https://blob-fidget.jymer1102.com) |
+| ![](https://img.shields.io/badge/TAG_MANIA-E53935?style=flat-square) | [![Launch](https://img.shields.io/badge/Launch-E53935?style=flat-square)](https://tag-mania.jymer1102.com) |
+| ![](https://img.shields.io/badge/NOTE_PETS-FFD700?style=flat-square&logoColor=black) | [![Launch](https://img.shields.io/badge/Launch-FFD700?style=flat-square&logoColor=black)](https://note-pets.jymer1102.com) |
+| ![](https://img.shields.io/badge/ZOMBIFIED-FF8C00?style=flat-square) | ![](https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square) |
 
-![](https://img.shields.io/badge/%E2%9C%A8-1A1A1A?style=flat-square)
+<br>
 
-*“For God did not call us to be impure, but to live a holy life.”* — **1 Thessalonians 4:7**
+### 📊 GitHub Stats & Activity
 
----
+![Snake Animation](https://raw.githubusercontent.com/jymer1102/jymer1102/output/github-snake.svg)
 
-### ![](https://img.shields.io/badge/SKILLS_%26_INTERESTS-008080?style=for-the-badge&logo=googlechrome&logoColor=white)
-
-<p align="center">
-  <img src="https://img.shields.io/badge/%F0%9F%8C%90-1A1A1A?style=flat-square" alt="globe" /> <strong>Web Design:</strong> Exploring free web hosting and site builders. I love to design and tweak websites, coding is not what I do, though.<br/><br/>
-  <img src="https://img.shields.io/badge/%F0%9F%92%BB-1A1A1A?style=flat-square" alt="laptop" /> <strong>Current Projects:</strong> Designing my zombie shooter game (<code>Zombified</code>).<br/><br/>
-  <img src="https://img.shields.io/badge/%F0%9F%9A%80-1A1A1A?style=flat-square" alt="rocket" /> <strong>Learning:</strong> Getting the hang of GitHub and basic web tools.
-</p>
-
----
-
-### ![](https://img.shields.io/badge/CONNECT_WITH_ME-1A1A1A?style=for-the-badge&logo=message&logoColor=white)
-
-[![Linktree](https://img.shields.io/badge/LINKTREE-39E09B?style=for-the-badge&logo=linktree&logoColor=white&labelColor=1a1a1a)](https://linktr.ee/jymer1102)
-[![Website](https://img.shields.io/badge/WEBSITE-7B2CBF?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1a1a1a)](http://jymer1102.com)
-
----
-
-#### ![](https://img.shields.io/badge/LIKE_WHAT_I_DO%3F_CONSIDER_DONATING%21-1A1A1A?style=for-the-badge)
-[![PayPal](https://img.shields.io/badge/PAYPAL-00457C?style=for-the-badge&logo=paypal&logoColor=white&labelColor=1a1a1a)](https://www.paypal.me/jymer1102)
-
----
-
-### ![](https://img.shields.io/badge/MY_CREATIONS-FF4500?style=for-the-badge&logo=gamepad&logoColor=white)
+[![Github Trophies](https://github-profile-trophy-mirror.vercel.app/?username=jymer1102&theme=radical&no-bg=true&margin-w=15)](https://github.com/ryo-ma/github-profile-trophy)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/agent1102-8A2BE2?style=flat-square" alt="agent1102" /> • <a href="https://agent1102.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=flat-square" alt="Launch" /></a><br/><br/>
-  <img src="https://img.shields.io/badge/SCREEN_PET-4A90E2?style=flat-square" alt="Screen Pet" /> • <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=flat-square" alt="Launch" /></a><br/><br/>
-  <img src="https://img.shields.io/badge/BLOB_FIDGET-2ECC71?style=flat-square" alt="Blob Fidget" /> • <a href="https://blob-fidget.jymer1102.com"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat-square" alt="Launch" /></a><br/><br/>
-  <img src="https://img.shields.io/badge/TAG_MANIA-E53935?style=flat-square" alt="Tag Mania" /> • <a href="https://tag-mania.jymer1102.com"><img src="https://img.shields.io/badge/Launch-E53935?style=flat-square" alt="Launch" /></a><br/><br/>
-  <img src="https://img.shields.io/badge/NOTE_PETS-FFD700?style=flat-square&logoColor=black" alt="Note Pets" /> • <a href="https://note-pets.jymer1102.com"><img src="https://img.shields.io/badge/Launch-FFD700?style=flat-square&logoColor=black" alt="Launch" /></a><br/><br/>
-  <img src="https://img.shields.io/badge/ZOMBIFIED-FF8C00?style=flat-square" alt="Zombified" /> • <a href="#"><img src="https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square" alt="In Progress" /></a>
+  <img src="https://github-stats-extended.vercel.app/api?username=jymer1102&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=jymer1102&layout=compact&theme=dark&hide_border=true" alt="Top Langs" />
 </p>
 
----
+<br>
 
-### ![](https://img.shields.io/badge/QUOTE_%26_JOKE_OF_THE_DAY-410093?style=for-the-badge&logo=github&logoColor=white)
+### ⚡ Quote & Joke of the Day
 
-![Dev Card](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Quote" />
+</p>
+<p align="center">
+  <img src="https://readme-jokes.vercel.app/api?theme=radical" alt="Joke" />
+</p>
 
-![Jokes Card](https://readme-jokes.vercel.app/api?theme=radical)
+<br>
 
----
-
-![](https://img.shields.io/badge/PROFILE_VIEWS-107C41?style=for-the-badge&logo=github&logoColor=white) [![jymer1102 profile views](https://u8views.com/api/v1/github/profiles/251914228/views/day-week-month-total-count.svg)](https://u8views.com/github/jymer1102)
+[![Profile Views](https://u8views.com/api/v1/github/profiles/251914228/views/day-week-month-total-count.svg)](https://u8views.com/github/jymer1102)
 
 ![Wave Footer](https://capsule-render.vercel.app/api?type=waving&color=7B2CBF&height=120&section=footer)
 
