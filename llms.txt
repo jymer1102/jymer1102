@@ -1,0 +1,29 @@
+# jymer1102 | Jackson Weimer
+
+> The official website and portfolio of Jackson Weimer (jymer1102): creator, designer, developer, pilot, businessman, and triathlete.
+
+## Core Pages
+
+- [Home](https://jymer1102.com/): Introduction to Jackson Weimer (jymer1102), covering academics, athletics, development, aviation, and faith.
+- [Creations](https://jymer1102.com/creations/): Collection of apps, web games, and projects built by Jackson Weimer.
+- [Connect](https://jymer1102.com/connect/): Contact information, direct messaging form, email link, and social profiles.
+- [Playground](https://jymer1102.com/playground/): Interactive live HTML, CSS, and JavaScript sandbox in the browser.
+
+## Featured Creations & Projects
+
+- [agent1102](https://agent1102.onrender.com/): An interactive AI companion experience web application.
+- [Screen Pet](https://screen-pet.base44.app/): An interactive virtual companion that lives inside your browser window.
+- [Blob Fidget](https://jymer1102.github.io/Blob-Fidget/): A physics-based interactive visual blob widget.
+- [Note Pets](https://jymer1102.github.io/Note-Pets/): An interactive notes app attaching reminders to fun virtual pets.
+- [Tag Mania](https://jymer1102.github.io/Tag-Mania/): A fast-paced arcade tag chase game for playing against friends or bots.
+- **Zombified** *(In Progress)*: An upcoming 3D web shooter featuring browser-based arena combat.
+
+## External Links & Socials
+
+- [Linktree](https://linktr.ee/jymer1102): Consolidated links to external social media profiles and channels.
+- [GitHub](https://github.com/jymer1102): Source code repositories and open-source contributions.
+
+## Legal & Information
+
+- [Privacy Policy](https://jymer1102.com/privacy/): Details on data processing, zero-tracking policy, cookies, and user privacy rights.
+- [Terms of Service](https://jymer1102.com/terms/): Terms for site usage, code playground rights, and content guidelines.
