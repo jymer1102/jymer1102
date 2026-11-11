@@ -1213,6 +1213,7 @@ overflow-x: auto;
 padding-bottom: 8px;
 -webkit-overflow-scrolling: touch;
 scrollbar-width: none;
+scroll-snap-type: x mandatory;
 }
 
 .nav-links::-webkit-scrollbar {
@@ -1225,10 +1226,21 @@ margin-right: 20px;
 font-size: 0.88rem;
 white-space: nowrap;
 flex-shrink: 0;
+scroll-snap-align: start;
 }
 
-.nav-links a:last-child {
-margin-right: 4px;
+.home-banner {
+margin-top: 70px;
+height: clamp(180px, 45vw, 240px);
+}
+
+.hero {
+padding: 40px 16px 60px;
+}
+
+.hero .glow-text {
+font-size: 2.2rem;
+margin-bottom: 12px;
 }
 
 .container {
