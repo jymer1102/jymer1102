@@ -197,11 +197,12 @@ word-break: break-word;
   width: 0.45em;
   height: 0.9em;
   background-color: var(--accent-bright);
-  color: transparent; /* Keeps the text transparent if you leave the "_" in the HTML */
+  color: transparent;
   box-shadow: 0 0 12px var(--accent-glow);
   border-radius: 2px;
-  flex-shrink: 0;
   margin-left: 4px;
+  vertical-align: baseline;
+  transform: translateY(0.1em); /* Nudges the block down to align with the text */
   animation: blink 1s step-end infinite;
 }
 
@@ -209,6 +210,7 @@ word-break: break-word;
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 .btn,
 .project-link {
