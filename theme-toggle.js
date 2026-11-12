@@ -11,7 +11,16 @@
         
         if (btn) {
             var label = theme === 'dark' ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-            btn.setAttribute('aria-label', label);
+            btn.setAttribute('title', label);
+
+            // Find or create a <span> for the visible label so we don't overwrite <re-icon>
+            var textSpan = btn.querySelector('.theme-label');
+            if (!textSpan) {
+                textSpan = document.createElement('span');
+                textSpan.className = 'theme-label';
+                btn.appendChild(textSpan);
+            }
+            textSpan.textContent = label;
         }
 
         if (icon) {
@@ -42,7 +51,7 @@
                     }, SPIN_DURATION);
                 }
 
-                // Swap the symbol and tooltip at the midpoint of the spin, so it flips
+                // Swap the symbol and label at the midpoint of the spin, so it flips
                 // from sun to moon (or back) right as the icon is edge-on.
                 setTimeout(function () {
                     document.documentElement.setAttribute('data-theme', next);
