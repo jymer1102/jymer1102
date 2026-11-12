@@ -288,7 +288,8 @@ if (touch) updateGlowPosition(touch.clientX, touch.clientY);
 (function () {
 const DEFAULT_HTML = `<h1><re-icon icon="handshake"></re-icon> Hello, user!</h1>
 <p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
-<button id="demo-btn"><span><re-icon icon="cursor" weight="outline" decorative></re-icon> Click me!</span></button>`;
+<button id="demo-btn"><span><re-icon icon="cursor" weight="outline" decorative></re-icon> Click me!</span></button>
+`;
 
 const DEFAULT_CSS = `
 :root {
@@ -425,6 +426,26 @@ input[type="submit"],
 input[type="button"], 
 [role="button"] {
   cursor: url('/images/cursor/custom-j-cursor-pointer.png'), pointer !important;
+}
+h1::after {
+  content: "";
+  display: inline-block;
+  width: 0.45em;
+  height: 0.9em;
+  background-color: var(--accent-bright);
+  box-shadow: 0 0 12px var(--accent-glow);
+  border-radius: 2px;
+  flex-shrink: 0;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 `;
 
