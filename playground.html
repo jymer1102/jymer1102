@@ -286,7 +286,7 @@ if (touch) updateGlowPosition(touch.clientX, touch.clientY);
 
 <script>
 (function () {
-const DEFAULT_HTML = `<h1><re-icon icon="handshake"></re-icon> Hello, user!<span class="cursor">_</span></h1>
+const DEFAULT_HTML = `const DEFAULT_HTML = `<h1><re-icon icon="handshake"></re-icon> Hello, user!<span class="cursor">_</span></h1>
 <p>Edit the HTML, CSS, and JS boxes above and watch the preview update.</p>
 <button id="demo-btn"><span><re-icon icon="cursor" weight="outline" decorative></re-icon> Click me!</span></button>
 `;
@@ -430,17 +430,21 @@ input[type="button"],
 
 .cursor {
   display: inline-block;
-  width: 0.5ch;
-  background: var(--accent-bright);
+  width: 0.45em;
+  height: 0.9em;
+  background-color: var(--accent-bright);
   color: transparent;
-  margin-left: 4px;
-  animation: blink 1.1s step-end infinite;
   box-shadow: 0 0 12px var(--accent-glow);
+  border-radius: 2px;
+  margin-left: 4px;
+  vertical-align: baseline;
+  transform: translateY(0.1em);
+  animation: blink 1s step-end infinite;
 }
 
 @keyframes blink {
-  0%, 45% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 `;
 
