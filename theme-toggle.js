@@ -11,7 +11,6 @@
         
         if (btn) {
             var label = theme === 'dark' ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-            btn.setAttribute('data-tooltip', label);
             btn.setAttribute('aria-label', label);
         }
 
