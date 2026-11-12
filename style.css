@@ -5,15 +5,19 @@
     2.  Global Reset & Base
     3.  Utility / Shared Patterns (eyebrows, glow text, interactive glow utility)
     4.  Navigation
-    5.  Hero (Home)
+    5.  Home Banner + Hero
     6.  Intro + Split Section (Home)
     7.  Page Header (Creations / Connect)
+    7b. 404 / Error Page
     8.  Project Cards & Gallery
-    9.  Project Icons & Logo Images
+    9.  Project Tags & Links
+    9b. Project Icons & Logo Images
     10. Connect Page & Contact Form
     11. Footer
     12. Responsive
     13. Scroll Indicator, Cursors & Modals
+    14. Code Playground
+    15. Legal: footer links, cookie banner, privacy/terms pages
   ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
