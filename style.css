@@ -307,27 +307,59 @@ align-items: center;
 gap: 16px;
 }
 
+.theme-toggle-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .theme-toggle {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 36px;
-height: 36px;
-border-radius: 50%;
-border: 1px solid var(--border);
-background: var(--bg-raised);
-color: var(--text-2);
-font-size: 0.95rem;
-cursor: pointer;
-transition: border-color 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
-flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  color: var(--text-2);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.25s var(--ease), color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
-border-color: var(--border-hover);
-color: var(--accent-bright);
-box-shadow: 0 0 12px var(--accent-glow);
-transform: scale(1.06);
+  border-color: var(--border-hover);
+  color: var(--accent-bright);
+  box-shadow: 0 0 12px var(--accent-glow);
+  transform: scale(1.06);
+}
+
+.theme-label {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--bg-raised);
+  color: var(--text-2);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
+  z-index: 100;
+}
+
+/* Reveal the label when hovering or tabbing onto the button */
+.theme-toggle:hover + .theme-label,
+.theme-toggle:focus-visible + .theme-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 /* Reicon glyphs sit inside a padded 24px grid, so icons next to text get a slight optical bump.
