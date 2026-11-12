@@ -5,10 +5,19 @@
 (function () {
     var SPIN_DURATION = 500;
 
-    function updateIcon(theme) {
+    function updateButton(theme) {
+        var btn = document.getElementById('theme-toggle');
         var icon = document.querySelector('#theme-toggle re-icon');
-        if (!icon) return;
-        icon.setAttribute('icon', theme === 'light' ? 'sun' : 'moon');
+        
+        if (btn) {
+            var label = theme === 'dark' ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+            btn.setAttribute('title', label);
+            btn.setAttribute('aria-label', label);
+        }
+
+        if (icon) {
+            icon.setAttribute('icon', theme === 'light' ? 'sun' : 'moon');
+        }
     }
 
     function currentTheme() {
@@ -16,7 +25,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        updateIcon(currentTheme());
+        updateButton(currentTheme());
 
         var btn = document.getElementById('theme-toggle');
         if (btn) {
@@ -34,12 +43,12 @@
                     }, SPIN_DURATION);
                 }
 
-                // Swap the symbol at the midpoint of the spin, so it flips
+                // Swap the symbol and tooltip at the midpoint of the spin, so it flips
                 // from sun to moon (or back) right as the icon is edge-on.
                 setTimeout(function () {
                     document.documentElement.setAttribute('data-theme', next);
                     try { localStorage.setItem('theme', next); } catch (e) {}
-                    updateIcon(next);
+                    updateButton(next);
                 }, SPIN_DURATION / 2);
             });
         }
@@ -53,7 +62,7 @@
                 if (stored) return;
                 var theme = e.matches ? 'dark' : 'light';
                 document.documentElement.setAttribute('data-theme', theme);
-                updateIcon(theme);
+                updateButton(theme);
             });
         }
     });
