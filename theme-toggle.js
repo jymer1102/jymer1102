@@ -5,22 +5,40 @@
 (function () {
     var SPIN_DURATION = 500;
 
+    function ensureLabelElements(btn) {
+        if (!btn) return null;
+
+        // Wrap the button if it isn't already inside .theme-toggle-wrapper
+        var wrapper = btn.parentElement;
+        if (!wrapper || !wrapper.classList.contains('theme-toggle-wrapper')) {
+            wrapper = document.createElement('div');
+            wrapper.className = 'theme-toggle-wrapper';
+            btn.parentNode.insertBefore(wrapper, btn);
+            wrapper.appendChild(btn);
+        }
+
+        // Create the sibling .theme-label span right after the button if missing
+        var textSpan = wrapper.querySelector('.theme-label');
+        if (!textSpan) {
+            textSpan = document.createElement('span');
+            textSpan.className = 'theme-label';
+            wrapper.appendChild(textSpan);
+        }
+
+        return textSpan;
+    }
+
     function updateButton(theme) {
         var btn = document.getElementById('theme-toggle');
         var icon = document.querySelector('#theme-toggle re-icon');
+        var label = theme === 'dark' ? 'Toggle Light Mode' : 'Toggle Dark Mode';
         
         if (btn) {
-            var label = theme === 'dark' ? 'Toggle Light Mode' : 'Toggle Dark Mode';
-            btn.setAttribute('title', label);
-
-            // Find or create a <span> for the visible label so we don't overwrite <re-icon>
-            var textSpan = btn.querySelector('.theme-label');
-            if (!textSpan) {
-                textSpan = document.createElement('span');
-                textSpan.className = 'theme-label';
-                btn.appendChild(textSpan);
+            btn.setAttribute('aria-label', label);
+            var textSpan = ensureLabelElements(btn);
+            if (textSpan) {
+                textSpan.textContent = label;
             }
-            textSpan.textContent = label;
         }
 
         if (icon) {
