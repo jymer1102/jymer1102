@@ -1,0 +1,90 @@
+{% comment %}
+  <head> for every page. All page-specific values come from the page's front matter:
+    title, description ......... required. <title> becomes "jymer1102 | <title>"
+    og_title ................... optional override for the og:/twitter: title
+    author, robots ............. optional overrides
+    social: false .............. skip canonical + Open Graph + Twitter tags (used by the 404 page)
+    viewport_cover: true ....... add viewport-fit=cover
+    effects: false ............. skip the AOS scroll-animation stylesheet
+    fontawesome: true .......... load Font Awesome
+    json_ld: true .............. add the schema.org structured data (home page)
+    head_js: name .............. load /js/name.js (blocking) in the <head>
+{% endcomment %}
+{%- if page.og_title -%}
+  {%- assign og_title = page.og_title -%}
+{%- else -%}
+  {%- capture og_title -%}{{ page.title }} | jymer1102 – Jackson Weimer{%- endcapture -%}
+{%- endif -%}
+<head>
+<meta charset="UTF-8">
+<!-- Theme is set before first paint to avoid a light/dark flash, so this stays inline. -->
+<script>
+(function () {
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored;
+    if (!theme) {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = 'dark';
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        theme = 'light';
+      } else {
+        theme = 'dark';
+      }
+    }
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0{% if page.viewport_cover %}, viewport-fit=cover{% endif %}">
+<!-- Primary SEO -->
+<title>jymer1102 | {{ page.title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<meta name="author" content="{{ page.author | default: 'Jackson Weimer' }}">
+<meta name="robots" content="{{ page.robots | default: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' }}">
+{% if page.social != false -%}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<!-- Open Graph (Facebook, LinkedIn, Discord, iMessage and others) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="jymer1102">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ og_title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/images/social-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="720">
+<meta property="og:image:height" content="480">
+<meta property="og:image:alt" content="jymer1102 written in glowing blue neon letters on a dark background">
+<!-- Twitter / X Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title | escape }}">
+<meta name="twitter:description" content="{{ page.description | escape }}">
+<meta name="twitter:image" content="{{ site.url }}/images/social-card.png">
+<meta name="twitter:image:alt" content="jymer1102 written in glowing blue neon letters on a dark background">
+{% endif -%}
+{% if page.json_ld -%}
+{% include structured-data.html %}
+{% endif -%}
+{% if page.effects != false -%}
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+{% endif -%}
+{% if page.fontawesome -%}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+{% comment %} fa-light (the "1" and the cross on the home page) is a Font Awesome PRO style and will not show with the free stylesheet above. Add your Pro kit here, e.g.: <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous"></script> {% endcomment %}
+{% endif -%}
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
+<link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/reicon@1.2.5/cdn/reicon.js" defer></script>
+{% if page.head_js -%}
+<script src="{{ '/js/' | append: page.head_js | append: '.js' | relative_url }}"></script>
+{% endif -%}
+</head>

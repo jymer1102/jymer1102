@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+
+{% include nav.html %}
+
+{% if page.banner -%}
+{% include home-banner.html %}
+
+{% endif -%}
+{% if page.header == 'legal' -%}
+<main class="legal-page">
+
+{% include page-header.html %}
+
+{{ content }}
+</main>
+{%- else -%}
+{% if page.header -%}
+{% include page-header.html %}
+
+{% endif -%}
+{% if page.scroll_indicator -%}
+<p id="scroll-indicator">Scroll down to explore<re-icon icon="square-arrow-down2" weight="outline" decorative></re-icon></p>
+
+{% endif -%}
+{{ content }}
+{%- endif %}
+
+{% include footer.html %}
+
+{% include scripts.html %}
+</body>
+</html>

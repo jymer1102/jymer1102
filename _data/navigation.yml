@@ -1,0 +1,10 @@
+# Main navigation. Add, remove or reorder links here and every page updates.
+# The link matching the current page's URL gets class="active" automatically.
+- title: Home
+  url: /
+- title: Creations
+  url: /creations/
+- title: Connect
+  url: /connect/
+- title: Playground
+  url: /playground/

@@ -1,0 +1,57 @@
+---
+layout: default
+title: "Playground"
+description: "A free live HTML, CSS and JavaScript playground by Jackson Weimer (jymer1102). Write code, see it run instantly and download your project. Nothing is saved."
+permalink: /playground/
+viewport_cover: true
+header: page
+eyebrow: "jymer1102 / try code"
+heading: "Try Code For Yourself<span class=\"cursor\"></span>"
+subtitle: "Show off your skills or use AI on this blank HTML / CSS / JS sandbox — nothing you write here is saved unless you download your code, share what you created and tag me @jymer1102! The possibilities are endless. You have control. Enjoy!"
+header_duration: 900
+scroll_indicator: true
+external_js:
+  - https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js
+page_js: playground
+---
+<main class="container reveal-on-scroll" id="playground-container">
+<section class="playground-section" data-aos="fade-up" data-aos-duration="800">
+<div class="playground-wrapper js-interactive-container">
+
+<div class="playground-toolbar">
+<div class="playground-tabs"></div>
+<div class="playground-actions">
+<button id="run-btn" class="playground-btn primary" type="button" aria-label="Run"><re-icon icon="play" weight="outline" decorative></re-icon></button>
+<button id="clear-btn" class="playground-btn" type="button" aria-label="Clear"><re-icon icon="x-circle" weight="outline" decorative></re-icon></button>
+<button id="download-btn" class="playground-btn" type="button" aria-label="Download Code"><re-icon icon="download" weight="outline" decorative></re-icon></button>
+<button id="fullscreen-btn" class="playground-btn" type="button" aria-label="Toggle Fullscreen"><re-icon icon="maximize" weight="outline" decorative></re-icon></button>
+<button id="reset-btn" class="playground-btn" type="button" aria-label="Reset Code"><re-icon icon="refresh" weight="outline" decorative></re-icon></button>
+</div>
+</div>
+
+<div class="playground-editors">
+<div class="playground-pane">
+<div class="playground-pane-label">HTML</div>
+<textarea id="html-code" class="playground-editor" spellcheck="false"></textarea>
+</div>
+<div class="playground-pane">
+<div class="playground-pane-label">CSS</div>
+<textarea id="css-code" class="playground-editor" spellcheck="false"></textarea>
+</div>
+<div class="playground-pane">
+<div class="playground-pane-label">JS</div>
+<textarea id="js-code" class="playground-editor" spellcheck="false"></textarea>
+</div>
+</div>
+
+<div class="playground-preview-wrap">
+<div class="playground-preview-label">Preview</div>
+<button id="exit-fullscreen-btn" class="exit-fullscreen-overlay" type="button" aria-label="Exit Fullscreen">
+  <re-icon icon="minimize" weight="outline" decorative></re-icon> Exit Fullscreen
+</button>
+<iframe id="preview-frame" class="playground-preview playground-preview--large" title="Live code preview" sandbox="allow-scripts allow-modals allow-same-origin" allow="fullscreen" allowfullscreen referrerpolicy="no-referrer"></iframe>
+</div>
+
+</div>
+</section>
+</main>

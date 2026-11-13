@@ -1,0 +1,26 @@
+{% comment %}
+  The big title block under the nav, built from front matter:
+    header ........... hero | page | error | legal   (which style of header)
+    eyebrow, heading . small label above the title, and the <h1> itself (HTML allowed)
+    subtitle ......... line under the title
+    legal_meta ....... "Effective ..." line (legal pages)
+    header_duration .. optional data-aos-duration
+{% endcomment %}
+{%- if page.header == 'hero' -%}
+<header class="hero" data-aos="fade-up">
+{%- elsif page.header == 'page' -%}
+<header class="page-header" data-aos="fade-up"{% if page.header_duration %} data-aos-duration="{{ page.header_duration }}"{% endif %}>
+{%- elsif page.header == 'error' -%}
+<header class="page-header error-header" data-aos="fade-up"{% if page.header_duration %} data-aos-duration="{{ page.header_duration }}"{% endif %}>
+{%- elsif page.header == 'legal' -%}
+<header class="legal-head">
+{%- endif %}
+<p class="eyebrow">{{ page.eyebrow }}</p>
+<h1 class="glow-text">{{ page.heading }}</h1>
+{% if page.subtitle -%}
+<p class="subtitle">{{ page.subtitle }}</p>
+{% endif -%}
+{% if page.legal_meta -%}
+<p class="legal-meta">{{ page.legal_meta }}</p>
+{% endif -%}
+</header>

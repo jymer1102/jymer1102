@@ -1,0 +1,126 @@
+---
+layout: default
+title: "Connect"
+description: "Get in touch with Jackson Weimer (jymer1102). Send a message through the contact form, email me directly, or find me on Linktree."
+permalink: /connect/
+fontawesome: true
+header: page
+eyebrow: "jymer1102 / connect"
+heading: "Connect"
+subtitle: "Reach out via socials or send a direct message."
+scroll_indicator: true
+page_js: connect
+---
+<main class="container reveal-on-scroll" id="connect-container">
+
+<section class="connect-section" data-aos="fade-up">
+<div class="connect-panel js-interactive-container">
+<ul class="connect-list">
+<li>
+<span class="connect-label"><re-icon icon="at-sign" weight="outline" decorative></re-icon> Email</span>
+<a href="mailto:theoneandonly@jymer1102.com" id="email-link" class="connect-value">theoneandonly@jymer1102.com</a>
+</li>
+<li>
+<span class="connect-label"><re-icon icon="phone" weight="outline" decorative></re-icon> Phone</span>
+<a href="#" id="phone-link" class="connect-value">+1 (417) 677-1355</a>
+</li>
+<li>
+<span class="connect-label"><i class="fa-brands fa-linktree"></i> Linktree</span>
+<a href="https://linktr.ee/jymer1102" target="_blank" rel="noopener noreferrer" class="connect-value">linktr.ee/jymer1102</a>
+</li>
+</ul>
+</div>
+</section>
+
+<section class="contact-section" data-aos="fade-up" data-aos-delay="100">
+<div class="form-container js-interactive-container">
+<form action="https://formspree.io/f/xlgqnkqn" method="POST" id="contact-form">
+
+<div class="form-group">
+<label for="name">Name</label>
+<div class="glow-input-wrapper">
+<input type="text" id="name" name="name" class="glow-input-hidden" placeholder="Your Name" required>
+<div class="glow-input-display">
+<span class="display-text"></span>
+<span class="custom-caret" style="display: none;"></span>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<label for="email">Email Address</label>
+<div class="glow-input-wrapper">
+<input type="email" id="email" name="_replyto" class="glow-input-hidden" placeholder="name@example.com" required>
+<div class="glow-input-display">
+<span class="display-text"></span>
+<span class="custom-caret" style="display: none;"></span>
+</div>
+</div>
+</div>
+
+<div class="form-group">
+<label for="subject">Subject</label>
+<select id="subject" name="subject" class="form-control">
+<option value="General Inquiry">General Inquiry</option>
+<option value="Project Proposal">Project Proposal</option>
+<option value="Collaboration">Collaboration</option>
+<option value="Just Saying Hi">Just Saying Hi</option>
+<option value="Testimony">Testimony</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="message">Message</label>
+<div class="glow-input-wrapper glow-textarea-wrapper">
+<textarea id="message" name="message" class="glow-input-hidden glow-textarea-hidden" placeholder="Write your message here..." required></textarea>
+<div class="glow-input-display glow-textarea-display">
+<span class="display-text"></span><span class="custom-caret" style="display: none;"></span>
+</div>
+</div>
+</div>
+
+<input type="hidden" name="_subject" value="New message from jymer1102.me!">
+
+<button type="submit" class="submit-btn" id="submit-btn"><re-icon icon="send" weight="outline" decorative></re-icon> Send Message</button>
+
+<div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+</form>
+</div>
+</section>
+
+</main>
+
+<div id="phone-modal" class="phone-modal">
+<div class="phone-modal-content">
+<h3>Contact via Phone</h3>
+<p>Choose an option below:</p>
+<div class="phone-modal-actions">
+<a href="tel:+14176771355" class="modal-btn call-btn">
+<re-icon icon="phone" weight="outline" decorative></re-icon> Call
+</a>
+<a href="sms:+14176771355" class="modal-btn text-btn">
+<re-icon icon="chat-dots" weight="outline" decorative></re-icon> Text
+</a>
+</div>
+<button id="close-modal" class="modal-close-btn">Cancel</button>
+</div>
+</div>
+
+<div id="email-modal" class="phone-modal">
+<div class="phone-modal-content">
+<h3>Contact via Email</h3>
+<p>Choose an option below:</p>
+<div class="phone-modal-actions stack">
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=theoneandonly@jymer1102.com" target="_blank" rel="noopener noreferrer" class="modal-btn call-btn">
+<i class="fa-brands fa-google"></i> Open in Gmail
+</a>
+<a href="mailto:theoneandonly@jymer1102.com" class="modal-btn text-btn">
+<re-icon icon="envelope" weight="outline" decorative></re-icon> Open Mail App
+</a>
+<button id="copy-email-btn" type="button" class="modal-btn text-btn">
+<re-icon icon="copy" weight="outline" decorative></re-icon> Copy Email
+</button>
+</div>
+<button id="close-email-modal" class="modal-close-btn">Cancel</button>
+</div>
+</div>
