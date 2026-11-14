@@ -25,7 +25,7 @@
   const emailModal = document.getElementById('email-modal');
   const closeEmailModal = document.getElementById('close-email-modal');
   const copyEmailBtn = document.getElementById('copy-email-btn');
-  const emailAddress = 'theoneandonly@jymer1102.me';
+  const emailAddress = 'theoneandonly@jymer1102.com';
   const copyEmailDefaultHTML = copyEmailBtn.innerHTML;
 
   emailLink.addEventListener('click', (e) => {
@@ -129,11 +129,11 @@
         const detail = data && data.errors && data.errors.length
         ? data.errors.map(err => err.message).join(', ')
         : 'Something went wrong sending your message.';
-        showStatus('error', `${detail} Try again, or email me directly at theoneandonly@jymer1102.me.`);
+        showStatus('error', `${detail} Try again, or email me directly at theoneandonly@jymer1102.com.`);
       }
     } catch (err) {
       console.error('Form submission failed:', err);
-      showStatus('error', "Couldn't reach the server. Try again, or email me directly at theoneandonly@jymer1102.me.");
+      showStatus('error', "Couldn't reach the server. Try again, or email me directly at theoneandonly@jymer1102.com.");
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = submitBtnDefaultHTML;
