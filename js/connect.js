@@ -126,9 +126,14 @@
         showStatus('success', "Thanks — your message is on its way. I'll get back to you soon.");
       } else {
         const data = await response.json().catch(() => null);
-        const detail = data && data.errors && data.errors.length
-        ? data.errors.map(err => err.message).join(', ')
-        : 'Something went wrong sending your message.';
+        console.error('Formspree rejected the submission:', response.status, data);
+        let detail = 'Something went wrong sending your message.';
+        if (data && data.errors && data.errors.length) {
+          detail = data.errors.map(err => err.message).join(', ');
+        } else if (data && data.error) {
+          detail = data.error;
+        }
+        detail = `${detail} (error ${response.status}).`.replace(/\.\s*\(/, ' (');
         showStatus('error', `${detail} Try again, or email me directly at theoneandonly@jymer1102.com.`);
       }
     } catch (err) {
