@@ -125,20 +125,17 @@
         form.querySelectorAll('.display-text').forEach(span => span.textContent = '');
         showStatus('success', "Thanks — your message is on its way. I'll get back to you soon.");
       } else {
-        const data = await response.json().catch(() => null);
-        console.error('Formspree rejected the submission:', response.status, data);
-        let detail = 'Something went wrong sending your message.';
-        if (data && data.errors && data.errors.length) {
-          detail = data.errors.map(err => err.message).join(', ');
-        } else if (data && data.error) {
-          detail = data.error;
-        }
-        detail = `${detail} (error ${response.status}).`.replace(/\.\s*\(/, ' (');
-        showStatus('error', `${detail} Try again, or email me directly at theoneandonly@jymer1102.com.`);
+        // Formspree refused the background request (often a captcha or
+        // verification step it wants to handle itself). Fall back to a normal
+        // form submit so Formspree can take over on its own page.
+        console.error('AJAX submit rejected, falling back to normal submit:', response.status);
+        HTMLFormElement.prototype.submit.call(form);
+        return;
       }
     } catch (err) {
       console.error('Form submission failed:', err);
-      showStatus('error', "Couldn't reach the server. Try again, or email me directly at theoneandonly@jymer1102.com.");
+      // Network/extension blocked the background request: try a normal submit.
+      HTMLFormElement.prototype.submit.call(form);
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = submitBtnDefaultHTML;
