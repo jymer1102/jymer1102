@@ -103,9 +103,39 @@
     statusBox.classList.remove('is-visible');
   };
 
+  // --- Spam protection (no third-party service) ---
+  // 1) Honeypot field (_gotcha) that only bots fill in.
+  // 2) The browser must have seen real typing/autofill (scripts that set field
+  //    values directly don't fire trusted input events).
+  // 3) Messages sent within a few seconds of page load are refused.
+  const MIN_SECONDS_ON_PAGE = 4;
+  const loadedAt = Date.now();
+  let sawHumanInput = false;
+
+  const markHuman = (e) => { if (e.isTrusted) sawHumanInput = true; };
+  form.addEventListener('input', markHuman);
+  form.addEventListener('change', markHuman);
+
+  // Bots get the normal-looking success screen so they don't learn what tripped them.
+  const fakeSuccess = () => {
+    form.reset();
+    form.querySelectorAll('.display-text').forEach(span => span.textContent = '');
+    showStatus('success', "Thanks — your message is on its way. I'll get back to you soon.");
+  };
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     hideStatus();
+
+    const honeypot = form.querySelector('[name="_gotcha"]');
+    if ((honeypot && honeypot.value) || !sawHumanInput) {
+      fakeSuccess();
+      return;
+    }
+    if (Date.now() - loadedAt < MIN_SECONDS_ON_PAGE * 1000) {
+      showStatus('error', 'That was quick! Give it a second and try sending again.');
+      return;
+    }
 
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<re-icon icon="loader" weight="outline" decorative></re-icon> Sending…';
@@ -125,17 +155,20 @@
         form.querySelectorAll('.display-text').forEach(span => span.textContent = '');
         showStatus('success', "Thanks — your message is on its way. I'll get back to you soon.");
       } else {
-        // Formspree refused the background request (often a captcha or
-        // verification step it wants to handle itself). Fall back to a normal
-        // form submit so Formspree can take over on its own page.
-        console.error('AJAX submit rejected, falling back to normal submit:', response.status);
-        HTMLFormElement.prototype.submit.call(form);
-        return;
+        const data = await response.json().catch(() => null);
+        console.error('Formspree rejected the submission:', response.status, data);
+        let detail = 'Something went wrong sending your message.';
+        if (data && data.errors && data.errors.length) {
+          detail = data.errors.map(err => err.message).join(', ');
+        } else if (data && data.error) {
+          detail = data.error;
+        }
+        detail = `${detail} (error ${response.status}).`.replace(/\.\s*\(/, ' (');
+        showStatus('error', `${detail} Try again, or email me directly at theoneandonly@jymer1102.com.`);
       }
     } catch (err) {
       console.error('Form submission failed:', err);
-      // Network/extension blocked the background request: try a normal submit.
-      HTMLFormElement.prototype.submit.call(form);
+      showStatus('error', "Couldn't reach the server. Try again, or email me directly at theoneandonly@jymer1102.com.");
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = submitBtnDefaultHTML;
