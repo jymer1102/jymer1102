@@ -156,7 +156,7 @@
       } else {
         const errorText = await response.text().catch(() => '');
         console.error('Worker rejected the submission:', response.status, errorText);
-        showStatus('error', `Something went wrong sending your message (error ${response.status}). Try again, or email me directly at theoneandonly@jymer1102.com.`);
+        showStatus('error', `Error ${response.status}: ${errorText}`);
       }
     } catch (err) {
       console.error('Form submission failed:', err);
