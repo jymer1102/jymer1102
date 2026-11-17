@@ -143,8 +143,7 @@
     try {
       const response = await fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
+        body: new FormData(form)
       });
 
       if (response.ok) {
@@ -155,16 +154,9 @@
         form.querySelectorAll('.display-text').forEach(span => span.textContent = '');
         showStatus('success', "Thanks — your message is on its way. I'll get back to you soon.");
       } else {
-        const data = await response.json().catch(() => null);
-        console.error('Formspree rejected the submission:', response.status, data);
-        let detail = 'Something went wrong sending your message.';
-        if (data && data.errors && data.errors.length) {
-          detail = data.errors.map(err => err.message).join(', ');
-        } else if (data && data.error) {
-          detail = data.error;
-        }
-        detail = `${detail} (error ${response.status}).`.replace(/\.\s*\(/, ' (');
-        showStatus('error', `${detail} Try again, or email me directly at theoneandonly@jymer1102.com.`);
+        const errorText = await response.text().catch(() => '');
+        console.error('Worker rejected the submission:', response.status, errorText);
+        showStatus('error', `Something went wrong sending your message (error ${response.status}). Try again, or email me directly at theoneandonly@jymer1102.com.`);
       }
     } catch (err) {
       console.error('Form submission failed:', err);
