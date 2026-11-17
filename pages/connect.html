@@ -34,7 +34,8 @@ page_js: connect
 
 <section class="contact-section" data-aos="fade-up" data-aos-delay="100">
 <div class="form-container js-interactive-container">
-<form action="https://formspree.io/f/xlgqnkqn" method="POST" id="contact-form">
+<!-- Replace the action URL below with your actual Cloudflare Worker URL -->
+<form action="https://contact-form-handler.your-username.workers.dev" method="POST" id="contact-form">
 
 <div class="form-group">
 <label for="name">Name</label>
@@ -79,9 +80,7 @@ page_js: connect
 </div>
 </div>
 
-<input type="hidden" name="_subject" value="New message from jymer1102.com!">
-
-<!-- Honeypot: invisible to people, bots fill it in and Formspree discards the message. -->
+<!-- Honeypot: invisible to people, bots fill it in and the script silently ignores the submission. -->
 <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
 
 <button type="submit" class="submit-btn" id="submit-btn"><re-icon icon="send" weight="outline" decorative></re-icon> Send Message</button>
