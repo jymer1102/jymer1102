@@ -81,6 +81,9 @@ page_js: connect
 
 <input type="hidden" name="_subject" value="New message from jymer1102.com!">
 
+<!-- Honeypot: invisible to people, bots fill it in and Formspree discards the message. -->
+<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+
 <button type="submit" class="submit-btn" id="submit-btn"><re-icon icon="send" weight="outline" decorative></re-icon> Send Message</button>
 
 <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
