@@ -1,6 +1,6 @@
 <div align="center">
 
-![README Banner](images/jymer1102_banner.gif)
+![README Banner](images/favicon/social-card.png)
 
 <h3>I'm a creator and designer building my digital corner of the internet. Welcome to my GitHub profile!</h3>
 
