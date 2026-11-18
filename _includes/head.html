@@ -77,8 +77,33 @@
 {% endif -%}
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
-<link id="animated-favicon" rel="icon" type="image/png" href="{{ '/images/favicon/frames/j_1.gif' | relative_url }}">
-<link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
+<!-- Theme-Aware Favicons (Dark default) -->
+<link id="favicon" rel="icon" type="image/svg+xml" href="{{ '/images/favicon/dark-favicon.svg' | relative_url }}">
+<link rel="alternate icon" type="image/png" href="{{ '/images/favicon/dark-favicon.png' | relative_url }}">
+<link rel="apple-touch-icon" href="{{ '/images/favicon/dark-favicon.png' | relative_url }}">
+
+<script>
+  (function () {
+    const lightIcon = "{{ '/images/favicon/light-favicon.svg' | relative_url }}";
+    const darkIcon = "{{ '/images/favicon/dark-favicon.svg' | relative_url }}";
+
+    function syncFavicon() {
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
+      const favicon = document.getElementById("favicon");
+      if (favicon) {
+        favicon.href = isLight ? lightIcon : darkIcon;
+      }
+    }
+
+    syncFavicon();
+
+    const observer = new MutationObserver(syncFavicon);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+  })();
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
