@@ -5,7 +5,7 @@
     2.  Global Reset & Base
     3.  Utility / Shared Patterns (eyebrows, glow text, interactive glow utility)
     4.  Navigation
-    5.  Home Banner + Hero
+    5.  Hero
     6.  Intro + Split Section (Home)
     7.  Page Header (Creations / Connect)
     7b. 404 / Error Page
@@ -36,7 +36,7 @@
 
 /* Accent (deep electric blue) */
 --accent: #1E56E0;
---accent-bright: #4FA9FF;
+--accent-bright: #4faafe;
 --accent-dim: rgba(30, 86, 224, 0.14);
 --accent-glow: rgba(30, 86, 224, 0.35);
 
@@ -80,12 +80,6 @@
 --text-3: #74747d;
 
 --nav-bg: rgba(255, 255, 255, 0.78);
-}
-
-/* Text that used the bright pastel accent for legibility on dark
-   backgrounds needs a deeper blue to stay readable on light ones. */
-:root[data-theme="light"] {
---accent-bright: #145dc7;
 }
 
 :root[data-theme="light"] .glow-text {
@@ -312,7 +306,8 @@ align-items: center;
 gap: 16px;
 }
 
-.theme-toggle-wrapper {
+.theme-toggle-wrapper,
+.btn-label-wrapper {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -342,7 +337,8 @@ gap: 16px;
   transform: scale(1.06);
 }
 
-.theme-label {
+.theme-label,
+.btn-label {
   position: absolute;
   top: calc(100% + 8px);
   left: 50%;
@@ -362,7 +358,9 @@ gap: 16px;
 
 /* Reveal the label when hovering or tabbing onto the button */
 .theme-toggle:hover + .theme-label,
-.theme-toggle:focus-visible + .theme-label {
+.theme-toggle:focus-visible + .theme-label,
+.playground-btn:hover + .btn-label,
+.playground-btn:focus-visible + .btn-label {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
@@ -471,54 +469,18 @@ width: 100%;
 }
 
 /* --------------------------------------------------------------------------
-  5. Home Banner + Hero
+  5. Hero
   -------------------------------------------------------------------------- */
-.home-banner {
-position: relative;
-width: 100%;
-height: clamp(240px, 34vw, 460px);
-overflow: hidden;
-transition: opacity 1.0s var(--ease), visibility 1.0s var(--ease);
-opacity: 1;
-visibility: visible;
-}
-
-.home-banner.fade-out {
-opacity: 0 !important;
-visibility: hidden !important;
-pointer-events: none !important;
-}
-
-.home-banner img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-object-position: center 42%;
-display: block;
-}
-
-.home-banner::after {
-content: '';
-position: absolute;
-inset: 0;
-background: linear-gradient(
-180deg,
-color-mix(in srgb, var(--bg) 0%, transparent) 0%,
-color-mix(in srgb, var(--bg) 0%, transparent) 40%,
-color-mix(in srgb, var(--bg) 35%, transparent) 62%,
-color-mix(in srgb, var(--bg) 70%, transparent) 78%,
-color-mix(in srgb, var(--bg) 92%, transparent) 90%,
-var(--bg) 100%
-);
-}
-
 .hero {
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-padding: 70px 20px 90px;
+min-height: 100vh;
+min-height: 100svh;
+box-sizing: border-box;
+padding: 100px 20px;
 position: relative;
 width: 100%;
 }
@@ -1266,13 +1228,8 @@ flex-shrink: 0;
 scroll-snap-align: start;
 }
 
-.home-banner {
-margin-top: 70px;
-height: clamp(180px, 45vw, 240px);
-}
-
 .hero {
-padding: 40px 16px 60px;
+padding: 90px 16px;
 }
 
 .hero .glow-text {
@@ -1359,11 +1316,6 @@ padding-top: 170px;
 padding-bottom: 100px;
 }
 
-.hero {
-padding-top: 60px;
-padding-bottom: 160px;
-}
-
     section,
     .connect-section {
 margin-bottom: 260px;
@@ -1438,13 +1390,13 @@ transform: translate(-50%, -6px);
 }
 
 html, body {
-cursor: url('/images/cursor/custom-j-cursor.png') 0 0, default;
+cursor: url('/images/cursor/custom-j-cursor.svg') 4 4, default;
 }
 
 a, button, .nav-cta, .btn-primary, select, input[type="submit"], .submit-btn,
 .logo, .theme-toggle, .playground-btn, .modal-close-btn, .modal-btn,
 select.form-control, .project-card:not(.in-progress) {
-cursor: url('/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer;
+cursor: url('/images/cursor/custom-j-cursor-pointer.svg') 4 4, pointer;
 }
 
 /* Phone Action Modal */
