@@ -51,7 +51,7 @@ html, body {
 }
 
 a, button, select, input[type="submit"] {
-  cursor: url('/images/cursor/alternate-select.cur'), pointer !important;
+  cursor: url('/images/cursor/arrow.cur'), pointer !important;
 }
 
 h1 {
@@ -139,7 +139,7 @@ button, button *,
 input[type="submit"], 
 input[type="button"], 
 [role="button"] {
-  cursor: url('/images/cursor/alternate-select.cur'), pointer !important;
+  cursor: url('/images/cursor/arrow.cur'), pointer !important;
 }
 
 .cursor {
