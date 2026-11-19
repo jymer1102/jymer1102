@@ -1,0 +1,13 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://jymer1102.com/.well-known/api-catalog",
+      "item": [
+        {
+          "href": "https://contact-form-handler.jymer1102.com",
+          "title": "Contact form endpoint: HTTP POST with form fields name, email, subject and message"
+        }
+      ]
+    }
+  ]
+}
