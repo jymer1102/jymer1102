@@ -1393,16 +1393,13 @@ a, button, .nav-cta, .btn-primary, select, input[type="submit"], .submit-btn,
 .logo, .theme-toggle, .playground-btn, .modal-close-btn, .modal-btn,
 select.form-control, .project-card:not(.in-progress),
 .link-btn, .cookie-btn, [role="button"], summary, label[for], .exit-fullscreen-overlay {
-cursor: url("/images/cursor/alternate-select.cur"), pointer;
+cursor: url("/images/cursor/arrow.cur"), pointer;
 }
 
-input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
-.glow-input-hidden, .glow-input-display {
+input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="range"]),
+textarea, .glow-input-hidden, .glow-input-display,
+.glow-textarea-hidden, .glow-textarea-display, .playground-editor {
 cursor: url("/images/cursor/text-select.cur"), text;
-}
-
-textarea, .glow-textarea-hidden, .glow-textarea-display {
-cursor: url("/images/cursor/handwriting.cur"), text;
 }
 
 .in-progress, .project-link.disabled, button:disabled, .submit-btn:disabled, [aria-disabled="true"] {
@@ -1421,11 +1418,15 @@ cursor: url("/images/cursor/working-in-background.cur"), progress;
 cursor: url("/images/cursor/busy.cur"), wait;
 }
 
-[data-cursor="crosshair"] {
+[data-cursor="draw"], .is-drawing {
+cursor: url("/images/cursor/handwriting.cur"), crosshair;
+}
+
+input[type="color"], [data-cursor="crosshair"] {
 cursor: url("/images/cursor/precision-select.cur"), crosshair;
 }
 
-[data-cursor="move"], .is-draggable {
+[data-cursor="move"], .is-draggable, [draggable="true"] {
 cursor: url("/images/cursor/move.cur"), move;
 }
 
@@ -2083,7 +2084,7 @@ body.preview-fullscreen-active {
   font-family: system-ui, -apple-system, sans-serif !important;
   font-size: 0.85rem !important;
   font-weight: 600 !important;
-  cursor: url("/images/cursor/alternate-select.cur"), pointer !important;
+  cursor: url("/images/cursor/arrow.cur"), pointer !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
   transition: all 0.2s ease !important;
   opacity: 0.9;
