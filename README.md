@@ -22,15 +22,15 @@
 <table style="border: none;" align="center">
   <tr style="border: none;">
     <td width="50%" align="center" style="border: none;">
-      <h3><img src="https://cdn.simpleicons.org/target/4faafe" width="20" /> What I'm Up To</h3>
+      <h3>What I'm Up To</h3>
       <p align="left">
-        <img src="https://cdn.simpleicons.org/googleearth/4faafe" width="16" /> <b>Web Design:</b> Exploring free web hosting and site builders. I love designing and tweaking websites; coding is not what I do, though.<br><br>
-        <img src="https://cdn.simpleicons.org/nodedotjs/4faafe" width="16" /> <b>Current Projects:</b> Designing my zombie shooter game (<code>Zombified</code>).<br><br>
-        <img src="https://cdn.simpleicons.org/rocket/4faafe" width="16" /> <b>Learning:</b> Getting the hang of GitHub and basic web tools.
+        <b>Web Design:</b> Exploring free web hosting and site builders. I love designing and tweaking websites; coding is not what I do, though.<br><br>
+        <b>Current Projects:</b> Designing my zombie shooter game (<code>Zombified</code>).<br><br>
+        <b>Learning:</b> Getting the hang of GitHub and basic web tools.
       </p>
     </td>
     <td width="50%" align="center" style="border: none;">
-      <h3><img src="https://cdn.simpleicons.org/git/4faafe" width="20" /> Skills & Tech</h3>
+      <h3>Skills & Tech</h3>
       <a href="https://skillicons.dev">
         <img src="https://skillicons.dev/icons?i=github,vscode,discord,spotify,instagram,windows&theme=dark&perline=3" alt="My Skills" />
       </a>
@@ -41,7 +41,7 @@
 <br><hr><br>
 
 <!-- CREATIONS -->
-<h3><img src="https://cdn.simpleicons.org/codemagic/4faafe" width="20" /> My Creations</h3>
+<h3>My Creations</h3>
 
 <table align="center">
   <tr>
