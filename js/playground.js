@@ -47,11 +47,11 @@ html, body {
   align-items: center;
   padding: 2rem;
   text-align: center;
-  cursor: url('/jymer1102/images/cursor/custom-j-cursor.png') 0 0, default;
+  cursor: url('/images/cursor/custom-j-cursor.svg') 4 4, default;
 }
 
 a, button, select, input[type="submit"] {
-  cursor: url('/jymer1102/images/cursor/custom-j-cursor-pointer.png') 0 0, pointer !important;
+  cursor: url('/images/cursor/custom-j-cursor-pointer.svg') 4 4, pointer !important;
 }
 
 h1 {
@@ -132,14 +132,14 @@ p {
 
 }
 body {
-  cursor: url('/images/cursor/custom-j-cursor.png') 0 0, auto;
+  cursor: url('/images/cursor/custom-j-cursor.svg') 4 4, auto;
 }
 a, a *, 
 button, button *, 
 input[type="submit"], 
 input[type="button"], 
 [role="button"] {
-  cursor: url('/images/cursor/custom-j-cursor-pointer.png'), pointer !important;
+  cursor: url('/images/cursor/custom-j-cursor-pointer.svg') 4 4, pointer !important;
 }
 
 .cursor {
