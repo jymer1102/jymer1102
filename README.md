@@ -96,7 +96,7 @@
 <br><hr><br>
 
 <!-- DAILY CARDS -->
-<h3><img src="https://cdn.simpleicons.org/lightning/4faafe" width="20" /> Quote & Joke of the Day</h3>
+<h3>Quote & Joke of the Day</h3>
 
 <table style="border: none;" align="center">
   <tr style="border: none;">
@@ -111,6 +111,6 @@
   <img src="https://u8views.com/api/v1/github/profiles/251914228/views/day-week-month-total-count.svg" alt="Profile Views" />
 </a>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=7B2CBF&height=120&section=footer" alt="Wave Footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=4FAAFE&height=120&section=footer" alt="Wave Footer" />
 
 </div>
