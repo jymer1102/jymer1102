@@ -1,14 +1,46 @@
 # robots.txt for https://jymer1102.com
-# Every crawler (including Googlebot) may crawl the whole site, including
+# Search engines and AI search/assistant tools may crawl the whole site, including
 # CSS, JavaScript and images, which Google needs in order to render the pages.
+#
+# Content Signals (https://contentsignals.org): how automated systems may use content
+# once it has been accessed. search = indexing and search results, ai-input = using
+# content as live input for AI answers, ai-train = training or fine-tuning AI models.
 
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-Image
+Allow: /
+
+# ---- AI crawler rules ----
+# Crawlers that collect content to TRAIN AI models are blocked.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: ImagesiftBot
+Disallow: /
+
+# AI search and assistant fetchers (these retrieve pages so people can find or ask
+# about the site, or when a person asks the assistant to open it) are allowed.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://jymer1102.com/sitemap.xml
