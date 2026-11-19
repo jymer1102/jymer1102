@@ -12,9 +12,9 @@
 <br>
 
 <!-- CONNECT BUTTONS -->
-<a href="https://linktr.ee/jymer1102"><img src="https://img.shields.io/badge/Linktree-0A0A0C?style=flat&logo=linktree&logoColor=4faafe" alt="Linktree"></a>
-<a href="http://jymer1102.com"><img src="https://img.shields.io/badge/Website-0A0A0C?style=flat&logo=googlechrome&logoColor=4faafe" alt="Website"></a>
-<a href="https://www.paypal.me/jymer1102"><img src="https://img.shields.io/badge/Donate-0A0A0C?style=flat&logo=paypal&logoColor=4faafe" alt="PayPal"></a>
+<a href="https://linktr.ee/jymer1102"><img src="https://img.shields.io/badge/Linktree-0A0A0C?style=plastic&logo=linktree&logoColor=4faafe" alt="Linktree"></a>
+<a href="http://jymer1102.com"><img src="https://img.shields.io/badge/Website-0A0A0C?style=plastic&logo=googlechrome&logoColor=4faafe" alt="Website"></a>
+<a href="https://www.paypal.me/jymer1102"><img src="https://img.shields.io/badge/Donate-0A0A0C?style=plastic&logo=paypal&logoColor=4faafe" alt="PayPal"></a>
 
 <br><br><hr><br>
 
@@ -46,30 +46,30 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/agent1102-0A0A0C?style=flat" alt="agent1102" /><br>
-      <a href="https://agent1102.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=flat" alt="Launch" /></a>
+      <img src="https://img.shields.io/badge/agent1102-0A0A0C?style=plastic" alt="agent1102" /><br>
+      <a href="https://agent1102.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=plastic" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Screen_Pet-0A0A0C?style=flat" alt="Screen Pet" /><br>
-      <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=flat" alt="Launch" /></a>
+      <img src="https://img.shields.io/badge/Screen_Pet-0A0A0C?style=plastic" alt="Screen Pet" /><br>
+      <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=plastic" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Blob_Fidget-0A0A0C?style=flat" alt="Blob Fidget" /><br>
-      <a href="https://blob-fidget.jymer1102.com"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat" alt="Launch" /></a>
+      <img src="https://img.shields.io/badge/Blob_Fidget-0A0A0C?style=plastic" alt="Blob Fidget" /><br>
+      <a href="https://blob-fidget.jymer1102.com"><img src="https://img.shields.io/badge/Launch-2ECC71?style=plastic" alt="Launch" /></a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/Tag_Mania-0A0A0C?style=flat" alt="Tag Mania" /><br>
-      <a href="https://tag-mania.jymer1102.com"><img src="https://img.shields.io/badge/Launch-E53935?style=flat" alt="Launch" /></a>
+      <img src="https://img.shields.io/badge/Tag_Mania-0A0A0C?style=plastic" alt="Tag Mania" /><br>
+      <a href="https://tag-mania.jymer1102.com"><img src="https://img.shields.io/badge/Launch-E53935?style=plastic" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Note_Pets-0A0A0C?style=flat" alt="Note Pets" /><br>
-      <a href="https://note-pets.jymer1102.com"><img src="https://img.shields.io/badge/Launch-FFD700?style=flat" alt="Launch" /></a>
+      <img src="https://img.shields.io/badge/Note_Pets-0A0A0C?style=plastic" alt="Note Pets" /><br>
+      <a href="https://note-pets.jymer1102.com"><img src="https://img.shields.io/badge/Launch-FFD700?style=plastic" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Zombified-0A0A0C?style=flat" alt="Zombified" /><br>
-      <img src="https://img.shields.io/badge/Status-In_Progress-orange?style=flat" alt="In Progress" />
+      <img src="https://img.shields.io/badge/Zombified-0A0A0C?style=plastic" alt="Zombified" /><br>
+      <img src="https://img.shields.io/badge/Status-In_Progress-orange?style=plastic" alt="In Progress" />
     </td>
   </tr>
 </table>
