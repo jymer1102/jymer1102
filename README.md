@@ -12,9 +12,9 @@
 <br>
 
 <!-- CONNECT BUTTONS -->
-<a href="https://linktr.ee/jymer1102"><img src="https://img.shields.io/badge/Linktree-1A1A1A?style=for-the-badge&logo=linktree&logoColor=39E09B" alt="Linktree"></a>
-<a href="http://jymer1102.com"><img src="https://img.shields.io/badge/Website-1A1A1A?style=for-the-badge&logo=googlechrome&logoColor=7B2CBF" alt="Website"></a>
-<a href="https://www.paypal.me/jymer1102"><img src="https://img.shields.io/badge/Donate-1A1A1A?style=for-the-badge&logo=paypal&logoColor=00457C" alt="PayPal"></a>
+<a href="https://linktr.ee/jymer1102"><img src="https://img.shields.io/badge/Linktree-0A0A0C?style=for-the-badge&logo=linktree&logoColor=39E09B" alt="Linktree"></a>
+<a href="http://jymer1102.com"><img src="https://img.shields.io/badge/Website-0A0A0C?style=for-the-badge&logo=googlechrome&logoColor=7B2CBF" alt="Website"></a>
+<a href="https://www.paypal.me/jymer1102"><img src="https://img.shields.io/badge/Donate-0A0A0C?style=for-the-badge&logo=paypal&logoColor=00457C" alt="PayPal"></a>
 
 <br><br><hr><br>
 
@@ -22,15 +22,15 @@
 <table style="border: none;" align="center">
   <tr style="border: none;">
     <td width="50%" align="center" style="border: none;">
-      <h3><img src="https://cdn.simpleicons.org/target/7B2CBF" width="20" /> What I'm Up To</h3>
+      <h3><img src="https://cdn.simpleicons.org/target/0A0A0C" width="20" /> What I'm Up To</h3>
       <p align="left">
-        <img src="https://cdn.simpleicons.org/googleearth/1A1A1A" width="16" /> <b>Web Design:</b> Exploring free web hosting and site builders. I love designing and tweaking websites; coding is not what I do, though.<br><br>
-        <img src="https://cdn.simpleicons.org/nodedotjs/1A1A1A" width="16" /> <b>Current Projects:</b> Designing my zombie shooter game (<code>Zombified</code>).<br><br>
-        <img src="https://cdn.simpleicons.org/rocket/1A1A1A" width="16" /> <b>Learning:</b> Getting the hang of GitHub and basic web tools.
+        <img src="https://cdn.simpleicons.org/googleearth/0A0A0C" width="16" /> <b>Web Design:</b> Exploring free web hosting and site builders. I love designing and tweaking websites; coding is not what I do, though.<br><br>
+        <img src="https://cdn.simpleicons.org/nodedotjs/0A0A0C" width="16" /> <b>Current Projects:</b> Designing my zombie shooter game (<code>Zombified</code>).<br><br>
+        <img src="https://cdn.simpleicons.org/rocket/0A0A0C" width="16" /> <b>Learning:</b> Getting the hang of GitHub and basic web tools.
       </p>
     </td>
     <td width="50%" align="center" style="border: none;">
-      <h3><img src="https://cdn.simpleicons.org/git/7B2CBF" width="20" /> Skills & Tech</h3>
+      <h3><img src="https://cdn.simpleicons.org/git/0A0A0C" width="20" /> Skills & Tech</h3>
       <a href="https://skillicons.dev">
         <img src="https://skillicons.dev/icons?i=github,vscode,discord,spotify,instagram,windows&theme=dark&perline=3" alt="My Skills" />
       </a>
@@ -46,29 +46,29 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/agent1102-1A1A1A?style=flat-square&logoColor=8A2BE2" alt="agent1102" /><br>
+      <img src="https://img.shields.io/badge/agent1102-0A0A0C?style=flat-square&logoColor=8A2BE2" alt="agent1102" /><br>
       <a href="https://agent1102.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=flat-square" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/SCREEN_PET-1A1A1A?style=flat-square&logoColor=4A90E2" alt="Screen Pet" /><br>
+      <img src="https://img.shields.io/badge/SCREEN_PET-0A0A0C?style=flat-square&logoColor=4A90E2" alt="Screen Pet" /><br>
       <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=flat-square" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/BLOB_FIDGET-1A1A1A?style=flat-square&logoColor=2ECC71" alt="Blob Fidget" /><br>
+      <img src="https://img.shields.io/badge/BLOB_FIDGET-0A0A0C?style=flat-square&logoColor=2ECC71" alt="Blob Fidget" /><br>
       <a href="https://blob-fidget.jymer1102.com"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat-square" alt="Launch" /></a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/TAG_MANIA-1A1A1A?style=flat-square&logoColor=E53935" alt="Tag Mania" /><br>
+      <img src="https://img.shields.io/badge/TAG_MANIA-0A0A0C?style=flat-square&logoColor=E53935" alt="Tag Mania" /><br>
       <a href="https://tag-mania.jymer1102.com"><img src="https://img.shields.io/badge/Launch-E53935?style=flat-square" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/NOTE_PETS-1A1A1A?style=flat-square&logoColor=FFD700" alt="Note Pets" /><br>
+      <img src="https://img.shields.io/badge/NOTE_PETS-0A0A0C?style=flat-square&logoColor=FFD700" alt="Note Pets" /><br>
       <a href="https://note-pets.jymer1102.com"><img src="https://img.shields.io/badge/Launch-FFD700?style=flat-square&logoColor=black" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/ZOMBIFIED-1A1A1A?style=flat-square&logoColor=FF8C00" alt="Zombified" /><br>
+      <img src="https://img.shields.io/badge/ZOMBIFIED-0A0A0C?style=flat-square&logoColor=FF8C00" alt="Zombified" /><br>
       <img src="https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square" alt="In Progress" />
     </td>
   </tr>
