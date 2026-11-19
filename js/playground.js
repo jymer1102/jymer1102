@@ -47,11 +47,11 @@ html, body {
   align-items: center;
   padding: 2rem;
   text-align: center;
-  cursor: url('/images/cursor/arrow.cur'), default;
+  cursor: url('/images/cursor/arrow.cur?v=3'), default;
 }
 
 a, button, select, input[type="submit"] {
-  cursor: url('/images/cursor/arrow.cur'), pointer !important;
+  cursor: url('/images/cursor/cursor-pointer.cur?v=3'), url('/images/cursor/arrow.cur?v=3'), pointer !important;
 }
 
 h1 {
@@ -132,14 +132,14 @@ p {
 
 }
 body {
-  cursor: url('/images/cursor/arrow.cur'), auto;
+  cursor: url('/images/cursor/arrow.cur?v=3'), auto;
 }
 a, a *, 
 button, button *, 
 input[type="submit"], 
 input[type="button"], 
 [role="button"] {
-  cursor: url('/images/cursor/arrow.cur'), pointer !important;
+  cursor: url('/images/cursor/cursor-pointer.cur?v=3'), url('/images/cursor/arrow.cur?v=3'), pointer !important;
 }
 
 .cursor {
