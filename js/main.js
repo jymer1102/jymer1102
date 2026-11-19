@@ -12,9 +12,10 @@ if (window.AOS) {
 
 // Cursor-following glow on every .js-interactive-container
 (function () {
-  const interactiveContainers = document.querySelectorAll('.js-interactive-container');
+  function attachGlow(container) {
+    if (container.__glowAttached) return;
+    container.__glowAttached = true;
 
-  interactiveContainers.forEach(container => {
     const updateGlowPosition = (clientX, clientY) => {
       const rect = container.getBoundingClientRect();
       const x = clientX - rect.left;
@@ -29,7 +30,12 @@ if (window.AOS) {
       const touch = e.touches[0];
       if (touch) updateGlowPosition(touch.clientX, touch.clientY);
     });
-  });
+  }
+
+  document.querySelectorAll('.js-interactive-container').forEach(attachGlow);
+
+  // Lets scripts that build cards later (like the cookie banner) opt in to the glow
+  window.jymerAttachGlow = attachGlow;
 })();
 
 // Footer year
