@@ -123,7 +123,7 @@
 
     function buildBanner() {
         var el = document.createElement('div');
-        el.className = 'cookie-banner';
+        el.className = 'cookie-banner js-interactive-container';
         el.id = 'cookie-banner';
         el.setAttribute('role', 'dialog');
         el.setAttribute('aria-modal', 'false');
@@ -152,6 +152,7 @@
         });
 
         document.body.appendChild(el);
+        if (window.jymerAttachGlow) window.jymerAttachGlow(el);
         return el;
     }
 
