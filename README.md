@@ -46,29 +46,29 @@
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/agent1102-0A0A0C?style=flat-square&logoColor=4faafe" alt="agent1102" /><br>
+      <img src="https://img.shields.io/badge/agent1102-0A0A0C?style=flat-square&label=agent1102&labelColor=0A0A0C&color=0A0A0C" alt="agent1102" /><br>
       <a href="https://agent1102.onrender.com/"><img src="https://img.shields.io/badge/Launch-8A2BE2?style=flat-square" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/SCREEN_PET-0A0A0C?style=flat-square&logoColor=4faafe" alt="Screen Pet" /><br>
+      <img src="https://img.shields.io/badge/SCREEN_PET-0A0A0C?style=flat-square&label=SCREEN_PET&labelColor=0A0A0C&color=0A0A0C" alt="Screen Pet" /><br>
       <a href="https://screen-pet.base44.app/"><img src="https://img.shields.io/badge/Launch-4A90E2?style=flat-square" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/BLOB_FIDGET-0A0A0C?style=flat-square&logoColor=4faafe" alt="Blob Fidget" /><br>
+      <img src="https://img.shields.io/badge/BLOB_FIDGET-0A0A0C?style=flat-square&label=BLOB_FIDGET&labelColor=0A0A0C&color=0A0A0C" alt="Blob Fidget" /><br>
       <a href="https://blob-fidget.jymer1102.com"><img src="https://img.shields.io/badge/Launch-2ECC71?style=flat-square" alt="Launch" /></a>
     </td>
   </tr>
   <tr>
     <td align="center">
-      <img src="https://img.shields.io/badge/TAG_MANIA-0A0A0C?style=flat-square&logoColor=4faafe" alt="Tag Mania" /><br>
+      <img src="https://img.shields.io/badge/TAG_MANIA-0A0A0C?style=flat-square&label=TAG_MANIA&labelColor=0A0A0C&color=0A0A0C" alt="Tag Mania" /><br>
       <a href="https://tag-mania.jymer1102.com"><img src="https://img.shields.io/badge/Launch-E53935?style=flat-square" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/NOTE_PETS-0A0A0C?style=flat-square&logoColor=4faafe" alt="Note Pets" /><br>
+      <img src="https://img.shields.io/badge/NOTE_PETS-0A0A0C?style=flat-square&label=NOTE_PETS&labelColor=0A0A0C&color=0A0A0C" alt="Note Pets" /><br>
       <a href="https://note-pets.jymer1102.com"><img src="https://img.shields.io/badge/Launch-FFD700?style=flat-square&logoColor=black" alt="Launch" /></a>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/ZOMBIFIED-0A0A0C?style=flat-square&logoColor=4faafe" alt="Zombified" /><br>
+      <img src="https://img.shields.io/badge/ZOMBIFIED-0A0A0C?style=flat-square&label=ZOMBIFIED&labelColor=0A0A0C&color=0A0A0C" alt="Zombified" /><br>
       <img src="https://img.shields.io/badge/Status-In_Progress-orange?style=flat-square" alt="In Progress" />
     </td>
   </tr>
