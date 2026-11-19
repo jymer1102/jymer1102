@@ -3,3 +3,8 @@ description: "jymer1102 — Creator, Designer, Athlete, Developer, Pilot, Christ
 permalink: pretty
 baseurl: ""
 url: "https://jymer1102.com"
+
+# Jekyll skips dotfolders and underscore files unless they are listed here
+include:
+  - .well-known
+  - _headers
