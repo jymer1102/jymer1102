@@ -1393,7 +1393,7 @@ a, button, .nav-cta, .btn-primary, select, input[type="submit"], .submit-btn,
 .logo, .theme-toggle, .playground-btn, .modal-close-btn, .modal-btn,
 select.form-control, .project-card:not(.in-progress),
 .link-btn, .cookie-btn, [role="button"], summary, label[for], .exit-fullscreen-overlay {
-cursor: url("/images/cursor/cursor-pointer.cur?v=3"), url("/images/cursor/arrow.cur?v=3"), pointer;
+cursor: url("/images/cursor/pointer.cur?v=3"), url("/images/cursor/arrow.cur?v=3"), pointer;
 }
 
 input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="range"]),
@@ -2084,7 +2084,7 @@ body.preview-fullscreen-active {
   font-family: system-ui, -apple-system, sans-serif !important;
   font-size: 0.85rem !important;
   font-weight: 600 !important;
-  cursor: url("/images/cursor/cursor-pointer.cur?v=3"), url("/images/cursor/arrow.cur?v=3"), pointer !important;
+  cursor: url("/images/cursor/pointer.cur?v=3"), url("/images/cursor/arrow.cur?v=3"), pointer !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
   transition: all 0.2s ease !important;
   opacity: 0.9;
