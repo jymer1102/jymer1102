@@ -34,10 +34,25 @@
     }
     document.documentElement.setAttribute('data-theme', theme);
   } catch (e) {
+    theme = 'dark';
     document.documentElement.setAttribute('data-theme', 'dark');
   }
+  // The favicon follows the same saved theme, and is created here (before the browser
+  // asks for a tab icon) so a light-theme visitor never sees the dark icon first.
+  var icons = {
+    light: "{{ '/images/favicon/light-favicon.svg' | relative_url }}",
+    dark: "{{ '/images/favicon/dark-favicon.svg' | relative_url }}"
+  };
+  var link = document.createElement('link');
+  link.id = 'favicon';
+  link.rel = 'icon';
+  link.type = 'image/svg+xml';
+  link.href = icons[theme === 'light' ? 'light' : 'dark'];
+  document.head.appendChild(link);
+  window.__faviconIcons = icons;
 })();
 </script>
+<noscript><link rel="icon" type="image/svg+xml" href="{{ '/images/favicon/dark-favicon.svg' | relative_url }}"></noscript>
 <meta name="viewport" content="width=device-width, initial-scale=1.0{% if page.viewport_cover %}, viewport-fit=cover{% endif %}">
 <!-- Primary SEO -->
 <title>jymer1102 | {{ page.title | escape }}</title>
@@ -77,28 +92,25 @@
 {% endif -%}
 <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
-<!-- Theme-Aware Favicons (Dark default) -->
-<link id="favicon" rel="icon" type="image/svg+xml" href="{{ '/images/favicon/dark-favicon.svg' | relative_url }}">
+<!-- Theme-aware favicon: the SVG link is created in the first script in <head> -->
 <link rel="alternate icon" type="image/png" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/images/favicon/apple-touch-icon.png' | relative_url }}">
 
 <script>
   (function () {
-    const lightIcon = "{{ '/images/favicon/light-favicon.svg' | relative_url }}";
-    const darkIcon = "{{ '/images/favicon/dark-favicon.svg' | relative_url }}";
+    var icons = window.__faviconIcons;
+    if (!icons) return;
 
     function syncFavicon() {
-      const isLight = document.documentElement.getAttribute("data-theme") === "light";
-      const favicon = document.getElementById("favicon");
-      if (favicon) {
-        favicon.href = isLight ? lightIcon : darkIcon;
+      var isLight = document.documentElement.getAttribute("data-theme") === "light";
+      var favicon = document.getElementById("favicon");
+      var href = isLight ? icons.light : icons.dark;
+      if (favicon && favicon.getAttribute("href") !== href) {
+        favicon.setAttribute("href", href);
       }
     }
 
-    syncFavicon();
-
-    const observer = new MutationObserver(syncFavicon);
-    observer.observe(document.documentElement, {
+    new MutationObserver(syncFavicon).observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["data-theme"],
     });
