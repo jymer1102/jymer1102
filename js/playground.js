@@ -51,7 +51,7 @@ html, body {
 }
 
 a, button, select, input[type="submit"] {
-  cursor: url('/images/cursor/cursor-pointer.cur?v=3'), url('/images/cursor/arrow.cur?v=3'), pointer !important;
+  cursor: url('/images/cursor/pointer.cur?v=3'), url('/images/cursor/arrow.cur?v=3'), pointer !important;
 }
 
 h1 {
@@ -139,7 +139,7 @@ button, button *,
 input[type="submit"], 
 input[type="button"], 
 [role="button"] {
-  cursor: url('/images/cursor/cursor-pointer.cur?v=3'), url('/images/cursor/arrow.cur?v=3'), pointer !important;
+  cursor: url('/images/cursor/pointer.cur?v=3'), url('/images/cursor/arrow.cur?v=3'), pointer !important;
 }
 
 .cursor {
@@ -385,7 +385,7 @@ const blob = await zip.generateAsync({ type: 'blob' });
 const url = URL.createObjectURL(blob);
 const a = document.createElement('a');
 a.href = url;
-a.download = 'my-jymer1102-code.zip';
+a.download = 'my-code.zip';
 document.body.appendChild(a);
 a.click();
 a.remove();
