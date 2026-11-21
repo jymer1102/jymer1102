@@ -1386,54 +1386,54 @@ transform: translate(-50%, -6px);
 }
 
 html, body {
-cursor: url("/images/cursor/arrow.cur?v=3"), default;
+cursor: url("/images/cursor/arrow.cur?v=4"), default;
 }
 
 a, button, .nav-cta, .btn-primary, select, input[type="submit"], .submit-btn,
 .logo, .theme-toggle, .playground-btn, .modal-close-btn, .modal-btn,
 select.form-control, .project-card:not(.in-progress),
 .link-btn, .cookie-btn, [role="button"], summary, label[for], .exit-fullscreen-overlay {
-cursor: url("/images/cursor/pointer.cur?v=3"), url("/images/cursor/arrow.cur?v=3"), pointer;
+cursor: url("/images/cursor/pointer.cur?v=4"), url("/images/cursor/arrow.cur?v=4"), pointer;
 }
 
 input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]):not([type="color"]):not([type="range"]),
 textarea, .glow-input-hidden, .glow-input-display,
 .glow-textarea-hidden, .glow-textarea-display, .playground-editor {
-cursor: url("/images/cursor/text-select.cur?v=3"), text;
+cursor: url("/images/cursor/text-select.cur?v=4"), text;
 }
 
 .in-progress, .project-link.disabled, button:disabled, .submit-btn:disabled, [aria-disabled="true"] {
-cursor: url("/images/cursor/unavailable.cur?v=3"), not-allowed;
+cursor: url("/images/cursor/unavailable.cur?v=4"), not-allowed;
 }
 
 .submit-btn:disabled {
-cursor: url("/images/cursor/busy.cur?v=3"), wait;
+cursor: url("/images/cursor/busy.cur?v=4"), wait;
 }
 
 progress, [aria-busy="true"] {
-cursor: url("/images/cursor/working-in-background.cur?v=3"), progress;
+cursor: url("/images/cursor/working-in-background.cur?v=4"), progress;
 }
 
 .is-loading, body.is-loading {
-cursor: url("/images/cursor/busy.cur?v=3"), wait;
+cursor: url("/images/cursor/busy.cur?v=4"), wait;
 }
 
 [data-cursor="draw"], .is-drawing {
-cursor: url("/images/cursor/handwriting.cur?v=3"), crosshair;
+cursor: url("/images/cursor/handwriting.cur?v=4"), crosshair;
 }
 
 input[type="color"], [data-cursor="crosshair"] {
-cursor: url("/images/cursor/precision-select.cur?v=3"), crosshair;
+cursor: url("/images/cursor/precision-select.cur?v=4"), crosshair;
 }
 
 [data-cursor="move"], .is-draggable, [draggable="true"] {
-cursor: url("/images/cursor/move.cur?v=3"), move;
+cursor: url("/images/cursor/move.cur?v=4"), move;
 }
 
-.resize-x { cursor: url("/images/cursor/horizontal-resize.cur?v=3"), ew-resize; }
-.resize-y { cursor: url("/images/cursor/vertical-resize.cur?v=3"), ns-resize; }
-.resize-nwse { cursor: url("/images/cursor/diagonal-resize-1.cur?v=3"), nwse-resize; }
-.resize-nesw { cursor: url("/images/cursor/diagonal-resize-2.cur?v=3"), nesw-resize; }
+.resize-x { cursor: url("/images/cursor/horizontal-resize.cur?v=4"), ew-resize; }
+.resize-y { cursor: url("/images/cursor/vertical-resize.cur?v=4"), ns-resize; }
+.resize-nwse { cursor: url("/images/cursor/diagonal-resize-1.cur?v=4"), nwse-resize; }
+.resize-nesw { cursor: url("/images/cursor/diagonal-resize-2.cur?v=4"), nesw-resize; }
 
 /* Phone Action Modal */
 .phone-modal {
@@ -2084,7 +2084,7 @@ body.preview-fullscreen-active {
   font-family: system-ui, -apple-system, sans-serif !important;
   font-size: 0.85rem !important;
   font-weight: 600 !important;
-  cursor: url("/images/cursor/pointer.cur?v=3"), url("/images/cursor/arrow.cur?v=3"), pointer !important;
+  cursor: url("/images/cursor/pointer.cur?v=4"), url("/images/cursor/arrow.cur?v=4"), pointer !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
   transition: all 0.2s ease !important;
   opacity: 0.9;
