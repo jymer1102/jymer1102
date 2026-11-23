@@ -19,6 +19,9 @@
 <h1>Cursor test</h1>
 <p>Part 1 checks each file loads from the server. Part 2 shows what your deployed <code>/style.css</code> applies. Hover the boxes to see the cursor.</p>
 
+<p id="env"></p>
+<p>Inline test (no files involved): hover <span class="hoverbox" id="inline">inline data cursor</span>. If this shows a blue I-beam but the table rows below do not, your browser is fine and the problem is the file paths or deployment.</p>
+
 <h2>1. Files</h2>
 <table id="files">
   <tr><th>File</th><th>HTTP status</th><th>Type</th><th>Bytes</th><th>Decoded size</th><th>Hover (raw file)</th></tr>
@@ -32,6 +35,9 @@
 <input value="input"> <button>button</button> <a href="#">link</a></p>
 
 <script>
+
+document.getElementById('env').textContent = 'Page address: ' + location.href + '  |  Browser: ' + navigator.userAgent;
+document.getElementById('inline').style.cursor = 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADD0lEQVR42tVXv2scVxD+Zubt3q8VQoVMBDImJmCEQwrHXHvEhVBU2NjHHsFV/CekCKSQuVwgYHDhyn1KsWsjEEFxFThcBEKUwuCksLExTpp0QSfd3d6+Nymk852EyN3Jtwh91e6b92bmvTfzvRnglEGTTVeC9leSHhYpDTQekU0FfQND/2GkEkYqx8kyOjCl2091Lox09qgkjHT29lOdAyYzTuPu/MY6FuHhEZH7UC1S9vHWJnwfAIyPr23izpPAqOI1E1c3buHvY6/qCHiU/TAGg0hZcLl0DmVT4Hk/4AU2XBYPsXiIyaDsB7xgCjxfOsfl1KYfg0jDeLR+GvfowwheF/hGDD6xqSsQ+BrI+ftiJAr8LIbbNrXPcpB7cQ09gBXQaWbBANfX07pXlG8BoNex9c2a+e4keniSyZW6mpUtzdVV2Sle9Medxcu6Kq9saa5SV5OZA80Gpe0CbIPIkcB/d4wCv0Hk2gXYZoPSzBw4HBZDl6s4MfEwThkTO9CaAYWRCulgLSk4jFRaM5MHtZl0wfZV6m3vZ0FryFwrrpEFYLNzQJVApDcf7y5yrlhO91xFD8KNmCrVH9W67t6vG9XSX/2503sND+i48gNysyX3e26Gl9I9wNl9GywEUwS6O+7Pf3f5SvNLdMeh4TMUhAc7ad6hjkhn2VlUnXUPxSOIR3DWPXQWVZHOcvMOdcbd/ftSceiVJAKA3q6tbX5h4pPomTgLPv1NvYuv4LrOBkP0E4SRyquL4O2r1MuUB4IdaFwjqwQ3VKi5uEY22JmcEc8eEw5FDx37naUDYaRSaEPqqqxAMniLkNRVudDGfpGaVRD26fYJgBuRXuqPC+hSg8gBBwQ03b6AAHW08hN8b8etGY+X/r8kwx9JgO+ffI5knB5hdFEaOQGR5ndxbWaB1ySPai7gVVNEXjxm8ZhNkfO5gFclj2rwAe4WWvgMRBpGo/WPvII4hIMqpTGet//BL0ruI7VIxec3rosHYICBr5LEXSCB6e3hJTx+DlWKMUjVqWF0Y5IVMmrNzlBzmhH+AyI3Wp+JSro+AAAAAElFTkSuQmCC") 16 16, crosshair';
 var names = ['arrow','pointer','text-select','unavailable','busy','working-in-background',
   'handwriting','precision-select','move','horizontal-resize','vertical-resize',
   'diagonal-resize-1','diagonal-resize-2','alternate-select'];
