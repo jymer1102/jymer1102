@@ -1419,7 +1419,7 @@ cursor: url("/images/cursor/busy.cur") 16 16, wait;
 }
 
 [data-cursor="draw"], .is-drawing {
-cursor: url("/images/cursor/precision-select.cur") 16 16, crosshair;
+cursor: url("/images/cursor/handwriting.cur") 3 3, crosshair;
 }
 
 input[type="color"], [data-cursor="crosshair"] {
