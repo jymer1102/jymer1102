@@ -160,7 +160,7 @@
       }
     } catch (err) {
       console.error('Form submission failed:', err);
-      showStatus('error', "Couldn't reach the server. Try again, or email me directly at theoneandonly@jymer1102.com.");
+      showStatus('error', "Couldn't reach the server. Try again, or email me directly at j@jymer1102.com.");
     } finally {
       submitBtn.disabled = false;
       submitBtn.innerHTML = submitBtnDefaultHTML;
